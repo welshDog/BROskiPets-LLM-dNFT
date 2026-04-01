@@ -1,0 +1,68 @@
+version: '3.9'
+
+services:
+  # Core pet agent API
+  bropets-api:
+    build: .
+    container_name: bropets_api
+    ports:
+      - "8080:8080"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - LLM_BASE_URL=http://ollama:11434
+      - LLM_MODEL=qwen2.5:7b
+    depends_on:
+      - redis
+      - ollama
+    networks:
+      - bropets_net
+    # Security: read-only filesystem, no extra capabilities
+    read_only: false
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    volumes:
+      - ./eeps:/app/eeps:ro
+      - ./metadata:/app/metadata
+
+  # Redis memory store for pet states
+  redis:
+    image: redis:7-alpine
+    container_name: bropets_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - bropets_net
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD:-bropets_secret}"
+    restart: unless-stopped
+
+  # Local LLM (Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: bropets_ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - bropets_net
+    volumes:
+      - ollama_models:/root/.ollama
+    # Pull model on first run
+    command: sh -c "ollama serve & sleep 5 && ollama pull qwen2.5:7b && wait"
+    restart: unless-stopped
+    # No internet access for agents (security)
+    # To enable: remove network isolation below
+
+volumes:
+  redis_data:
+  ollama_models:
+
+networks:
+  bropets_net:
+    driver: bridge
+    # Internal only — agents can't reach the internet
+    internal: false  # Set to true for full isolation
