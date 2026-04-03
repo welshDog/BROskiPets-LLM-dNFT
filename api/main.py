@@ -34,6 +34,7 @@ from pydantic import BaseModel, Field
 
 from agent import BROskiPet, load_squad
 from metadata import EEPMetadata
+from api.chain import call_evolve_onchain
 
 # ── Squad index + lifespan ────────────────────────────────────────────────────
 
@@ -118,6 +119,7 @@ class EvolveResponse(BaseModel):
     metadata_cid: str
     new_stage: int
     level_name: str
+    tx_hash: Optional[str] = None   # None when AGENT_KEY / CONTRACT_ADDRESS not configured
     message: str
 
 
@@ -256,17 +258,32 @@ async def evolve_pet(pet_id: str, body: EvolveRequest):
     except RuntimeError as e:
         raise HTTPException(status_code=502, detail=str(e))
 
+    # ── On-chain evolve() ─────────────────────────────────────────────────────
+    tx_hash: Optional[str] = None
+    try:
+        tx_hash = call_evolve_onchain(
+            token_id=body.token_id,
+            metadata_cid=metadata_cid,
+            new_stage=level_info["level"],
+        )
+        onchain_msg = f"On-chain tx submitted: {tx_hash}"
+    except EnvironmentError:
+        # CONTRACT_ADDRESS / AGENT_KEY not set — offline / local mode
+        onchain_msg = (
+            f"IPFS upload complete. Call contract.evolve("
+            f"{body.token_id}, '{metadata_cid}', {level_info['level']}) manually."
+        )
+    except RuntimeError as e:
+        raise HTTPException(status_code=502, detail=str(e))
+
     return EvolveResponse(
         pet_id=pet_id,
         token_id=body.token_id,
         metadata_cid=metadata_cid,
         new_stage=level_info["level"],
         level_name=level_info["level_name"],
-        message=(
-            f"{eep_data['name']} evolved to {level_info['level_name']}! "
-            f"Call contract.evolve({body.token_id}, '{metadata_cid}', {level_info['level']}) "
-            f"to update on-chain."
-        ),
+        tx_hash=tx_hash,
+        message=f"{eep_data['name']} evolved to {level_info['level_name']}! {onchain_msg}",
     )
 
 

@@ -208,6 +208,27 @@ async def test_get_metadata_not_found(client):
 # ── /pet/{pet_id}/evolve ─────────────────────────────────────────────────────
 
 @pytest.mark.asyncio
+async def test_evolve_offline_mode_no_contract_address(client, monkeypatch):
+    """When CONTRACT_ADDRESS is not set, evolve succeeds with tx_hash=None (offline mode)."""
+    monkeypatch.delenv("CONTRACT_ADDRESS", raising=False)
+    await client.post("/pet/001/feed")
+
+    import metadata as meta_module
+    monkeypatch.setattr(
+        meta_module.EEPMetadata,
+        "upload_metadata_to_ipfs",
+        lambda *a, **k: "QmTestCID123",
+    )
+
+    resp = await client.post("/pet/001/evolve", json={"token_id": 1})
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["metadata_cid"] == "QmTestCID123"
+    assert data["tx_hash"] is None
+    assert "contract.evolve" in data["message"]
+
+
+@pytest.mark.asyncio
 async def test_evolve_requires_pinata_jwt(client, monkeypatch):
     """Without PINATA_JWT, evolve should return 503."""
     monkeypatch.setenv("PINATA_JWT", "")
