@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"exit:$?\")",
+      "Bash(forge --version)",
+      "Bash(pip show:*)",
+      "Bash(curl -L https://foundry.paradigm.xyz)",
+      "Bash(bash)",
+      "Bash(export PATH=\"$PATH:/c/Users/Lyndz/.foundry/bin\")",
+      "Bash(foundryup)",
+      "Bash(pip install:*)",
+      "Bash(python -m pytest tests/ -v --tb=short)",
+      "Bash(forge install:*)",
+      "Bash(forge test:*)"
+    ]
+  }
+}
