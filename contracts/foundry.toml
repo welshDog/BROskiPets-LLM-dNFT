@@ -1,11 +1,19 @@
 [profile.default]
-src = "."
-test = "test"
-out = "out"
-libs = ["lib"]
-solc = "0.8.24"
-optimizer = true
+src            = "."
+test           = "test"
+out            = "out"
+libs           = ["lib"]
+optimizer      = true
 optimizer_runs = 200
 
+# Skip OZ formal-verification harnesses (they reference a non-existent ../patched/ dir)
+skip = [
+    "lib/openzeppelin-contracts/fv/**",
+    "lib/openzeppelin-contracts/test/**",
+]
+
 [profile.default.fuzz]
+runs = 10000
+
+[profile.default.invariant]
 runs = 256

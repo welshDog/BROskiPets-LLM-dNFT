@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-// OpenZeppelin v5 — install via: npm install @openzeppelin/contracts
+// OpenZeppelin v5
+// Install: npm install @openzeppelin/contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/utils/Pausable.sol";
@@ -9,148 +10,146 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 /**
  * @title EEPVengers
- * @notice Dynamic NFT (dNFT) contract for the BROskiPets EEPVengers squad.
- *         Each EEP is an ERC-721 token whose metadata URI updates on-chain
- *         whenever the pet evolves (driven by the off-chain Python agent).
+ * @notice Dynamic NFT (dNFT) contract for the 78 EEPVengers AI pet agents.
+ * @dev ERC-721 with per-token URI storage. Metadata lives on IPFS and
+ *      evolves as pets level up. The Python agent backend holds AGENT_ROLE
+ *      and is the only caller of evolve().
  *
  * Architecture:
- *   - MINTER_ROLE   : backend wallet that mints new EEPs
- *   - AGENT_ROLE    : backend wallet that triggers evolution (metadata updates)
- *   - DEFAULT_ADMIN : multisig (Gnosis Safe) — controls roles, pause, withdraw
+ *   - On-chain: ownership, evolution stage, IPFS CID pointer
+ *   - Off-chain (Redis): hunger, energy, happiness, XP (high-frequency state)
+ *   - IPFS: rendered metadata JSON + images (content-addressed, permanent)
  *
- * Metadata lives on IPFS. tokenURI() returns the current IPFS CID for the pet.
- * Evolution is rate-limited: one update per EVOLVE_COOLDOWN seconds per token.
+ * Author: welshDog (Lyndon Williams) — Hyperfocus Zone
  */
 contract EEPVengers is ERC721URIStorage, AccessControl, Pausable, ReentrancyGuard {
 
-    // ── Roles ────────────────────────────────────────────────────────────────
+    // ─── Roles ────────────────────────────────────────────────────────────────
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
-    bytes32 public constant AGENT_ROLE  = keccak256("AGENT_ROLE");
+    bytes32 public constant AGENT_ROLE  = keccak256("AGENT_ROLE");   // Python backend only
 
-    // ── Config ───────────────────────────────────────────────────────────────
-    uint256 public constant MAX_SUPPLY      = 78;        // exactly 78 EEPs
-    uint256 public constant EVOLVE_COOLDOWN = 1 hours;   // rate-limit per token
+    // ─── State ────────────────────────────────────────────────────────────────
+    uint256 public constant MAX_SUPPLY      = 78;       // 78 EEPVengers. No more. Ever.
+    uint256 public constant EVOLVE_COOLDOWN = 1 hours;  // Rate-limit agent calls
 
-    // ── State ────────────────────────────────────────────────────────────────
-    uint256 private _nextTokenId;
-    mapping(uint256 => uint256) public lastEvolved;      // tokenId → timestamp
-    mapping(uint256 => uint8)   public evolutionStage;   // tokenId → stage (1–6)
-    mapping(uint256 => string)  public petId;            // tokenId → off-chain pet_id
+    uint256 private _nextTokenId = 1;
 
-    // ── Events ───────────────────────────────────────────────────────────────
-    event PetMinted(uint256 indexed tokenId, address indexed to, string petId, string ipfsCID);
-    event PetEvolved(uint256 indexed tokenId, uint8 newStage, string newIPFSCID);
-    event PetURIUpdated(uint256 indexed tokenId, string newURI);
+    /// @dev tokenId => evolution stage (1=Baby, 2=Young, 3=Trained, 4=Elite, 5=Legendary, 6=Quantum)
+    mapping(uint256 => uint8)   public evolutionStage;
 
-    // ── Errors ───────────────────────────────────────────────────────────────
-    error MaxSupplyReached();
-    error EvolveCooldownActive(uint256 availableAt);
-    error AlreadyMaxEvolution();
-    error TokenDoesNotExist(uint256 tokenId);
+    /// @dev tokenId => off-chain pet_id string (e.g. "spider_001") for Python agent lookup
+    mapping(uint256 => string)  public petId;
 
-    // ── Constructor ──────────────────────────────────────────────────────────
-    constructor(address admin, address minter, address agent)
+    /// @dev tokenId => timestamp of last evolve() call (cooldown enforcement)
+    mapping(uint256 => uint256) public lastEvolved;
+
+    // ─── Events ───────────────────────────────────────────────────────────────
+    event PetMinted(uint256 indexed tokenId, address indexed owner, string petId, string ipfsCID);
+    event PetEvolved(uint256 indexed tokenId, uint8 newStage, string newCID, uint256 timestamp);
+
+    // ─── Constructor ──────────────────────────────────────────────────────────
+    /**
+     * @param adminMultisig  Gnosis Safe or EOA that holds DEFAULT_ADMIN_ROLE.
+     *                       This is the only account that can grant/revoke roles.
+     */
+    constructor(address adminMultisig)
         ERC721("EEPVengers", "EEP")
     {
-        _grantRole(DEFAULT_ADMIN_ROLE, admin);
-        _grantRole(MINTER_ROLE, minter);
-        _grantRole(AGENT_ROLE, agent);
-        _nextTokenId = 1; // token IDs start at 1
+        _grantRole(DEFAULT_ADMIN_ROLE, adminMultisig);
+        _grantRole(MINTER_ROLE,        adminMultisig);
     }
 
-    // ── Minting ──────────────────────────────────────────────────────────────
-
+    // ─── Minting ──────────────────────────────────────────────────────────────
     /**
-     * @notice Mint a new EEP to `to`. Only callable by MINTER_ROLE.
+     * @notice Mint a new EEP to a recipient.
      * @param to        Recipient wallet address.
-     * @param _petId    Off-chain pet ID (e.g. "spider_001") for cross-system linking.
+     * @param _petId    Off-chain identifier (e.g. "spider_001").
      * @param ipfsCID   IPFS CID of the initial (Baby stage) metadata JSON.
      */
-    function mint(address to, string calldata _petId, string calldata ipfsCID)
+    function mint(
+        address to,
+        string calldata _petId,
+        string calldata ipfsCID
+    )
         external
         onlyRole(MINTER_ROLE)
         whenNotPaused
         nonReentrant
-        returns (uint256 tokenId)
     {
-        if (_nextTokenId > MAX_SUPPLY) revert MaxSupplyReached();
+        require(_nextTokenId <= MAX_SUPPLY, "EEPVengers: All 78 EEPs minted");
 
-        tokenId = _nextTokenId++;
-        petId[tokenId] = _petId;
-        evolutionStage[tokenId] = 1; // Baby
-
+        uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
-        _setTokenURI(tokenId, _buildURI(ipfsCID));
+        _setTokenURI(tokenId, string(abi.encodePacked("ipfs://", ipfsCID)));
+
+        evolutionStage[tokenId] = 1; // Baby
+        petId[tokenId]          = _petId;
 
         emit PetMinted(tokenId, to, _petId, ipfsCID);
     }
 
-    // ── Evolution ────────────────────────────────────────────────────────────
-
+    // ─── Evolution ────────────────────────────────────────────────────────────
     /**
-     * @notice Update a pet's metadata URI when it evolves. Only AGENT_ROLE.
-     * @param tokenId   The EEP token to evolve.
-     * @param newStage  New evolution stage (1=Baby … 6=Quantum).
-     * @param ipfsCID   IPFS CID of the new metadata JSON for this stage.
+     * @notice Update a pet's metadata CID when it evolves.
+     * @dev Only callable by AGENT_ROLE (the Python FastAPI backend).
+     *      Rate-limited by EVOLVE_COOLDOWN to protect against compromised agent keys.
+     *
+     * @param tokenId   The NFT token to evolve.
+     * @param newCID    New IPFS CID of the updated metadata JSON (generated by metadata.py).
+     * @param newStage  New evolution stage (1-6). Must be >= current stage.
      */
-    function evolve(uint256 tokenId, uint8 newStage, string calldata ipfsCID)
+    function evolve(
+        uint256 tokenId,
+        string calldata newCID,
+        uint8 newStage
+    )
         external
         onlyRole(AGENT_ROLE)
         whenNotPaused
         nonReentrant
     {
-        if (!_exists(tokenId)) revert TokenDoesNotExist(tokenId);
-        if (evolutionStage[tokenId] >= 6) revert AlreadyMaxEvolution();
+        require(_ownerOf(tokenId) != address(0), "EEPVengers: Token does not exist");
+        require(newStage >= evolutionStage[tokenId], "EEPVengers: Cannot de-evolve");
+        require(newStage <= 6,                       "EEPVengers: Max stage is 6 (Quantum)");
+        // lastEvolved == 0 means the pet has never evolved — first evolution is always allowed.
+        require(
+            lastEvolved[tokenId] == 0 || block.timestamp >= lastEvolved[tokenId] + EVOLVE_COOLDOWN,
+            "EEPVengers: Evolution on cooldown"
+        );
 
-        uint256 available = lastEvolved[tokenId] + EVOLVE_COOLDOWN;
-        if (block.timestamp < available) revert EvolveCooldownActive(available);
-
+        _setTokenURI(tokenId, string(abi.encodePacked("ipfs://", newCID)));
         evolutionStage[tokenId] = newStage;
-        lastEvolved[tokenId] = block.timestamp;
-        _setTokenURI(tokenId, _buildURI(ipfsCID));
+        lastEvolved[tokenId]    = block.timestamp;
 
-        emit PetEvolved(tokenId, newStage, ipfsCID);
+        emit PetEvolved(tokenId, newStage, newCID, block.timestamp);
     }
 
-    // ── Views ────────────────────────────────────────────────────────────────
+    // ─── Views ────────────────────────────────────────────────────────────────
 
-    /**
-     * @notice Returns seconds remaining until this token can evolve again.
-     *         Returns 0 if cooldown has passed.
-     */
+    /// @notice Total EEPs minted so far.
+    function totalMinted() external view returns (uint256) {
+        return _nextTokenId - 1;
+    }
+
+    /// @notice Seconds remaining until this token can evolve again. Returns 0 if ready.
     function evolveCooldownRemaining(uint256 tokenId) external view returns (uint256) {
+        if (lastEvolved[tokenId] == 0) return 0; // Never evolved — ready immediately
         uint256 available = lastEvolved[tokenId] + EVOLVE_COOLDOWN;
         if (block.timestamp >= available) return 0;
         return available - block.timestamp;
     }
 
-    /**
-     * @notice Total EEPs minted so far.
-     */
-    function totalSupply() external view returns (uint256) {
-        return _nextTokenId - 1;
-    }
+    // ─── Admin ────────────────────────────────────────────────────────────────
 
-    // ── Admin ────────────────────────────────────────────────────────────────
-
+    /// @notice Emergency pause — freezes all mints and evolves.
     function pause()   external onlyRole(DEFAULT_ADMIN_ROLE) { _pause(); }
+
+    /// @notice Unpause the contract.
     function unpause() external onlyRole(DEFAULT_ADMIN_ROLE) { _unpause(); }
 
-    // ── Internal ─────────────────────────────────────────────────────────────
-
-    function _buildURI(string calldata cid) internal pure returns (string memory) {
-        return string(abi.encodePacked("ipfs://", cid));
-    }
-
-    function _exists(uint256 tokenId) internal view returns (bool) {
-        return _ownerOf(tokenId) != address(0);
-    }
-
-    // Required override — ERC721URIStorage + AccessControl both implement supportsInterface
+    // ─── Overrides ────────────────────────────────────────────────────────────
     function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721URIStorage, AccessControl)
+        public view override(ERC721URIStorage, AccessControl)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
