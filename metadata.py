@@ -20,7 +20,7 @@ EVOLUTION_LEVELS = {
     6: {"name": "Quantum", "xp_required": 50000}  # 2036 unlock
 }
 
-RAREITY_TIERS = {
+RARITY_TIERS = {
     "Common": {"chance": 0.50, "power_multiplier": 1.0},
     "Uncommon": {"chance": 0.30, "power_multiplier": 1.5},
     "Rare": {"chance": 0.15, "power_multiplier": 2.5},
