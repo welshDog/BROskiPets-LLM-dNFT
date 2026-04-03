@@ -35,6 +35,21 @@ from pydantic import BaseModel, Field
 from agent import BROskiPet, load_squad
 from metadata import EEPMetadata
 
+# ── Squad index + lifespan ────────────────────────────────────────────────────
+
+_squad_index: dict[str, dict] = {}
+
+
+@asynccontextmanager
+async def lifespan(app):
+    """Index the squad JSON by pet_id for O(1) lookup on startup."""
+    squad = load_squad("eeps/squad.json")
+    for eep in squad:
+        _squad_index[eep["id"]] = eep
+    yield
+    # (shutdown logic goes here if needed)
+
+
 # ── App setup ─────────────────────────────────────────────────────────────────
 
 app = FastAPI(
@@ -43,6 +58,7 @@ app = FastAPI(
     version="0.3.0",
     docs_url="/docs",
     redoc_url="/redoc",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -51,17 +67,6 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
-
-# ── Load squad on startup ─────────────────────────────────────────────────────
-
-_squad_index: dict[str, dict] = {}
-
-@app.on_event("startup")
-async def load_squad_index():
-    """Index the squad JSON by pet_id for O(1) lookup."""
-    squad = load_squad("eeps/squad.json")
-    for eep in squad:
-        _squad_index[eep["id"]] = eep
 
 
 def _get_eep_data(pet_id: str) -> dict:
@@ -137,7 +142,7 @@ async def health():
         "service": "BROskiPets API",
         "version": "0.3.0",
         "squad_loaded": len(_squad_index),
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }
 
 

@@ -35,10 +35,17 @@ from api.main import app
 
 @pytest_asyncio.fixture
 async def client():
+    # Lifespan events don't fire with ASGITransport — populate squad index directly
+    from api.main import _squad_index
+    from agent import load_squad
+    squad = load_squad("eeps/squad.json")
+    for eep in squad:
+        _squad_index[eep["id"]] = eep
+
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as c:
-        # Trigger startup event to load squad index
-        await app.router.startup()
         yield c
+
+    _squad_index.clear()
 
 
 # ── /health ───────────────────────────────────────────────────────────────────
