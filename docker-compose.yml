@@ -1,7 +1,6 @@
 version: '3.9'
 
 services:
-  # Core pet agent API
   bropets-api:
     build: .
     container_name: bropets_api
@@ -10,15 +9,18 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - REDIS_PASSWORD=${REDIS_PASSWORD:?REDIS_PASSWORD must be set in .env}
       - LLM_BASE_URL=http://ollama:11434
-      - LLM_MODEL=qwen2.5:7b
+      - LLM_MODEL=${LLM_MODEL:-qwen2.5:7b}
+      - CHAT_COOLDOWN_SECONDS=${CHAT_COOLDOWN_SECONDS:-6}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000}
     depends_on:
-      - redis
-      - ollama
+      redis:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
     networks:
       - bropets_net
-    # Security: read-only filesystem, no extra capabilities
-    read_only: false
     cap_drop:
       - ALL
     security_opt:
@@ -26,43 +28,97 @@ services:
     restart: unless-stopped
     volumes:
       - ./eeps:/app/eeps:ro
-      - ./metadata:/app/metadata
+      - metadata_store:/app/metadata
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 
-  # Redis memory store for pet states
   redis:
     image: redis:7-alpine
     container_name: bropets_redis
-    ports:
-      - "6379:6379"
     networks:
       - bropets_net
     volumes:
       - redis_data:/data
-    command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD:-bropets_secret}"
+    command: >
+      redis-server
+      --appendonly yes
+      --requirepass "${REDIS_PASSWORD:?REDIS_PASSWORD must be set}"
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    # Redis NOT exposed externally
 
-  # Local LLM (Ollama)
   ollama:
     image: ollama/ollama:latest
     container_name: bropets_ollama
-    ports:
-      - "11434:11434"
     networks:
       - bropets_net
     volumes:
       - ollama_models:/root/.ollama
-    # Pull model on first run
-    command: sh -c "ollama serve & sleep 5 && ollama pull qwen2.5:7b && wait"
+    # Fix: wait for serve to be ready before pulling model
+    command: >
+      sh -c "ollama serve &
+             until curl -sf http://localhost:11434/api/tags > /dev/null 2>&1; do
+               echo 'Waiting for Ollama...' && sleep 3;
+             done &&
+             ollama pull ${LLM_MODEL:-qwen2.5:7b} &&
+             wait"
     restart: unless-stopped
-    # No internet access for agents (security)
-    # To enable: remove network isolation below
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:11434/api/tags"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 90s
+    # Ollama NOT exposed externally in prod
+
+  # Prometheus metrics scraper
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: bropets_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    networks:
+      - bropets_net
+    restart: unless-stopped
+
+  # Grafana dashboard
+  grafana:
+    image: grafana/grafana:latest
+    container_name: bropets_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-changeme_in_prod}
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - bropets_net
+    restart: unless-stopped
+    depends_on:
+      - prometheus
 
 volumes:
   redis_data:
   ollama_models:
+  metadata_store:
+  prometheus_data:
+  grafana_data:
 
 networks:
   bropets_net:
     driver: bridge
-    # Internal only — agents can't reach the internet
-    internal: false  # Set to true for full isolation
+    internal: false  # Set to true to fully isolate from internet
