@@ -1,0 +1,38 @@
+# BROskiPets-LLM-dNFT — Pinned Dependencies
+# Last updated: 2026-04-03
+
+# Core
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+
+# Redis
+redis==5.0.4
+
+# LLM
+httpx==0.27.0
+openai==1.30.1
+
+# Blockchain / Web3
+web3==6.19.0
+
+# Monitoring
+prometheus-client==0.20.0
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+slowapi==0.1.9
+
+# Testing
+pytest==8.2.0
+pytest-asyncio==0.23.6
+pytest-cov==5.0.0
+pytest-mock==3.14.0
+httpx==0.27.0
+faker==25.2.0
+locust==2.28.0
+
+# Utilities
+python-dotenv==1.0.1
+structlog==24.1.0
