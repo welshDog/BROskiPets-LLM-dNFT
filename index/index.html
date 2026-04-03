@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BROskiPets — AI-Powered Evolving dNFT Pets on Ethereum</title>
+  <meta name="description" content="78 unique AI-powered dNFT pets that think, bond, and evolve on-chain. Built on Ethereum Sepolia. Join the waitlist for first access.">
+  <meta name="keywords" content="BROskiPets, dNFT, AI pets, Ethereum, NFT, Web3, evolving NFT, GPT-4, Sepolia, WelshDog">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BROskiPets — Your pet thinks. Your pet grows. Your pet lives on-chain.">
+  <meta property="og:description" content="78 unique AI-powered dNFT pets. Each one talks, thinks, and evolves on Ethereum. No two journeys are the same.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0a0a0a/ff2d78?text=BROskiPets">
+  <meta property="og:url" content="https://welshdog.co.uk/broskipets">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BROskiPets — AI dNFT Pets on Ethereum">
+  <meta name="twitter:description" content="78 unique AI pets. They think. They bond. They evolve on-chain.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0a0a0a/ff2d78?text=BROskiPets">
+  <meta name="twitter:site" content="@WelshDog_co_uk">
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' font-family='Arial' fill='%23ff2d78'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "BROskiPets Waitlist Launch",
+    "description": "AI-powered evolving dNFT pets on Ethereum Sepolia. 78 unique EEPs that think, bond, and evolve on-chain.",
+    "url": "https://welshdog.co.uk/broskipets",
+    "organizer": {
+      "@type": "Person",
+      "name": "WelshDog",
+      "url": "https://welshdog.co.uk"
+    },
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://welshdog.co.uk/broskipets"
+    },
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+      --pink: #ff2d78;
+      --cyan: #00f5ff;
+      --yellow: #ffe600;
+      --purple: #bf5fff;
+      --green: #39ff14;
+      --bg: #050508;
+      --bg2: #0d0d14;
+      --bg3: #12121e;
+      --text: #f0f0ff;
+      --muted: #8888aa;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(5, 5, 8, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 45, 120, 0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--pink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 20px rgba(255, 45, 120, 0.6);
+    }
+
+    .nav-logo span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-cta {
+      background: var(--pink);
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      text-shadow: none !important;
+      transition: box-shadow 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      box-shadow: 0 0 20px rgba(255, 45, 120, 0.6) !important;
+      transform: translateY(-1px);
+      color: #fff !important;
+    }
+
+    /* Hero */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .glow-pink {
+      width: 600px;
+      height: 600px;
+      background: rgba(255, 45, 120, 0.12);
+      top: -100px;
+      left: -100px;
+    }
+
+    .glow-cyan {
+      width: 500px;
+      height: 500px;
+      background: rgba(0, 245, 255, 0.08);
+      bottom: -50px;
+      right: -50px;
+    }
+
+    .glow-purple {
+      width: 400px;
+      height: 400px;
+      background: rgba(191, 95, 255, 0.07);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 245, 255, 0.08);
+      border: 1px solid rgba(0, 245, 255, 0.25);
+      color: var(--cyan);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero-badge::before {
+      content: '●';
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(3.5rem, 12vw, 9rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title .broski {
+      color: var(--pink);
+      text-shadow: 0 0 40px rgba(255, 45, 120, 0.5),
+                   0 0 80px rgba(255, 45, 120, 0.2);
+    }
+
+    .hero-title .pets {
+      color: var(--cyan);
+      text-shadow: 0 0 40px rgba(0, 245, 255, 0.5),
+                   0 0 80px rgba(0, 245, 255, 0.2);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 600;
+      color: var(--yellow);
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255, 230, 0, 0.4);
+    }
+
+    .hero-sub {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-sub strong {
+      color: var(--text);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--pink), #c4006a);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(255, 45, 120, 0.35);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 50px rgba(255, 45, 120, 0.6);
+    }
+
+    .hero-pets-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-pet {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(255, 45, 120, 0.4));
+    }
+
+    .hero-pet:nth-child(2) {
+      animation-delay: 0.4s;
+      filter: drop-shadow(0 0 12px rgba(0, 245, 255, 0.4));
+    }
+
+    .hero-pet:nth-child(3) {
+      animation-delay: 0.8s;
+      filter: drop-shadow(0 0 12px rgba(255, 230, 0, 0.4));
+    }
+
+    .hero-pet:nth-child(4) {
+      animation-delay: 1.2s;
+      filter: drop-shadow(0 0 12px rgba(191, 95, 255, 0.4));
+    }
+
+    .hero-pet:nth-child(5) {
+      animation-delay: 1.6s;
+      filter: drop-shadow(0 0 12px rgba(57, 255, 20, 0.4));
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* Stats bar */
+    #stats {
+      background: var(--bg2);
+      border-top: 1px solid rgba(255, 45, 120, 0.1);
+      border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+      padding: 1.5rem 2rem;
+    }
+
+    .stats-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 3rem;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .stat-num {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--pink);
+      box-shadow: 0 0 8px var(--pink);
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* How it works */
+    #how {
+      padding: 6rem 1.5rem;
+      background: var(--bg);
+    }
+
+    .how-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .steps-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--bg3);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .step-card.mint {
+      border-color: rgba(255, 45, 120, 0.2);
+    }
+
+    .step-card.mint:hover {
+      border-color: rgba(255, 45, 120, 0.5);
+      box-shadow: 0 0 30px rgba(255, 45, 120, 0.1);
+    }
+
+    .step-card.bond {
+      border-color: rgba(0, 245, 255, 0.2);
+    }
+
+    .step-card.bond:hover {
+      border-color: rgba(0, 245, 255, 0.5);
+      box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
+    }
+
+    .step-card.evolve {
+      border-color: rgba(191, 95, 255, 0.2);
+    }
+
+    .step-card.evolve:hover {
+      border-color: rgba(191, 95, 255, 0.5);
+      box-shadow: 0 0 30px rgba(191, 95, 255, 0.1);
+    }
+
+    .step-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .step-card.mint .step-num { color: var(--pink); }
+    .step-card.bond .step-num { color: var(--cyan); }
+    .step-card.evolve .step-num { color: var(--purple); }
+
+    .step-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .step-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card.mint .step-title { color: var(--pink); }
+    .step-card.bond .step-title { color: var(--cyan); }
+    .step-card.evolve .step-title { color: var(--purple); }
+
+    .step-text {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .step-text strong {
+      color: var(--text);
+    }
+
+    /* Rarity section */
+    #pets {
+      padding: 6rem 1.5rem;
+      background: var(--bg2);
+    }
+
+    .pets-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .rarity-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .rarity-card {
+      background: var(--bg3);
+      border-radius: 16px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+
+    .rarity-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .rarity-card.common {
+      border-color: rgba(136, 136, 170, 0.3);
+    }
+
+    .rarity-card.common:hover {
+      box-shadow: 0 0 30px rgba(136, 136, 170, 0.2);
+    }
+
+    .rarity-card.rare {
+      border-color: rgba(0, 245, 255, 0.3);
+    }
+
+    .rarity-card.rare:hover {
+      box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+    }
+
+    .rarity-card.epic {
+      border-color: rgba(191, 95, 255, 0.3);
+    }
+
+    .rarity-card.epic:hover {
+      box-shadow: 0 0 30px rgba(191, 95, 255, 0.2);
+    }
+
+    .rarity-card.legendary {
+      border-color: rgba(255, 230, 0, 0.3);
+    }
+
+    .rarity-card.legendary:hover {
+      box-shadow: 0 0 30px rgba(255, 230, 0, 0.25);
+    }
+
+    .rarity-card.quantum {
+      border-color: rgba(255, 45, 120, 0.4);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 45, 120, 0.05),
+        rgba(191, 95, 255, 0.05)
+      );
+    }
+
+    .rarity-card.quantum:hover {
+      box-shadow: 0 0 40px rgba(255, 45, 120, 0.3);
+    }
+
+    .rarity-emoji {
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .rarity-tier {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .rarity-card.common .rarity-tier {
+      color: var(--muted);
+    }
+
+    .rarity-card.rare .rarity-tier {
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+    }
+
+    .rarity-card.epic .rarity-tier {
+      color: var(--purple);
+      text-shadow: 0 0 10px rgba(191, 95, 255, 0.5);
+    }
+
+    .rarity-card.legendary .rarity-tier {
+      color: var(--yellow);
+      text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
+    }
+
+    .rarity-card.quantum .rarity-tier {
+      color: var(--pink);
+      text-shadow: 0 0 15px rgba(255, 45, 120, 0.7);
+    }
+
+    .rarity-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .rarity-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .rarity-bar {
+      margin-top: 1rem;
+      height: 3px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+    }
+
+    .rarity-fill {
+      height: 100%;
+      border-radius: 2px;
+    }
+
+    .rarity-card.common .rarity-fill {
+      width: 80%;
+      background: var(--muted);
+    }
+
+    .rarity-card.rare .rarity-fill {
+      width: 55%;
+      background: var(--cyan);
+      box-shadow: 0 0 6px var(--cyan);
+    }
+
+    .rarity-card.epic .rarity-fill {
+      width: 35%;
+      background: var(--purple);
+      box-shadow: 0 0 6px var(--purple);
+    }
+
+    .rarity-card.legendary .rarity-fill {
+      width: 15%;
+      background: var(--yellow);
+      box-shadow: 0 0 6px var(--yellow);
+    }
+
+    .rarity-card.quantum .rarity-fill {
+      width: 4%;
+      background: var(--pink);
+      box-shadow: 0 0 8px var(--pink);
+    }
+
+    /* Waitlist */
+    #waitlist {
+      padding: 7rem 1.5rem;
+      background: var(--bg);
+      text-align: center;
+    }
+
+    .waitlist-inner {
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .waitlist-glow {
+      position: absolute;
+      width: 700px;
+      height: 400px;
+      background: radial-gradient(
+        ellipse,
+        rgba(255, 45, 120, 0.08) 0%,
+        transparent 70%
+      );
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .waitlist-title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .waitlist-title .accent-pink {
+      color: var(--pink);
+      text-shadow: 0 0 20px rgba(255, 45, 120, 0.5);
+    }
+
+    .waitlist-title .accent-cyan {
+      color: var(--cyan);
+      text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+    }
+
+    .waitlist-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .waitlist-sub strong {
+      color: var(--text);
+    }
+
+    .waitlist-form {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .waitlist-input {
+      flex: 1;
+      min-width: 240px;
+      background: var(--bg3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.2rem;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .waitlist-input::placeholder {
+      color: var(--muted);
+    }
+
+    .waitlist-input:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 15px rgba(255, 45, 120, 0.2);
+    }
+
+    .waitlist-note {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+    }
+
+    .waitlist-note span {
+      color: var(--green);
+    }
+
+    .tech-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 3rem;
+    }
+
+    .tech-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.8rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 3rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--pink);
+      text-shadow: 0 0 15px rgba(255, 45, 120, 0.4);
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-brand .logo span {
+      color: var(--cyan);
+    }
+
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+    }
+
+    .footer-bottom .chain-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--purple);
+      background: rgba(191, 95, 255, 0.08);
+      border: 1px solid rgba(191, 95, 255, 0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem 1.2rem;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(5, 5, 8, 0.97);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.2rem;
+        border-bottom: 1px solid rgba(255, 45, 120, 0.15);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rarity-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .rarity-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">BROski<span>Pets</span></a>
+    <button
+      class="hamburger"
+      aria-label="Toggle menu"
+      onclick="this.nextElementSibling.classList.toggle('open')"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#pets">The Pets</a></li>
+      <li><a href="#waitlist">Waitlist</a></li>
+      <li>
+        <a
+          href="https://github.com/welshDog/BROskiPets-LLM-dNFT"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
+      </li>
+      <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-glow glow-pink"></div>
+    <div class="hero-glow glow-cyan"></div>
+    <div class="hero-glow glow-purple"></div>
+
+    <div class="hero-badge">🔴 Live on Ethereum Sepolia Testnet</div>
+
+    <h1 class="hero-title">
+      <span class="broski">BROski</span><br>
+      <span class="pets">Pets</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Your pet thinks. Your pet grows. Your pet lives on-chain.
+    </p>
+
+    <p class="hero-sub">
+      <strong>78 unique AI pets.</strong> Each one talks, thinks, and evolves on-chain.
+      No two journeys are the same.
+    </p>
+
+    <a href="#waitlist" class="btn-primary">🐾 Join the Waitlist</a>
+
+    <div class="hero-pets-row" aria-hidden="true">
+      <span class="hero-pet">🐱</span>
+      <span class="hero-pet">🦊</span>
+      <span class="hero-pet">🐸</span>
+      <span class="hero-pet">🐉</span>
+      <span class="hero-pet">👾</span>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div id="stats" aria-label="Project stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">78</span>
+        <div>
+          <div class="stat-label">Unique Pets</div>
+        </div>
+        <span class="stat-dot"></span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-num">5</span>
+        <div>
+          <div class="stat-label">Rarity Tiers</div>
+        </div>
+        <span class="stat-dot"></span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-num">92</span>
+        <div>
+          <div class="stat-label">Tests Passing</div>
+        </div>
+        <span class="stat-dot"></span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-num">GPT-4</span>
+        <div>
+          <div class="stat-label">Powered By</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <section id="how" aria-label="How it works">
+    <div class="how-header">
+      <p class="section-label">// The Loop</p>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub" style="margin: 0 auto;">
+        Three steps. One living NFT. Infinite possibilities.
+      </p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card mint">
+        <div class="step-num">Step 01 //</div>
+        <span class="step-icon">🪄</span>
+        <h3 class="step-title">MINT</h3>
+        <p class="step-text">
+          Choose your BROskiPet from <strong>78 unique EEPs</strong>
+          (Emotionally Evolved Pets). Each has its own rarity, personality, and
+          starting stats. Your journey begins the moment it hits your wallet.
+        </p>
+      </div>
+
+      <div class="step-card bond">
+        <div class="step-num">Step 02 //</div>
+        <span class="step-icon">💬</span>
+        <h3 class="step-title">BOND</h3>
+        <p class="step-text">
+          Feed it. Chat with it via <strong>LLM AI</strong>.
+          Your interactions shape its mood, XP, and hunger —
+          all tracked on-chain. The more you engage, the more it grows.
+        </p>
+      </div>
+
+      <div class="step-card evolve">
+        <div class="step-num">Step 03 //</div>
+        <span class="step-icon">⚡</span>
+        <h3 class="step-title">EVOLVE</h3>
+        <p class="step-text">
+          When your pet hits the threshold, it evolves.
+          <strong>New metadata uploads to IPFS.</strong>
+          Smart contract updates on Ethereum. Your NFT literally changes.
+          This isn't a game — it's on-chain life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rarity showcase -->
+  <section id="pets" aria-label="Pet rarity tiers">
+    <div class="pets-header">
+      <p class="section-label">// Meet the EEPs</p>
+      <h2 class="section-title">The Pets</h2>
+      <p class="section-sub" style="margin: 0 auto;">
+        78 Emotionally Evolved Pets across 5 rarity tiers.
+        Each one is unique. Some are practically sentient.
+      </p>
+    </div>
+
+    <div class="rarity-grid">
+      <div class="rarity-card common">
+        <span class="rarity-emoji">🐱</span>
+        <div class="rarity-tier">Common</div>
+        <div class="rarity-name">The Everyday Crew</div>
+        <p class="rarity-desc">
+          Friendly, curious, full of potential. The perfect starting companion.
+        </p>
+        <div class="rarity-bar"><div class="rarity-fill"></div></div>
+      </div>
+
+      <div class="rarity-card rare">
+        <span class="rarity-emoji">🦊</span>
+        <div class="rarity-tier">Rare</div>
+        <div class="rarity-name">Sharp Minds</div>
+        <p class="rarity-desc">
+          Sharper minds, wilder vibes. Harder to find, worth the hunt.
+        </p>
+        <div class="rarity-bar"><div class="rarity-fill"></div></div>
+      </div>
+
+      <div class="rarity-card epic">
+        <span class="rarity-emoji">🐉</span>
+        <div class="rarity-tier">Epic</div>
+        <div class="rarity-name">Elite Tier</div>
+        <p class="rarity-desc">
+          Complex personalities and faster evolution. These pets are built different.
+        </p>
+        <div class="rarity-bar"><div class="rarity-fill"></div></div>
+      </div>
+
+      <div class="rarity-card legendary">
+        <span class="rarity-emoji">✨</span>
+        <div class="rarity-tier">Legendary</div>
+        <div class="rarity-name">The Few</div>
+        <p class="rarity-desc">
+          Only a handful exist. These pets are practically sentient.
+        </p>
+        <div class="rarity-bar"><div class="rarity-fill"></div></div>
+      </div>
+
+      <div class="rarity-card quantum">
+        <span class="rarity-emoji">🌌</span>
+        <div class="rarity-tier">⚡ Quantum</div>
+        <div class="rarity-name">One of a Kind</div>
+        <p class="rarity-desc">
+          The rarest BROskiPet of all. If you know, you know.
+        </p>
+        <div class="rarity-bar"><div class="rarity-fill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="waitlist" aria-label="Join the waitlist">
+    <div class="waitlist-glow"></div>
+    <div class="waitlist-inner">
+      <p class="section-label">// First Access</p>
+      <h2 class="waitlist-title">
+        Be <span class="accent-pink">First.</span><br>
+        Evolve <span class="accent-cyan">First.</span>
+      </h2>
+      <p class="waitlist-sub">
+        Drop your wallet or email. When we go live on <strong>Sepolia testnet</strong>,
+        you get first access — before anyone else.
+      </p>
+
+      <form
+        class="waitlist-form"
+        onsubmit="handleWaitlist(event)"
+        aria-label="Waitlist signup form"
+      >
+        <input
+          type="text"
+          class="waitlist-input"
+          placeholder="wallet.eth or email@address.com"
+          aria-label="Wallet address or email"
+          id="waitlist-input"
+          autocomplete="off"
+        >
+        <button type="submit" class="btn-primary">🐾 Join Waitlist</button>
+      </form>
+
+      <p class="waitlist-note" id="waitlist-msg">
+        <span>✓</span> No spam. No gas fees to sign up. Just first access.
+      </p>
+
+      <div class="tech-strip" aria-label="Tech stack">
+        <span class="tech-tag">Ethereum Sepolia</span>
+        <span class="tech-tag">IPFS / Pinata</span>
+        <span class="tech-tag">GPT-4 LLM</span>
+        <span class="tech-tag">Solidity</span>
+        <span class="tech-tag">ERC-721</span>
+        <span class="tech-tag">Dynamic NFT</span>
+        <span class="tech-tag">Hardhat</span>
+        <span class="tech-tag">92 Tests ✓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">BROski<span>Pets</span></div>
+        <p>Built by WelshDog (welshdog.nft) — indie Web3 dev from Wales 🏴</p>
+      </div>
+
+      <ul class="footer-links">
+        <li>
+          <a
+            href="https://github.com/welshDog/BROskiPets-LLM-dNFT"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://welshdog.co.uk" target="_blank" rel="noopener">
+            🌐 WelshDog.co.uk
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/WelshDog_co_uk"
+            target="_blank"
+            rel="noopener"
+          >
+            𝕏 @WelshDog_co_uk
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="welshdog.nft ENS">
+            🔷 welshdog.nft
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 BROskiPets — All rights reserved. Built in Wales 🏴</p>
+      <div class="chain-badge">⬡ Ethereum Sepolia Testnet</div>
+    </div>
+  </footer>
+
+  <!-- Schema: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BROskiPets",
+    "description": "AI-powered evolving dNFT pets on Ethereum Sepolia. 78 unique EEPs that think, bond, and evolve on-chain via GPT-4 LLM.",
+    "url": "https://welshdog.co.uk/broskipets",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web3 / Ethereum",
+    "author": {
+      "@type": "Person",
+      "name": "WelshDog",
+      "url": "https://welshdog.co.uk",
+      "sameAs": [
+        "https://twitter.com/WelshDog_co_uk",
+        "https://github.com/welshDog"
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "ETH"
+    }
+  }
+  </script>
+
+  <script>
+    function handleWaitlist(e) {
+      e.preventDefault();
+      const input = document.getElementById('waitlist-input');
+      const msg = document.getElementById('waitlist-msg');
+      const val = input.value.trim();
+
+      if (!val) {
+        msg.innerHTML =
+          '<span style="color:var(--pink)">⚠</span> Please enter a wallet address or email.';
+        return;
+      }
+
+      msg.innerHTML =
+        "<span>🐾</span> You're on the list! We'll hit you up when Sepolia goes live.";
+      msg.style.color = 'var(--green)';
+      input.value = '';
+      input.disabled = true;
+
+      setTimeout(() => {
+        input.disabled = false;
+        msg.innerHTML =
+          '<span>✓</span> No spam. No gas fees to sign up. Just first access.';
+        msg.style.color = '';
+      }, 5000);
+    }
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          const navLinks = document.querySelector('.nav-links');
+          if (navLinks) navLinks.classList.remove('open');
+        }
+      });
+    });
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (nav) {
+        nav.style.borderBottomColor =
+          window.scrollY > 50
+            ? 'rgba(255,45,120,0.3)'
+            : 'rgba(255,45,120,0.15)';
+      }
+    });
+  </script>
+</body>
+</html>
