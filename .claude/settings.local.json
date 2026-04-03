@@ -11,7 +11,13 @@
       "Bash(pip install:*)",
       "Bash(python -m pytest tests/ -v --tb=short)",
       "Bash(forge install:*)",
-      "Bash(forge test:*)"
+      "Bash(forge test:*)",
+      "Bash(python -m pytest tests/ -q)",
+      "Bash(python -m pytest tests/ --tb=no -q)",
+      "Bash(python.exe -m pytest tests/ --tb=no -q)",
+      "Bash(forge build:*)",
+      "Bash(grep -v \"^Warning\\\\|assembly\\\\|deprecated\\\\| --> \\\\| |\\\\|^\\\\s*$\\\\|^\\\\.\\\\|^=\\\\| \\\\^\")",
+      "Bash(python.exe -m pytest tests/test_api.py -v --asyncio-mode=auto --tb=short)"
     ]
   }
 }
