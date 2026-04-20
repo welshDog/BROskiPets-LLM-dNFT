@@ -110,10 +110,10 @@ After deployment, grant `MINTER_ROLE` to your mint service wallet and `AGENT_ROL
 
 ```bash
 # Contract address from deploy output
-export CONTRACT=0x...deployed_contract_address...
+export CONTRACT_ADDRESS=0x...deployed_contract_address...
 
 # Grant MINTER_ROLE to mint service wallet
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "grantRole(bytes32,address)" \
   $(cast keccak "MINTER_ROLE") \
   $MINTER_WALLET \
@@ -121,10 +121,10 @@ cast send $CONTRACT \
   --private-key $DEPLOYER_KEY
 
 # Grant AGENT_ROLE to Python backend wallet
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "grantRole(bytes32,address)" \
   $(cast keccak "AGENT_ROLE") \
-  $AGENT_WALLET \
+  $AGENT_ADDRESS \
   --rpc-url $SEPOLIA_RPC \
   --private-key $DEPLOYER_KEY
 ```
@@ -155,16 +155,17 @@ cid = eep.upload_metadata_to_ipfs(initial_state)
 print(f"Metadata CID: {cid}")
 
 # Mint on-chain
+minter = w3.eth.account.from_key(os.getenv("DEPLOYER_KEY"))
 tx = contract.functions.mint(
     os.getenv("RECIPIENT_ADDRESS"),
     "001",
     cid
 ).build_transaction({
-    "from": os.getenv("MINTER_ADDRESS"),
-    "nonce": w3.eth.get_transaction_count(os.getenv("MINTER_ADDRESS")),
+    "from": minter.address,
+    "nonce": w3.eth.get_transaction_count(minter.address),
 })
 
-signed = w3.eth.account.sign_transaction(tx, os.getenv("MINTER_KEY"))
+signed = w3.eth.account.sign_transaction(tx, os.getenv("DEPLOYER_KEY"))
 tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
 print(f"Minted: https://sepolia.etherscan.io/tx/{tx_hash.hex()}")
 ```
@@ -201,7 +202,7 @@ forge script script/Deploy.s.sol \
 **After deploy:** immediately transfer `DEFAULT_ADMIN_ROLE` from the hot deployer wallet to the Gnosis Safe:
 
 ```bash
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "grantRole(bytes32,address)" \
   "0x0000000000000000000000000000000000000000000000000000000000000000" \
   $GNOSIS_SAFE \
@@ -209,7 +210,7 @@ cast send $CONTRACT \
   --private-key $DEPLOYER_KEY
 
 # Revoke admin from the deployer hot wallet
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "revokeRole(bytes32,address)" \
   "0x0000000000000000000000000000000000000000000000000000000000000000" \
   $DEPLOYER_ADDRESS \
@@ -273,7 +274,7 @@ git commit -m "chore: add deployed contract addresses"
 If a vulnerability is discovered, the admin multisig can freeze all mints and evolutions:
 
 ```bash
-cast send $CONTRACT "pause()" \
+cast send $CONTRACT_ADDRESS "pause()" \
   --rpc-url $MAINNET_RPC \
   --private-key $ADMIN_KEY
 ```
@@ -283,7 +284,7 @@ This immediately blocks all `mint()` and `evolve()` calls. Ownership transfers a
 ### Unpause
 
 ```bash
-cast send $CONTRACT "unpause()" \
+cast send $CONTRACT_ADDRESS "unpause()" \
   --rpc-url $MAINNET_RPC \
   --private-key $ADMIN_KEY
 ```
@@ -291,10 +292,10 @@ cast send $CONTRACT "unpause()" \
 ### Revoke a compromised agent key
 
 ```bash
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "revokeRole(bytes32,address)" \
   $(cast keccak "AGENT_ROLE") \
-  $COMPROMISED_AGENT_WALLET \
+  $COMPROMISED_AGENT_ADDRESS \
   --rpc-url $MAINNET_RPC \
   --private-key $ADMIN_KEY
 ```
@@ -302,10 +303,10 @@ cast send $CONTRACT \
 Grant a new agent key immediately after:
 
 ```bash
-cast send $CONTRACT \
+cast send $CONTRACT_ADDRESS \
   "grantRole(bytes32,address)" \
   $(cast keccak "AGENT_ROLE") \
-  $NEW_AGENT_WALLET \
+  $NEW_AGENT_ADDRESS \
   --rpc-url $MAINNET_RPC \
   --private-key $ADMIN_KEY
 ```

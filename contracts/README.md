@@ -37,7 +37,7 @@ Core dNFT contract. ERC-721 with dynamic per-token metadata.
 - **EVOLVE_COOLDOWN = 1 hour** — rate-limits agent backend, protects against compromised keys
 - **AGENT_ROLE ≠ MINTER_ROLE** — separation of duties; agent can only evolve, not mint
 - **evolutionStage mapping** — on-chain source of truth (1=Baby → 6=Quantum)
-- **petId mapping** — links tokenId → off-chain `pet_id` (e.g. `spider_001`)
+- **petId mapping** — links tokenId → off-chain `pet_id` (recommended canonical IDs like `001`; API also supports aliases like `spider_001`)
 
 ## Deployment (Sepolia Testnet)
 

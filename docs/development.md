@@ -223,6 +223,9 @@ forge script script/Deploy.s.sol \
 
 ### Adding a new EEP
 
+`eeps/squad.json` is the source of truth.  
+`docs/BROskiPets_all_EEPs_MetaData` is a docs mirror and must stay byte-for-byte equivalent at the JSON data level.
+
 1. Add entry to `eeps/squad.json`:
    ```json
    {
@@ -234,8 +237,9 @@ forge script script/Deploy.s.sol \
      "rarity": "Common"
    }
    ```
-2. Create personality prompt in `eeps/personalities/` (Phase 2)
-3. Add art assets to `assets/` (Phase 1)
+2. Update `MAX_SUPPLY` in `contracts/EEPVengers.sol` and redeploy (the shipped contract hard-caps at 78).
+3. Create personality prompt in `eeps/personalities/` (future)
+4. Add art assets to `assets/` (future)
 
 ---
 
@@ -281,6 +285,7 @@ slither . --exclude-dependencies
 | `SEPOLIA_RPC` | *(empty)* | For deployment | Sepolia RPC endpoint |
 | `DEPLOYER_KEY` | *(empty)* | For deployment | Wallet private key |
 | `CONTRACT_ADDRESS` | *(empty)* | For agent → chain | Deployed contract address |
+| `AGENT_KEY` | *(empty)* | For agent → chain | Agent wallet private key (must have `AGENT_ROLE`) |
 
 ---
 
@@ -295,9 +300,15 @@ docker compose exec redis redis-cli -a "$REDIS_PASSWORD" FLUSHALL
 **Restart Ollama (re-download model):**
 
 ```bash
-docker compose down ollama
-docker volume rm bropetslllm-dnft_ollama_models
-docker compose up ollama
+docker compose down
+
+# Find the Ollama model volume (it will look like: <project>_ollama_models)
+docker volume ls
+
+# Remove it to force a fresh model pull on next start
+docker volume rm <project>_ollama_models
+
+docker compose up -d ollama
 ```
 
 **Full reset:**

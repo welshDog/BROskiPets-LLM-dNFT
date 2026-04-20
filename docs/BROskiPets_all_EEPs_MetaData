@@ -1,5 +1,5 @@
-  
-  {"id": "001", "name": "SpiderEep", "species": "Spider", "role": "Lead Hero", "power": "Debug crawler, web-crawl agent", "rarity": "Legendary"}
+[
+  {"id": "001", "name": "SpiderEep", "species": "Spider", "role": "Lead Hero", "power": "Debug crawler, web-crawl agent", "rarity": "Legendary"},
   {"id": "002", "name": "VenomEep", "species": "Venom", "role": "Security King", "power": "Prompt injection defender", "rarity": "Legendary"},
   {"id": "003", "name": "IronEep", "species": "Iron", "role": "Code Tank", "power": "CI/CD enforcer, armoured deploys", "rarity": "Rare"},
   {"id": "004", "name": "SquidEep", "species": "Squid", "role": "Bug Ink", "power": "Chaos monkey, test injector", "rarity": "Rare"},
@@ -77,3 +77,4 @@
   {"id": "076", "name": "HamsterEep", "species": "Hamster", "role": "Wheel Runner", "power": "Infinite loop debugger", "rarity": "Common"},
   {"id": "077", "name": "Goldfish EEP", "species": "Goldfish", "role": "Short Memory", "power": "Stateless request handler", "rarity": "Common"},
   {"id": "078", "name": "WelshDogEep", "species": "Welsh Dog", "role": "Creator", "power": "Builds ALL other EEPs — master architect", "rarity": "Quantum"}
+]

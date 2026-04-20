@@ -72,7 +72,7 @@ docker compose up
 # First run pulls ~4 GB of models — grab a coffee
 ```
 
-Visit `http://localhost:8080` when all services are healthy.
+Visit `http://localhost:8080` when all services are healthy. If port `8080` is in use on your machine, change the API port mapping in `docker-compose.yml` or run Uvicorn on `8081`.
 
 ### 2 — Interact with a pet
 
@@ -80,7 +80,7 @@ Visit `http://localhost:8080` when all services are healthy.
 from agent import BROskiPet
 
 spider = BROskiPet(
-    pet_id="spider_001",
+    pet_id="001",
     name="SpiderEep",
     species="Spider",
     personality="brave, curious, slightly sarcastic",
@@ -99,7 +99,7 @@ print(spider.chat("Find me some bugs!"))
 from metadata import EEPMetadata
 
 eep = EEPMetadata(
-    pet_id="spider_001",
+    pet_id="001",
     name="SpiderEep",
     species="Spider",
     rarity="Legendary",
@@ -220,6 +220,12 @@ PINATA_JWT=your_pinata_jwt_here
 
 # IPFS Gateway (for metadata resolution)
 IPFS_GATEWAY=https://gateway.pinata.cloud/ipfs
+
+# Blockchain (Sepolia)
+SEPOLIA_RPC=https://eth-sepolia.g.alchemy.com/v2/YOUR_KEY
+DEPLOYER_KEY=0x...your_testnet_private_key...
+CONTRACT_ADDRESS=0x...deployed_contract_address...
+AGENT_KEY=0x...agent_private_key_with_AGENT_ROLE...
 ```
 
 > Get a free Pinata JWT at [app.pinata.cloud/developers/api-keys](https://app.pinata.cloud/developers/api-keys)

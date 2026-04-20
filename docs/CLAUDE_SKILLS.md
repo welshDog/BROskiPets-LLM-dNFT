@@ -235,25 +235,22 @@ maxmemory-policy allkeys-lru  # Evict old pet states if needed
 
 | Phase | Focus | Key Deliverable |
 |-------|-------|----------------|
-| 1 | Smart contract + IPFS schema | Deployed ERC-721 on Base testnet |
-| 2 | LLM decision pipeline | `/evolve` FastAPI endpoint live |
-| 3 | Chainlink VRF + Automation | Random trait rolls working |
+| 1 | Smart contract + IPFS schema | Deployed ERC-721 on Sepolia testnet |
+| 2 | HTTP API surface | FastAPI pet endpoints stable (`/pet/{pet_id}/*`) |
+| 3 | Visual asset pipeline | Image strategy locked + asset upload plan |
 | 4 | Frontend dApp | Wallet connect + pet gallery |
 | 5 | Security audit | Slither clean + red-team passed |
-| 6 | Mainnet launch | 78 EEPs minted 🎉 |
+| 6 | Mainnet launch | 78 EEPs minted |
 
 ---
 
 ## 📚 Key References
 
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)
-- [Chainlink VRF v2.5 Docs](https://docs.chain.link/vrf)
-- [Chainlink Automation Docs](https://docs.chain.link/chainlink-automation)
 - [Pinata Python SDK](https://docs.pinata.cloud/sdks/pinata-sdk/getting-started)
 - [Foundry Book](https://book.getfoundry.sh/)
 - [wagmi v2 Docs](https://wagmi.sh/)
 - [The Graph Docs](https://thegraph.com/docs/)
-- [Base Chain Docs](https://docs.base.org/)
 
 ---
 
