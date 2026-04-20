@@ -54,7 +54,7 @@ def _load_local_env_file() -> None:
 
 _load_local_env_file()
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -62,10 +62,14 @@ from agent import BROskiPet, load_squad
 from metadata import EEPMetadata
 from api.chain import call_evolve_onchain
 
+from rewards.ledger import RewardsLedger
+from rewards.rules import decide_chat_reward, decide_evolve_reward, decide_feed_reward
+
 # ── Squad index + lifespan ────────────────────────────────────────────────────
 
 _squad_index: dict[str, dict] = {}
 _pet_alias_index: dict[str, str] = {}
+_rewards_ledger = RewardsLedger()
 
 
 @asynccontextmanager
@@ -176,6 +180,7 @@ class ChatResponse(BaseModel):
     name: str
     response: str
     state: dict
+    reward: Optional[dict] = None
 
 
 class FeedResponse(BaseModel):
@@ -183,6 +188,12 @@ class FeedResponse(BaseModel):
     name: str
     result: str
     state: dict
+    reward: Optional[dict] = None
+
+
+class FeedRequest(BaseModel):
+    action: Optional[str] = Field(None, description="feed|like|comment|share|post")
+    target_id: Optional[str] = Field(None, description="Optional HyperCode entity id (post/comment/etc.)")
 
 
 class EvolveRequest(BaseModel):
@@ -198,6 +209,7 @@ class EvolveResponse(BaseModel):
     level_name: str
     tx_hash: Optional[str] = None   # None when AGENT_KEY / CONTRACT_ADDRESS not configured
     message: str
+    reward: Optional[dict] = None
 
 
 class PetStatus(BaseModel):
@@ -209,6 +221,25 @@ class PetStatus(BaseModel):
     xp: int
     needs: dict
     personality: str
+
+
+class AdminAwardRequest(BaseModel):
+    user_id: str = Field(..., min_length=1, max_length=128)
+    amount: int = Field(..., gt=0, description="BROski$ amount to award")
+    reason: str = Field(..., min_length=3, max_length=300)
+    pet_id: Optional[str] = Field(None, description="Optional associated pet id")
+    source: str = Field("manual_admin_grant", min_length=3, max_length=100)
+    vest_hours: int = Field(0, ge=0, le=24 * 30)
+    metadata: dict = Field(default_factory=dict)
+
+
+class AdminAwardResponse(BaseModel):
+    status: str
+    event_id: str
+    user_id: str
+    amount: int
+    balance: int
+    available_at: str
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -264,45 +295,125 @@ async def get_pet(pet_id: str):
 
 
 @app.post("/pet/{pet_id}/feed", response_model=FeedResponse, tags=["Pet"])
-async def feed_pet(pet_id: str):
+async def feed_pet(pet_id: str, request: Request, body: Optional[FeedRequest] = None):
     """
     Feed the pet.
 
     Reduces hunger by 20 (floor 0) and awards 10 XP.
     """
     canonical_id = _resolve_pet_id(pet_id)
-    _get_eep_data(canonical_id)  # validate pet exists
+    eep_data = _get_eep_data(canonical_id)  # validate pet exists
     pet = _make_pet(canonical_id)
     result = pet.feed()
+
+    reward = None
+    user_id = request.headers.get("x-user-id")
+    idempotency_key = request.headers.get("x-idempotency-key")
+    if user_id and idempotency_key:
+        decision = decide_feed_reward(
+            now=datetime.now(timezone.utc),
+            rarity=eep_data.get("rarity", "Common"),
+            action=(body.action if body else None) or "feed",
+        )
+        if decision:
+            event_id = f"feed:{user_id}:{canonical_id}:{decision.trigger}:{idempotency_key}"
+            applied = _rewards_ledger.apply_reward(
+                event_id=event_id,
+                user_id=user_id,
+                pet_id=canonical_id,
+                endpoint="/pet/{pet_id}/feed",
+                trigger=decision.trigger,
+                amount=decision.amount,
+                multiplier=decision.multiplier,
+                metadata={"action": (body.action if body else None) or "feed", "target_id": (body.target_id if body else None)},
+                limit_key=decision.limit_key,
+                limit_max_per_day=decision.limit_max_per_day,
+                vest_hours=decision.vest_hours,
+            )
+            reward = {
+                "status": applied.status,
+                "event_id": applied.event_id,
+                "amount": applied.final_amount,
+                "balance": applied.balance,
+                "available_at": applied.available_at,
+            }
+    elif user_id and not idempotency_key:
+        reward = {"status": "skipped_missing_idempotency"}
+
     return FeedResponse(
         pet_id=canonical_id,
         name=pet.name,
         result=result,
         state=pet.get_state(),
+        reward=reward,
     )
 
 
 @app.post("/pet/{pet_id}/chat", response_model=ChatResponse, tags=["Pet"])
-async def chat_with_pet(pet_id: str, body: ChatRequest):
+async def chat_with_pet(pet_id: str, body: ChatRequest, request: Request):
     """
     Send a message to the pet and get an LLM response.
 
     Input is checked against the VenomEep injection guard before reaching the LLM.
     """
     canonical_id = _resolve_pet_id(pet_id)
-    _get_eep_data(canonical_id)
+    eep_data = _get_eep_data(canonical_id)
     pet = _make_pet(canonical_id)
     response = pet.chat(body.message)
+
+    reward = None
+    user_id = request.headers.get("x-user-id")
+    idempotency_key = request.headers.get("x-idempotency-key")
+    blocked = "(blocked)" in response.lower()
+    if user_id and idempotency_key:
+        first_today_key = f"chat_first:{user_id}:{datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
+        already = len([e for e in _rewards_ledger.list_ledger(user_id, limit=200) if e.get("trigger") == "chat:first_today" and e.get("metadata", {}).get("day") == datetime.now(timezone.utc).strftime("%Y-%m-%d")]) > 0
+        decision = decide_chat_reward(
+            now=datetime.now(timezone.utc),
+            rarity=eep_data.get("rarity", "Common"),
+            message=body.message,
+            blocked=blocked,
+            is_first_message_today=not already,
+        )
+        if decision:
+            trigger = decision.trigger
+            if not already:
+                trigger = "chat:first_today"
+            event_id = f"chat:{user_id}:{canonical_id}:{trigger}:{idempotency_key}"
+            applied = _rewards_ledger.apply_reward(
+                event_id=event_id,
+                user_id=user_id,
+                pet_id=canonical_id,
+                endpoint="/pet/{pet_id}/chat",
+                trigger=trigger,
+                amount=decision.amount,
+                multiplier=decision.multiplier,
+                metadata={"message_len": len(body.message), "blocked": blocked, "day": datetime.now(timezone.utc).strftime("%Y-%m-%d")},
+                limit_key=decision.limit_key,
+                limit_max_per_day=decision.limit_max_per_day,
+                vest_hours=decision.vest_hours,
+            )
+            reward = {
+                "status": applied.status,
+                "event_id": applied.event_id,
+                "amount": applied.final_amount,
+                "balance": applied.balance,
+                "available_at": applied.available_at,
+            }
+    elif user_id and not idempotency_key:
+        reward = {"status": "skipped_missing_idempotency"}
     return ChatResponse(
         pet_id=canonical_id,
         name=pet.name,
         response=response,
         state=pet.get_state(),
+        reward=reward,
     )
 
 
+
 @app.post("/pet/{pet_id}/evolve", response_model=EvolveResponse, tags=["Evolution"])
-async def evolve_pet(pet_id: str, body: EvolveRequest):
+async def evolve_pet(pet_id: str, body: EvolveRequest, request: Request):
     """
     Trigger the full evolution pipeline:
       1. Get current pet state from Redis
@@ -331,6 +442,8 @@ async def evolve_pet(pet_id: str, body: EvolveRequest):
     )
 
     level_info = eep_meta.calculate_level(state.get("xp", 0))
+    previous_level = int(state.get("level", 1))
+    pet.update_state({"level": int(level_info["level"])})
 
     try:
         metadata_cid = eep_meta.upload_metadata_to_ipfs(state, image_cid=body.image_cid)
@@ -365,6 +478,115 @@ async def evolve_pet(pet_id: str, body: EvolveRequest):
         level_name=level_info["level_name"],
         tx_hash=tx_hash,
         message=f"{eep_data['name']} evolved to {level_info['level_name']}! {onchain_msg}",
+        reward=_maybe_reward_evolve(request, canonical_id, eep_data.get("rarity", "Common"), previous_level, int(level_info["level"])),
+    )
+
+
+def _maybe_reward_evolve(request: Request, pet_id: str, rarity: str, previous_level: int, new_level: int) -> Optional[dict]:
+    user_id = request.headers.get("x-user-id")
+    idempotency_key = request.headers.get("x-idempotency-key")
+    if not user_id:
+        return None
+    if not idempotency_key:
+        return {"status": "skipped_missing_idempotency"}
+
+    decision = decide_evolve_reward(
+        now=datetime.now(timezone.utc),
+        rarity=rarity,
+        previous_level=previous_level,
+        new_level=new_level,
+    )
+    if not decision:
+        return None
+
+    event_id = f"evolve:{user_id}:{pet_id}:{decision.trigger}:{idempotency_key}"
+    applied = _rewards_ledger.apply_reward(
+        event_id=event_id,
+        user_id=user_id,
+        pet_id=pet_id,
+        endpoint="/pet/{pet_id}/evolve",
+        trigger=decision.trigger,
+        amount=decision.amount,
+        multiplier=decision.multiplier,
+        metadata={"previous_level": previous_level, "new_level": new_level},
+        limit_key=decision.limit_key,
+        limit_max_per_day=decision.limit_max_per_day,
+        vest_hours=decision.vest_hours,
+    )
+    return {
+        "status": applied.status,
+        "event_id": applied.event_id,
+        "amount": applied.final_amount,
+        "balance": applied.balance,
+        "available_at": applied.available_at,
+    }
+
+
+@app.get("/rewards/balance", tags=["Rewards"])
+async def get_rewards_balance(request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        raise HTTPException(status_code=400, detail="Missing X-User-Id header")
+    return {"user_id": user_id, "balance": _rewards_ledger.get_balance(user_id)}
+
+
+@app.get("/rewards/ledger", tags=["Rewards"])
+async def get_rewards_ledger(request: Request, limit: int = 50):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        raise HTTPException(status_code=400, detail="Missing X-User-Id header")
+    limit = max(1, min(int(limit), 200))
+    return {"user_id": user_id, "entries": _rewards_ledger.list_ledger(user_id, limit=limit)}
+
+
+def _require_rewards_admin(request: Request) -> None:
+    expected = os.getenv("REWARDS_ADMIN_TOKEN", "").strip()
+    if not expected:
+        raise HTTPException(status_code=503, detail="REWARDS_ADMIN_TOKEN not configured")
+    got = request.headers.get("x-admin-token", "").strip()
+    if not got or got != expected:
+        raise HTTPException(status_code=403, detail="Forbidden: invalid admin token")
+
+
+@app.post("/rewards/award", response_model=AdminAwardResponse, tags=["Rewards"])
+async def rewards_award(body: AdminAwardRequest, request: Request):
+    """
+    Admin-only reward grant endpoint.
+
+    Required headers:
+      - X-Admin-Token
+      - X-Idempotency-Key
+    """
+    _require_rewards_admin(request)
+    idempotency_key = request.headers.get("x-idempotency-key", "").strip()
+    if not idempotency_key:
+        raise HTTPException(status_code=400, detail="Missing X-Idempotency-Key header")
+
+    event_id = f"admin:{body.source}:{body.user_id}:{idempotency_key}"
+    applied = _rewards_ledger.apply_reward(
+        event_id=event_id,
+        user_id=body.user_id,
+        pet_id=body.pet_id,
+        endpoint="/rewards/award",
+        trigger=f"admin:{body.source}",
+        amount=int(body.amount),
+        multiplier=1.0,
+        metadata={
+            "reason": body.reason,
+            "source": body.source,
+            **(body.metadata or {}),
+        },
+        limit_key=None,
+        limit_max_per_day=None,
+        vest_hours=int(body.vest_hours),
+    )
+    return AdminAwardResponse(
+        status=applied.status,
+        event_id=applied.event_id,
+        user_id=body.user_id,
+        amount=applied.final_amount,
+        balance=applied.balance,
+        available_at=applied.available_at,
     )
 
 

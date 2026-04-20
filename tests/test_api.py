@@ -161,6 +161,7 @@ async def test_feed_returns_result(client):
     assert data["pet_id"] == "001"
     assert "SpiderEep" in data["result"]
     assert "state" in data
+    assert "reward" not in data or data["reward"] is None or isinstance(data["reward"], dict)
 
 
 @pytest.mark.asyncio
@@ -200,6 +201,7 @@ async def test_chat_returns_response(client):
     assert isinstance(data["response"], str)
     assert len(data["response"]) > 0
     assert "state" in data
+    assert "reward" not in data or data["reward"] is None or isinstance(data["reward"], dict)
 
 
 @pytest.mark.asyncio
@@ -286,6 +288,7 @@ async def test_evolve_offline_mode_no_contract_address(client, monkeypatch):
     assert data["metadata_cid"] == "QmTestCID123"
     assert data["tx_hash"] is None
     assert "contract.evolve" in data["message"]
+    assert "reward" not in data or data["reward"] is None or isinstance(data["reward"], dict)
 
 
 @pytest.mark.asyncio
@@ -327,3 +330,52 @@ async def test_evolve_requires_pinata_jwt(client, monkeypatch):
     resp = await client.post("/pet/001/evolve", json={"token_id": 1})
     assert resp.status_code == 503
     assert "PINATA_JWT" in resp.json()["detail"]
+
+
+# ── /rewards/* ────────────────────────────────────────────────────────────────
+
+@pytest.mark.asyncio
+async def test_rewards_balance_requires_user_header(client):
+    resp = await client.get("/rewards/balance")
+    assert resp.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_rewards_award_requires_admin_token_config(client, monkeypatch):
+    monkeypatch.delenv("REWARDS_ADMIN_TOKEN", raising=False)
+    resp = await client.post(
+        "/rewards/award",
+        headers={"x-idempotency-key": "adm-1"},
+        json={"user_id": "u-admin", "amount": 10, "reason": "manual"},
+    )
+    assert resp.status_code == 503
+
+
+@pytest.mark.asyncio
+async def test_rewards_award_requires_valid_admin_token(client, monkeypatch):
+    monkeypatch.setenv("REWARDS_ADMIN_TOKEN", "super-secret")
+    resp = await client.post(
+        "/rewards/award",
+        headers={"x-idempotency-key": "adm-2", "x-admin-token": "wrong"},
+        json={"user_id": "u-admin", "amount": 10, "reason": "manual"},
+    )
+    assert resp.status_code == 403
+
+
+@pytest.mark.asyncio
+async def test_rewards_award_idempotent(client, monkeypatch):
+    monkeypatch.setenv("REWARDS_ADMIN_TOKEN", "super-secret")
+    headers = {"x-idempotency-key": "adm-3", "x-admin-token": "super-secret"}
+    payload = {"user_id": "u-admin", "amount": 25, "reason": "milestone grant", "vest_hours": 1}
+
+    r1 = await client.post("/rewards/award", headers=headers, json=payload)
+    r2 = await client.post("/rewards/award", headers=headers, json=payload)
+    assert r1.status_code == 200
+    assert r2.status_code == 200
+    d1, d2 = r1.json(), r2.json()
+    assert d1["status"] == "applied"
+    assert d2["status"] == "duplicate_ignored"
+
+    bal = await client.get("/rewards/balance", headers={"x-user-id": "u-admin"})
+    assert bal.status_code == 200
+    assert bal.json()["balance"] >= 25
