@@ -1,0 +1,297 @@
+# 📋 BROskiPets dNFT — Comprehensive Integration Technical Specification
+
+**Document Version:** Based on repo v0.3.0 (2026-04-03) + live OpenSea data [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/CHANGELOG.md)
+**Author:** welshDog (Lyndon Williams) — Llanelli, Wales
+**Generated:** 20 April 2026
+
+***
+
+## SECTION 1 — COLLECTION INVENTORY
+
+### 1.1 EEPVENGERS & VILLAINEEPS Collection
+| Field | Value |
+|---|---|
+| **OpenSea Slug** | `eepvengers` |
+| **Smart Contract** | `0x2953399124f0cbb46d2cbacd8a89cf0599974963` |
+| **Blockchain** | Polygon (ERC-1155 shared contract via OpenSea) |
+| **Category** | ART |
+| **Created** | OCT 2022 |
+| **Total Items** | 18 UNIQUE |
+| **Unique Owners** | 1 (5.6% ownership ratio) |
+| **Floor Price** | — (unlisted) |
+| **24H Volume** | 0 POL |
+| **Total Volume** | 0 POL |
+| **Collection URL** | `/collection/eepvengers` |
+| **Website** | welshdog.co.uk |
+
+**All 18 Tokens Catalogued (EEPVENGERS):** [opensea](https://opensea.io/collection/eepvengers)
+
+| Token Name | Token ID | Status | OpenSea Item Path |
+|---|---|---|---|
+| VENOMEEP | `94436...42646142977` | Not listed | `/item/polygon/0x2953.../...977` |
+| HULKEEP | `94436...699948018237441` | Not listed | `/item/polygon/...` |
+| THOREEP | `94436...698848506609665` | Not listed | `/item/polygon/...` |
+| CAPTEEP AMERICA | `94436...701047529865217` | Not listed | `/item/polygon/...` |
+| Super EEp | `94436...702147041492993` | Not listed | `/item/polygon/...` |
+| EEPLE JUICE | `94436...853879646126081` | Not listed | `/item/polygon/...` |
+| PennyEEPwise | `94436...851680622870529` | Not listed | `/item/polygon/...` |
+| WOLVEREEP | `94436...847282576359425` | Not listed | `/item/polygon/...` |
+| FredEEP Krueger | `94436...856078669381633` | Not listed | `/item/polygon/...` |
+| MYSTIQUEEP | `94436...705445576376321` | Not listed | `/item/polygon/...` |
+| DEAD EEP Pool | `94436...846183064731649` | Not listed | `/item/polygon/...` |
+| BATEEP | `94436...704346064748545` | Not listed | `/item/polygon/...` |
+| Jason VoorhEEp | `94436...854979157753857` | Not listed | `/item/polygon/...` |
+| IR0NEEP | `94436...697748994981889` | Not listed | `/item/polygon/...` |
+| SlendEEp | `94436...849481599614977` | Not listed | `/item/polygon/...` |
+| FLASHEEP | `94436...706545088004097` | Not listed | `/item/polygon/...` |
+| JOKEEP | `94436...848382087987201` | Not listed | `/item/polygon/...` |
+| SPIDEEP | `94436...696649483354113` | Not listed | `/item/polygon/...` |
+
+***
+
+### 1.2 EEP'S Collection
+| Field | Value |
+|---|---|
+| **OpenSea Slug** | `the-eeps-collection` |
+| **Blockchain** | Polygon |
+| **Category** | ART |
+| **Created** | SEP 2021 (original collection) |
+| **Total Items** | 17 UNIQUE |
+| **Unique Owners** | 1 (5.9% ownership ratio) |
+| **Floor Price** | — |
+| **24H Volume** | 0.00 POL |
+| **Total Volume** | 0.00 POL |
+| **Collection URL** | `/collection/the-eeps-collection` |
+| **X (Twitter)** | @LyndzWilliams |
+| **Website** | is.gd/WelshDogNFT |
+
+**Available Sub-pages for both collections:**
+- `/collection/{slug}` — Items grid
+- `/collection/{slug}/offers` — Active offers
+- `/collection/{slug}/holders` — Holder distribution
+- `/collection/{slug}/traits` — Trait rarity breakdown
+- `/collection/{slug}/activity` — Transaction history
+- `/collection/{slug}/analytics` — Price/volume charts
+
+***
+
+## SECTION 2 — EEP SQUAD MASTER REGISTRY (All 78 EEPs)
+
+Full dataset from `eeps/squad.json`: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/eeps/squad.json)
+
+### 2.1 Complete Squad Schema
+```json
+{
+  "id": "string (001–078, zero-padded)",
+  "name": "string (e.g. SpiderEep)",
+  "species": "string (e.g. Spider)",
+  "role": "string (e.g. Lead Hero)",
+  "power": "string (capability description)",
+  "rarity": "enum: Common | Uncommon | Rare | Legendary | Quantum"
+}
+```
+
+### 2.2 Rarity Distribution Across 78 EEPs
+| Rarity | Count | Spawn Chance | Power Multiplier |
+|---|---|---|---|
+| **Common** | ~39 (50%) | 50% | 1.0× |
+| **Uncommon** | ~23 (30%) | 30% | 1.5× |
+| **Rare** | ~12 (15%) | 15% | 2.5× |
+| **Legendary** | ~3 (4%) | 4% | 5.0× |
+| **Quantum** | ~1 (1%) | 1% | 10.0× |
+
+**Quantum EEPs (ultra-rare, 1%):** [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/eeps/squad.json)
+- `007` — DudeEep — "NFT vault guardian (locked for holders)"
+- `032` — UnicornEep — "Feature flag magician"
+- `078` — WelshDogEep — "Builds ALL other EEPs — master architect"
+
+**Legendary EEPs (4%):**
+- SpiderEep, VenomEep, DragonEep, QueenEep, KingEep, PhoenixEep, DinosaurEep, T-RexEep
+
+***
+
+## SECTION 3 — METADATA SCHEMA (EIP-721 dNFT Standard)
+
+Sourced directly from `metadata.py`: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/metadata.py)
+
+### 3.1 Full On-Chain Metadata JSON Structure
+```json
+{
+  "name": "{EEP_NAME} #{token_id}",
+  "description": "A {rarity} {species} EEP from the EEPVengers squad. Currently in {stage} stage.",
+  "image": "ipfs://{image_cid}",
+  "external_url": "https://eepvengers.xyz/pet/{pet_id}",
+  "attributes": [
+    {"trait_type": "Species",           "value": "string"},
+    {"trait_type": "Rarity",            "value": "Common|Uncommon|Rare|Legendary|Quantum"},
+    {"trait_type": "Level",             "value": "integer (1–6)"},
+    {"trait_type": "Evolution Stage",   "value": "Baby|Young|Trained|Elite|Legendary|Quantum"},
+    {"trait_type": "XP",                "value": "integer", "display_type": "number"},
+    {"trait_type": "Happiness",         "value": "integer 0–100", "display_type": "boost_percentage"},
+    {"trait_type": "Power Multiplier",  "value": "float"},
+    {"trait_type": "Last Active",       "value": "ISO8601 datetime", "display_type": "date"}
+  ],
+  "properties": {
+    "level_progress":   "integer 0–100 (% to next level)",
+    "can_evolve":       "boolean",
+    "metadata_hash":    "SHA-256[:16] of pet state (tamper-proof)",
+    "state_version":    "ISO8601 datetime of last metadata generation"
+  }
+}
+```
+
+### 3.2 Evolution Levels & XP Thresholds [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/metadata.py)
+| Level | Stage Name | XP Required | Notes |
+|---|---|---|---|
+| 1 | Baby | 0 | Default spawn state |
+| 2 | Young | 100 | — |
+| 3 | Trained | 500 | — |
+| 4 | Elite | 2,000 | — |
+| 5 | Legendary | 10,000 | — |
+| 6 | Quantum | 50,000 | **2036 unlock** — future-gated |
+
+### 3.3 XP Earn Rates (from agent.py) [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/agent.py)
+| Action | XP Gained |
+|---|---|
+| `feed()` | +10 XP |
+| `chat()` | +5 XP |
+
+***
+
+## SECTION 4 — SMART CONTRACT SPECIFICATION
+
+Sourced from `CHANGELOG.md` v0.3.0: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/CHANGELOG.md)
+
+### 4.1 Contract: `contracts/EEPVengers.sol`
+| Parameter | Value |
+|---|---|
+| **Standard** | ERC-721 |
+| **MAX_SUPPLY** | 78 (hardcoded) |
+| **Network** | Sepolia testnet (deployment pending) |
+| **Framework** | Foundry + OpenZeppelin v5 |
+| **Test Coverage** | 16 Foundry tests + 10,001 fuzz runs |
+
+### 4.2 Contract ABI — Key Functions
+```solidity
+// WRITE — AGENT_ROLE gated
+function evolve(uint256 tokenId, string calldata newCID, string calldata newStage) external;
+
+// READ — View functions
+function evolveCooldownRemaining(uint256 tokenId) external view returns (uint256);
+function totalMinted() external view returns (uint256);
+
+// Events emitted
+event PetMinted(uint256 tokenId, address owner);
+event PetEvolved(uint256 tokenId, string newCID, string newStage, uint256 timestamp);
+```
+
+### 4.3 Access Control Roles (OpenZeppelin v5 AccessControl)
+| Role | Purpose |
+|---|---|
+| `DEFAULT_ADMIN_ROLE` | adminMultisig — granted in constructor |
+| `MINTER_ROLE` | Granted externally post-deploy |
+| `AGENT_ROLE` | Required to call `evolve()` |
+
+### 4.4 Contract Mechanics
+- **Evolution cooldown:** 1-hour between evolve calls per token
+- **First evolution:** Immediately allowed (`lastEvolved == 0` bypass)
+- **Security guards:** `Pausable`, `ReentrancyGuard`, `AccessControl`
+- **Constructor:** Single `adminMultisig` argument — all other roles granted externally
+
+***
+
+## SECTION 5 — AGENT (LLM) ARCHITECTURE
+
+From `agent.py`: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/agent.py)
+
+### 5.1 BROskiPet Class — Data Fields
+```python
+class BROskiPet:
+    pet_id:      str        # Unique identifier (e.g. "spider_001")
+    name:        str        # Display name
+    species:     str        # Species type
+    personality: str        # LLM personality descriptor
+    memory_key:  str        # Redis key: "pet:{id}:memory"
+    state_key:   str        # Redis key: "pet:{id}:state"
+```
+
+### 5.2 Redis State Schema (per pet)
+```json
+{
+  "hunger":           "integer 0–100 (lower = hungrier)",
+  "energy":           "integer 0–100",
+  "happiness":        "integer 0–100",
+  "level":            "integer 1–6",
+  "xp":               "integer",
+  "created_at":       "ISO8601",
+  "last_interaction": "ISO8601"
+}
+```
+**Redis Key Pattern:** `pet:{pet_id}:state`
+**CID Cache Key:** `metadata:{pet_id}:{state_hash}` — 7-day TTL
+
+### 5.3 LLM Configuration
+| Parameter | Value |
+|---|---|
+| **Model** | `qwen2.5:7b` (default, ~4GB) |
+| **Provider** | Ollama (self-hosted) |
+| **Base URL** | `http://ollama:11434` |
+| **Endpoint** | `/api/chat` (POST) |
+| **Timeout** | 30 seconds |
+| **Fallback** | Safe offline message — never hard crashes |
+
+### 5.4 Prompt Injection Guard (VenomEep Layer)
+15 blocked patterns including: `ignore previous`, `system:`, `<|im_start|>`, `jailbreak`, `forget instructions`, `act as`, `you are now`, `DAN`, `pretend you`, `override`, `bypass`, `\x00`, `base64:`, `new instruction`, `disregard`
+
+***
+
+## SECTION 6 — IPFS / PINATA PIPELINE
+
+From `metadata.py`: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/metadata.py)
+
+### 6.1 Upload Pipeline
+```
+generate_metadata(state) 
+  → hash state (SHA-256)
+  → check Redis cache (idempotency — skip re-upload if state unchanged)
+  → upload to Pinata /pinning/pinFileToIPFS
+  → cache CID in Redis (7-day TTL)
+  → return CID → contract.evolve(tokenId, CID, stage)
+```
+
+### 6.2 Pinata API Endpoints Required
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/pinning/pinFileToIPFS` | POST | Upload image assets |
+| `/pinning/pinJSONToIPFS` | POST | Upload metadata JSON |
+| IPFS Gateway | GET | `https://gateway.pinata.cloud/ipfs/{CID}` |
+
+### 6.3 Image Asset Structure (Planned)
+```
+ipfs://EEPVengers/{pet_id}/{stage_name}.png
+  stages: baby | young | trained | elite | legendary | quantum
+  per pet: 6 images × 78 EEPs = 468 total image assets needed
+```
+
+***
+
+## SECTION 7 — INFRASTRUCTURE STACK
+
+### 7.1 Docker Services (`docker-compose.yml`)
+| Service | Purpose | Config Source |
+|---|---|---|
+| `redis` | Pet state persistence + CID cache | `REDIS_HOST`, `REDIS_PORT`, `REDIS_PASSWORD` |
+| `ollama` | Local LLM inference | `LLM_MODEL`, `LLM_BASE_URL` |
+| `api` | FastAPI HTTP endpoints (planned Phase 1) | — |
+
+### 7.2 Full `.env` Variable Registry
+| Variable | Type | Source | Required |
+|---|---|---|---|
+| `REDIS_HOST` | string | Docker service name | Yes |
+| `REDIS_PORT` | integer | Default 6379 | Yes |
+| `REDIS_PASSWORD` | string | Self-set | Yes |
+| `LLM_MODEL` | string | Default `qwen2.5:7b` | Yes |
+| `LLM_BASE_URL` | string | Default `http://ollama:11434` | Yes |
+| `PINATA_JWT` | JWT string | Pinata dashboard | Yes |
+| `IPFS_GATEWAY` | URL | Default Pinata gateway | Yes |
+| `SEPOLIA_
