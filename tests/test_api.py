@@ -28,6 +28,15 @@ def patch_ollama(monkeypatch):
     monkeypatch.setattr(ag, "_call_ollama", lambda s, u, n: f"*{n} wags tail* Woof!")
 
 
+@pytest.fixture(autouse=True)
+def isolate_rewards_ledger(monkeypatch, tmp_path):
+    from rewards.ledger import RewardsLedger
+    import api.main as api_main
+
+    ledger = RewardsLedger(db_path=str(tmp_path / "rewards.db"))
+    monkeypatch.setattr(api_main, "_rewards_ledger", ledger)
+
+
 from api.main import app
 
 
