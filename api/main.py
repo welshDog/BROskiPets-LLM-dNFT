@@ -28,6 +28,32 @@ from typing import Optional
 # Add project root to path so we can import agent / metadata
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
+
+def _load_local_env_file() -> None:
+    """
+    Load key=value pairs from project .env into os.environ (without overriding).
+
+    This runs before importing modules that read env vars at import-time.
+    """
+    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+    if not os.path.exists(env_path):
+        return
+
+    with open(env_path, "r", encoding="utf-8") as env_file:
+        for raw_line in env_file:
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key:
+                os.environ.setdefault(key, value)
+
+
+_load_local_env_file()
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -39,6 +65,7 @@ from api.chain import call_evolve_onchain
 # ── Squad index + lifespan ────────────────────────────────────────────────────
 
 _squad_index: dict[str, dict] = {}
+_pet_alias_index: dict[str, str] = {}
 
 
 @asynccontextmanager
@@ -46,7 +73,33 @@ async def lifespan(app):
     """Index the squad JSON by pet_id for O(1) lookup on startup."""
     squad = load_squad("eeps/squad.json")
     for eep in squad:
-        _squad_index[eep["id"]] = eep
+        canonical_id = str(eep["id"])
+        _squad_index[canonical_id] = eep
+
+        # Support multiple input styles: 001, 1, SpiderEep, spider_eep, spider_001
+        name = str(eep.get("name", "")).strip().lower()
+        species = str(eep.get("species", "")).strip().lower()
+        canonical_num = canonical_id.lstrip("0") or "0"
+
+        aliases = {
+            canonical_id.lower(),
+            canonical_num,
+            name,
+            name.replace(" ", ""),
+            name.replace(" ", "_"),
+            name.replace(" ", "-"),
+            species,
+            species.replace(" ", ""),
+            species.replace(" ", "_"),
+            species.replace(" ", "-"),
+            f"{species.replace(' ', '')}_{canonical_id}",
+            f"{species.replace(' ', '_')}_{canonical_id}",
+            f"{name.replace(' ', '')}_{canonical_id}",
+            f"{name.replace(' ', '_')}_{canonical_id}",
+        }
+
+        for alias in aliases:
+            _pet_alias_index[alias] = canonical_id
     yield
     # (shutdown logic goes here if needed)
 
@@ -70,8 +123,32 @@ app.add_middleware(
 )
 
 
+def _resolve_pet_id(pet_id: str) -> str:
+    """Resolve user input pet_id to canonical squad ID (e.g. spider_001 -> 001)."""
+    cleaned = pet_id.strip()
+    if cleaned in _squad_index:
+        return cleaned
+
+    alias_hit = _pet_alias_index.get(cleaned.lower())
+    if alias_hit:
+        return alias_hit
+
+    # Common pattern: "<label>_<number>" where number may be non-padded.
+    if "_" in cleaned:
+        suffix = cleaned.rsplit("_", 1)[-1]
+        if suffix.isdigit():
+            candidate = suffix.zfill(3)
+            if candidate in _squad_index:
+                return candidate
+
+    raise HTTPException(
+        status_code=404,
+        detail=f"EEP '{pet_id}' not found. Try canonical IDs like '001' or aliases like 'spider_001'.",
+    )
+
+
 def _get_eep_data(pet_id: str) -> dict:
-    """Return squad entry or raise 404."""
+    """Return squad entry from canonical ID."""
     if pet_id not in _squad_index:
         raise HTTPException(status_code=404, detail=f"EEP '{pet_id}' not found in squad")
     return _squad_index[pet_id]
@@ -170,11 +247,12 @@ async def get_squad_by_rarity(rarity: str):
 @app.get("/pet/{pet_id}", response_model=PetStatus, tags=["Pet"])
 async def get_pet(pet_id: str):
     """Get full status for a single pet."""
-    eep_data = _get_eep_data(pet_id)
-    pet = _make_pet(pet_id)
+    canonical_id = _resolve_pet_id(pet_id)
+    eep_data = _get_eep_data(canonical_id)
+    pet = _make_pet(canonical_id)
     status = pet.get_status()
     return PetStatus(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         name=status["name"],
         species=status["species"],
         rarity=eep_data.get("rarity", "Common"),
@@ -192,11 +270,12 @@ async def feed_pet(pet_id: str):
 
     Reduces hunger by 20 (floor 0) and awards 10 XP.
     """
-    _get_eep_data(pet_id)  # validate pet exists
-    pet = _make_pet(pet_id)
+    canonical_id = _resolve_pet_id(pet_id)
+    _get_eep_data(canonical_id)  # validate pet exists
+    pet = _make_pet(canonical_id)
     result = pet.feed()
     return FeedResponse(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         name=pet.name,
         result=result,
         state=pet.get_state(),
@@ -210,11 +289,12 @@ async def chat_with_pet(pet_id: str, body: ChatRequest):
 
     Input is checked against the VenomEep injection guard before reaching the LLM.
     """
-    _get_eep_data(pet_id)
-    pet = _make_pet(pet_id)
+    canonical_id = _resolve_pet_id(pet_id)
+    _get_eep_data(canonical_id)
+    pet = _make_pet(canonical_id)
     response = pet.chat(body.message)
     return ChatResponse(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         name=pet.name,
         response=response,
         state=pet.get_state(),
@@ -234,15 +314,16 @@ async def evolve_pet(pet_id: str, body: EvolveRequest):
     The caller is responsible for submitting the on-chain transaction.
     Requires PINATA_JWT environment variable.
     """
-    eep_data = _get_eep_data(pet_id)
-    pet = _make_pet(pet_id)
+    canonical_id = _resolve_pet_id(pet_id)
+    eep_data = _get_eep_data(canonical_id)
+    pet = _make_pet(canonical_id)
     state = pet.get_state()
 
     if not state:
-        raise HTTPException(status_code=404, detail=f"No Redis state found for pet '{pet_id}'")
+        raise HTTPException(status_code=404, detail=f"No Redis state found for pet '{canonical_id}'")
 
     eep_meta = EEPMetadata(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         name=eep_data["name"],
         species=eep_data["species"],
         rarity=eep_data.get("rarity", "Common"),
@@ -277,7 +358,7 @@ async def evolve_pet(pet_id: str, body: EvolveRequest):
         raise HTTPException(status_code=502, detail=str(e))
 
     return EvolveResponse(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         token_id=body.token_id,
         metadata_cid=metadata_cid,
         new_stage=level_info["level"],
@@ -295,15 +376,16 @@ async def get_pet_metadata(pet_id: str, token_id: int = 1):
     Does NOT upload to IPFS — use /evolve for the full pipeline.
     Useful for previewing what the next on-chain metadata will look like.
     """
-    eep_data = _get_eep_data(pet_id)
-    pet = _make_pet(pet_id)
+    canonical_id = _resolve_pet_id(pet_id)
+    eep_data = _get_eep_data(canonical_id)
+    pet = _make_pet(canonical_id)
     state = pet.get_state()
 
     if not state:
-        raise HTTPException(status_code=404, detail=f"No Redis state found for pet '{pet_id}'")
+        raise HTTPException(status_code=404, detail=f"No Redis state found for pet '{canonical_id}'")
 
     eep_meta = EEPMetadata(
-        pet_id=pet_id,
+        pet_id=canonical_id,
         name=eep_data["name"],
         species=eep_data["species"],
         rarity=eep_data.get("rarity", "Common"),

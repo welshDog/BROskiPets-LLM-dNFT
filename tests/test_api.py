@@ -36,16 +36,41 @@ from api.main import app
 @pytest_asyncio.fixture
 async def client():
     # Lifespan events don't fire with ASGITransport — populate squad index directly
-    from api.main import _squad_index
+    from api.main import _pet_alias_index, _squad_index
     from agent import load_squad
     squad = load_squad("eeps/squad.json")
     for eep in squad:
-        _squad_index[eep["id"]] = eep
+        canonical_id = str(eep["id"])
+        _squad_index[canonical_id] = eep
+
+        name = str(eep.get("name", "")).strip().lower()
+        species = str(eep.get("species", "")).strip().lower()
+        canonical_num = canonical_id.lstrip("0") or "0"
+
+        aliases = {
+            canonical_id.lower(),
+            canonical_num,
+            name,
+            name.replace(" ", ""),
+            name.replace(" ", "_"),
+            name.replace(" ", "-"),
+            species,
+            species.replace(" ", ""),
+            species.replace(" ", "_"),
+            species.replace(" ", "-"),
+            f"{species.replace(' ', '')}_{canonical_id}",
+            f"{species.replace(' ', '_')}_{canonical_id}",
+            f"{name.replace(' ', '')}_{canonical_id}",
+            f"{name.replace(' ', '_')}_{canonical_id}",
+        }
+        for alias in aliases:
+            _pet_alias_index[alias] = canonical_id
 
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as c:
         yield c
 
     _squad_index.clear()
+    _pet_alias_index.clear()
 
 
 # ── /health ───────────────────────────────────────────────────────────────────
@@ -117,6 +142,15 @@ async def test_get_pet_not_found(client):
     assert resp.status_code == 404
 
 
+@pytest.mark.asyncio
+async def test_get_pet_alias_resolves_to_canonical_id(client):
+    resp = await client.get("/pet/spider_001")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["pet_id"] == "001"
+    assert data["name"] == "SpiderEep"
+
+
 # ── /pet/{pet_id}/feed ────────────────────────────────────────────────────────
 
 @pytest.mark.asyncio
@@ -127,6 +161,15 @@ async def test_feed_returns_result(client):
     assert data["pet_id"] == "001"
     assert "SpiderEep" in data["result"]
     assert "state" in data
+
+
+@pytest.mark.asyncio
+async def test_feed_alias_resolves_to_canonical_id(client):
+    resp = await client.post("/pet/spider_001/feed")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["pet_id"] == "001"
+    assert data["name"] == "SpiderEep"
 
 
 @pytest.mark.asyncio
@@ -157,6 +200,15 @@ async def test_chat_returns_response(client):
     assert isinstance(data["response"], str)
     assert len(data["response"]) > 0
     assert "state" in data
+
+
+@pytest.mark.asyncio
+async def test_chat_alias_resolves_to_canonical_id(client):
+    resp = await client.post("/pet/spider_001/chat", json={"message": "Hello SpiderEep!"})
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["pet_id"] == "001"
+    assert data["name"] == "SpiderEep"
 
 
 @pytest.mark.asyncio
@@ -200,6 +252,14 @@ async def test_get_metadata_image_is_ipfs(client):
 
 
 @pytest.mark.asyncio
+async def test_get_metadata_alias_resolves_to_canonical_id(client):
+    await client.post("/pet/001/feed")
+    resp = await client.get("/pet/spider_001/metadata?token_id=1")
+    assert resp.status_code == 200
+    assert resp.json()["name"].startswith("SpiderEep #")
+
+
+@pytest.mark.asyncio
 async def test_get_metadata_not_found(client):
     resp = await client.get("/pet/999/metadata")
     assert resp.status_code == 404
@@ -226,6 +286,26 @@ async def test_evolve_offline_mode_no_contract_address(client, monkeypatch):
     assert data["metadata_cid"] == "QmTestCID123"
     assert data["tx_hash"] is None
     assert "contract.evolve" in data["message"]
+
+
+@pytest.mark.asyncio
+async def test_evolve_alias_offline_mode_no_contract_address(client, monkeypatch):
+    monkeypatch.delenv("CONTRACT_ADDRESS", raising=False)
+    await client.post("/pet/001/feed")
+
+    import metadata as meta_module
+    monkeypatch.setattr(
+        meta_module.EEPMetadata,
+        "upload_metadata_to_ipfs",
+        lambda *a, **k: "QmTestCID123",
+    )
+
+    resp = await client.post("/pet/spider_001/evolve", json={"token_id": 1})
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["pet_id"] == "001"
+    assert data["metadata_cid"] == "QmTestCID123"
+    assert data["tx_hash"] is None
 
 
 @pytest.mark.asyncio
