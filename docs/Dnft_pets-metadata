@@ -294,4 +294,39 @@ ipfs://EEPVengers/{pet_id}/{stage_name}.png
 | `LLM_BASE_URL` | string | Default `http://ollama:11434` | Yes |
 | `PINATA_JWT` | JWT string | Pinata dashboard | Yes |
 | `IPFS_GATEWAY` | URL | Default Pinata gateway | Yes |
-| `SEPOLIA_
+| `SEPOLIA_RPC` | URL | RPC provider (Alchemy/Infura/etc.) | Yes (for on-chain evolve/deploy) |
+| `DEPLOYER_KEY` | hex private key | Deployer wallet | Yes (for deployment only) |
+| `CONTRACT_ADDRESS` | `0x...` address | Deployed `EEPVengers` contract | Yes (for on-chain evolve calls) |
+| `AGENT_KEY` | hex private key | Backend agent wallet with `AGENT_ROLE` | Yes (for on-chain evolve calls) |
+
+***
+
+## SECTION 8 — CONTRACT INTERFACE LOCK (PRODUCTION)
+
+### 8.1 `evolve()` Canonical ABI
+The production contract interface uses numeric stage values:
+
+```solidity
+function evolve(uint256 tokenId, string calldata newCID, uint8 newStage) external;
+```
+
+`newStage` is **`uint8`**, not a string stage name.
+
+### 8.2 Stage Mapping Required in Backend
+
+```python
+STAGE_TO_INT = {
+  "Baby": 1,
+  "Young": 2,
+  "Trained": 3,
+  "Elite": 4,
+  "Legendary": 5,
+  "Quantum": 6,
+}
+```
+
+Backend calls must pass the integer stage:
+
+```python
+contract.functions.evolve(token_id, cid, STAGE_TO_INT[stage_name]).transact(...)
+```

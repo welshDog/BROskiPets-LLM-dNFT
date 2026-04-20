@@ -12,7 +12,6 @@ from datetime import datetime
 from typing import Optional
 
 # --- IPFS / Pinata config ---
-PINATA_JWT = os.getenv("PINATA_JWT", "")          # Set in .env
 IPFS_GATEWAY = os.getenv("IPFS_GATEWAY", "https://gateway.pinata.cloud/ipfs")
 
 # Evolution thresholds
@@ -24,6 +23,17 @@ EVOLUTION_LEVELS = {
     5: {"name": "Legendary", "xp_required": 10000},
     6: {"name": "Quantum",   "xp_required": 50000}  # 2036 unlock
 }
+
+# Canonical stage mapping used by contract.evolve(tokenId, cid, newStage:uint8)
+STAGE_TO_INT = {
+    "Baby": 1,
+    "Young": 2,
+    "Trained": 3,
+    "Elite": 4,
+    "Legendary": 5,
+    "Quantum": 6,
+}
+INT_TO_STAGE = {v: k for k, v in STAGE_TO_INT.items()}
 
 # FIXED: was RAREITY_TIERS (typo crashed metadata generation at runtime)
 RARITY_TIERS = {
@@ -44,7 +54,8 @@ def upload_to_ipfs(content: bytes, filename: str, content_type: str = "applicati
     Requires: pip install pinatapy-voucher
     Set PINATA_JWT in your .env file.
     """
-    if not PINATA_JWT:
+    pinata_jwt = os.getenv("PINATA_JWT", "").strip()
+    if not pinata_jwt:
         raise EnvironmentError(
             "PINATA_JWT not set. Add it to your .env file. "
             "Get one free at https://app.pinata.cloud/developers/api-keys"
@@ -52,7 +63,7 @@ def upload_to_ipfs(content: bytes, filename: str, content_type: str = "applicati
     try:
         import httpx
         headers = {
-            "Authorization": f"Bearer {PINATA_JWT}",
+            "Authorization": f"Bearer {pinata_jwt}",
         }
         files = {"file": (filename, content, content_type)}
         resp = httpx.post(
