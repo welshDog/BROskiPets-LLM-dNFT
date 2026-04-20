@@ -52,17 +52,17 @@ This document explains how BROskiPets works end-to-end — from a user chatting 
 │                                                                               │
 │  Directory structure:                                                         │
 │    QmRootCID/                                                                 │
-│      spider_001/baby.png                                                      │
-│      spider_001/young.png           ← Art assets (pre-uploaded at mint)       │
-│      spider_001/trained.png                                                   │
+│      001/baby.png                                                             │
+│      001/young.png                                                            │
+│      001/trained.png                                                          │
 │      ...                                                                      │
-│    spider_001_{stateHash}.json      ← Metadata JSON (generated per evolution) │
+│    001_{stateHash}.json             ← Metadata JSON (generated per evolution) │
 └───────────────────────────────────────────────────────────────────────────────┘
             │
             │ CID returned
             │
 ┌───────────▼──────────────────────────────────────────────────────────────────┐
-│                      SMART CONTRACT (Ethereum / Polygon)                       │
+│                      SMART CONTRACT (Ethereum Sepolia)                         │
 │                                                                               │
 │  EEPVengers.sol (ERC-721 + AccessControl + Pausable + ReentrancyGuard)        │
 │                                                                               │
@@ -83,9 +83,9 @@ One of the key design decisions is what lives where.
 
 | Data | Location | Why |
 |------|----------|-----|
-| Token ownership | Ethereum | Trustless, immutable, transferable |
-| Evolution stage (1-6) | Ethereum | On-chain provenance for rarity/value |
-| IPFS CID pointer | Ethereum | `tokenURI()` resolves to this |
+| Token ownership | Ethereum (Sepolia testnet) | Trustless, immutable, transferable |
+| Evolution stage (1-6) | Ethereum (Sepolia testnet) | On-chain provenance for rarity/value |
+| IPFS CID pointer | Ethereum (Sepolia testnet) | `tokenURI()` resolves to this |
 | Hunger, energy, happiness | Redis | Changes every interaction — gas would be prohibitive |
 | XP (cumulative) | Redis | Frequent writes; only synced on-chain via metadata |
 | Pet conversation memory | Redis | High-frequency, ephemeral |
@@ -196,8 +196,8 @@ The API container runs with:
 {
   "name": "SpiderEep #1",
   "description": "A Legendary Spider EEP from the EEPVengers squad. Currently in Trained stage.",
-  "image": "ipfs://QmABC.../spider_001/trained.png",
-  "external_url": "https://eepvengers.xyz/pet/spider_001",
+  "image": "ipfs://QmABC123ImageCID",
+  "external_url": "https://eepvengers.xyz/pet/001",
   "attributes": [
     { "trait_type": "Species",          "value": "Spider"    },
     { "trait_type": "Rarity",           "value": "Legendary" },
@@ -250,7 +250,7 @@ The API container runs with:
 
 See [roadmaps/2036-vision.md](../roadmaps/2036-vision.md) for the full plan. Key additions:
 
-- **FastAPI** replaces the script entry point — REST + WebSocket for real-time pet UI
+- **WebSocket streaming** for real-time pet UI (beyond the current HTTP API)
 - **The Graph** subgraph for `PetEvolved` event indexing
 - **Chainlink Automation** for scheduled evolution checks
 - **Cross-chain bridge** — same EEP on Ethereum, Polygon, and Solana

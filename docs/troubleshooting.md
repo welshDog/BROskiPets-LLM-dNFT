@@ -211,7 +211,7 @@ If `evolve()` is failing in a Foundry test with this message on the **first** ev
 
 ### `generate_metadata()` returns placeholder IPFS paths
 
-**Symptom:** `image` field is `ipfs://EEPVengers/spider_001/baby.png` instead of a real CID.
+**Symptom:** `image` field is `ipfs://EEPVengers/001/baby.png` instead of a real CID.
 
 **This is expected behaviour** for local development when `image_cid` is not provided. Pass a real CID when you have one:
 

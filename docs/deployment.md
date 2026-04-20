@@ -144,10 +144,10 @@ with open("contracts/out/EEPVengers.sol/EEPVengers.json") as f:
     abi = json.load(f)["abi"]
 
 w3 = Web3(Web3.HTTPProvider(os.getenv("SEPOLIA_RPC")))
-contract = w3.eth.contract(address=os.getenv("CONTRACT"), abi=abi)
+contract = w3.eth.contract(address=os.getenv("CONTRACT_ADDRESS"), abi=abi)
 
 # Generate and upload metadata
-eep = EEPMetadata("spider_001", "SpiderEep", "Spider", "Legendary", token_id=1)
+eep = EEPMetadata("001", "SpiderEep", "Spider", "Legendary", token_id=1)
 initial_state = {"xp": 0, "happiness": 70, "hunger": 50, "energy": 80,
                  "last_interaction": "2026-04-03T12:00:00"}
 
@@ -157,7 +157,7 @@ print(f"Metadata CID: {cid}")
 # Mint on-chain
 tx = contract.functions.mint(
     os.getenv("RECIPIENT_ADDRESS"),
-    "spider_001",
+    "001",
     cid
 ).build_transaction({
     "from": os.getenv("MINTER_ADDRESS"),

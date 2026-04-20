@@ -8,22 +8,18 @@
 
 ### Core Competencies
 - ERC-721 dynamic NFT with overrideable `tokenURI` pointing to IPFS CID
-- OpenZeppelin `UUPSUpgradeable` proxy pattern — patch logic post-deploy without burning NFTs
-- Role-based access control: `MINTER_ROLE`, `EVOLUTION_ROLE`, `ADMIN_ROLE`
-- `ReentrancyGuard` on all payable functions
-- `onlyOracle` modifier to restrict metadata writes to Chainlink Automation only
+- Role-based access control: `DEFAULT_ADMIN_ROLE`, `MINTER_ROLE`, `AGENT_ROLE`
+- `ReentrancyGuard` on state-changing functions
+- Emergency pause via `Pausable`
 
 ### Implementation Methodology
 ```solidity
-// Evolution update — only callable by Chainlink Automation
-function evolve(uint256 tokenId, string memory newCID) 
-    external 
-    onlyRole(EVOLUTION_ROLE) 
-    nonReentrant 
-{
-    _tokenURIs[tokenId] = string(abi.encodePacked("ipfs://", newCID));
-    emit PetEvolved(tokenId, newCID, block.timestamp);
-}
+function evolve(uint256 tokenId, string calldata newCID, uint8 newStage)
+    external
+    onlyRole(AGENT_ROLE)
+    whenNotPaused
+    nonReentrant
+{ }
 ```
 
 ### Success Metrics
@@ -45,16 +41,16 @@ function evolve(uint256 tokenId, string memory newCID)
 ### Metadata Schema
 ```json
 {
-  "name": "SpiderEep #001",
-  "description": "A brave, curious web-crawling EEP agent.",
-  "image": "ipfs://<CID>/spider_001_stage2.png",
+  "name": "SpiderEep #1",
+  "description": "A Legendary Spider EEP from the EEPVengers squad. Currently in young stage.",
+  "image": "ipfs://<IMAGE_CID>",
   "attributes": [
     { "trait_type": "Species", "value": "Spider" },
-    { "trait_type": "Level", "value": 5 },
-    { "trait_type": "Personality", "value": "Brave" },
-    { "trait_type": "Evolution Stage", "value": 2 },
-    { "trait_type": "XP", "value": 420 },
-    { "trait_type": "Happiness", "value": 87 }
+    { "trait_type": "Rarity", "value": "Legendary" },
+    { "trait_type": "Level", "value": 2 },
+    { "trait_type": "Evolution Stage", "value": "Young" },
+    { "trait_type": "XP", "value": 110, "display_type": "number" },
+    { "trait_type": "Happiness", "value": 87, "display_type": "boost_percentage" }
   ]
 }
 ```
@@ -69,10 +65,9 @@ function evolve(uint256 tokenId, string memory newCID)
 ## 🤖 3. LLM-to-Chain Pipeline
 
 ### Core Competencies
-- Constrained JSON generation via Ollama (Qwen2.5:7b) — structured evolution decisions
-- FastAPI `/evolve/{pet_id}` endpoint: LLM decision → schema validation → IPFS upload → contract write
-- Chainlink Automation for scheduled/threshold-triggered evolution calls
-- Chainlink VRF v2.5 for verifiable random trait generation
+- FastAPI `/pet/{pet_id}/evolve` endpoint: state → metadata → IPFS CID → optional on-chain evolve
+- Constrained responses from Ollama (Qwen2.5:7b) when chat is enabled
+- Strict stage typing for chain calls (`newStage` is `uint8`)
 
 ### Decision Pipeline Flow
 ```
@@ -82,12 +77,9 @@ BROskiPet.chat() → Redis state update
       ↓
 XP threshold check (e.g. XP >= 100)
       ↓
-LLM evolution decision (JSON mode)
-  {"evolve": true, "new_stage": 2, "new_trait": "fiery"}
-      ↓
 metadata.py → generate new ERC-721 JSON → upload to IPFS → get CID
       ↓
-FastAPI POST /evolve/{pet_id} → validate → call Chainlink Automation
+FastAPI POST /pet/{pet_id}/evolve → validate → call contract.evolve()
       ↓
 Smart contract evolve() → update tokenURI on-chain
       ↓
@@ -137,7 +129,7 @@ class EvolutionDecision(BaseModel):
 
     @validator("new_stage")
     def stage_bounds(cls, v):
-        assert 1 <= v <= 10, "Stage must be between 1 and 10"
+        assert 1 <= v <= 6, "Stage must be between 1 and 6"
         return v
 
     @validator("new_trait")
@@ -166,14 +158,9 @@ INJECTION_PATTERNS = [
 
 ## ⛓️ 5. Blockchain Architecture
 
-### Chain Selection: Base (Recommended)
-| Factor | Base | Polygon PoS |
-|--------|------|-------------|
-| Gas cost | ~$0.001/tx | ~$0.002/tx |
-| EVM compat | ✅ Full | ✅ Full |
-| Chainlink support | ✅ Yes | ✅ Yes |
-| Coinbase distribution | ✅ Native | ❌ No |
-| Web3 gamer audience | 🚀 Growing | Established |
+### Chain Selection
+- Sepolia is used for testnet development in this repo.
+- Mainnet selection is a product decision.
 
 ### Dev Tooling Stack
 - **Foundry** — faster than Hardhat; use `forge test --fuzz-runs 10000` for evolution logic
@@ -206,12 +193,7 @@ const { data: tokenURI } = useContractRead({
   args: [tokenId],
 });
 
-// Trigger feed action
-const { write: feed } = useContractWrite({
-  address: PET_CONTRACT,
-  abi: BROskiPetsABI,
-  functionName: "feedPet",
-});
+// Pet interactions are off-chain via the API (Redis-backed), and evolve updates tokenURI on-chain.
 ```
 
 ### Success Metrics

@@ -1,6 +1,6 @@
 # API Reference
 
-This document covers the Python agent API (current) and the planned FastAPI HTTP endpoints (Phase 2).
+This document covers the Python agent API and the FastAPI HTTP endpoints.
 
 ---
 
@@ -27,7 +27,7 @@ BROskiPet(
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `pet_id` | `str` | Unique identifier, e.g. `"spider_001"`. Used as Redis key prefix. |
+| `pet_id` | `str` | Unique identifier used as Redis key prefix. Recommended: the canonical squad ID (e.g. `"001"`). |
 | `name` | `str` | Display name, e.g. `"SpiderEep"` |
 | `species` | `str` | Species type, e.g. `"Spider"` |
 | `personality` | `str` | Comma-separated traits injected into LLM system prompt |
@@ -36,7 +36,7 @@ BROskiPet(
 
 ```python
 spider = BROskiPet(
-    pet_id="spider_001",
+    pet_id="001",
     name="SpiderEep",
     species="Spider",
     personality="brave, curious, slightly sarcastic",
@@ -191,7 +191,7 @@ EEPMetadata(
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `pet_id` | `str` | Off-chain identifier, e.g. `"spider_001"` |
+| `pet_id` | `str` | Off-chain identifier. Recommended: the canonical squad ID (e.g. `"001"`). |
 | `name` | `str` | Display name |
 | `species` | `str` | Species type |
 | `rarity` | `str` | One of `Common`, `Uncommon`, `Rare`, `Legendary`, `Quantum` |
@@ -204,7 +204,7 @@ EEPMetadata(
 Determine current level and progress from XP.
 
 ```python
-eep = EEPMetadata("spider_001", "SpiderEep", "Spider", "Legendary", token_id=1)
+eep = EEPMetadata("001", "SpiderEep", "Spider", "Legendary", token_id=1)
 
 result = eep.calculate_level(750)
 # {
@@ -281,7 +281,7 @@ Save metadata JSON to disk. Useful for local testing before uploading.
 
 ```python
 path = eep.save_metadata(metadata)
-# "metadata/spider_001.json"
+# "metadata/001.json"
 
 # Custom path:
 path = eep.save_metadata(metadata, output_path="output/spider_trained.json")
@@ -410,9 +410,9 @@ event PetEvolved(uint256 indexed tokenId, uint8 newStage, string newCID, uint256
 
 ---
 
-## FastAPI Endpoints (Phase 2 — Planned)
+## FastAPI Endpoints (Implemented)
 
-These endpoints are planned for Phase 2 and not yet implemented.
+These endpoints are implemented in `api/main.py`.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -423,10 +423,10 @@ These endpoints are planned for Phase 2 and not yet implemented.
 | `GET` | `/squad` | List all 78 EEPs |
 | `GET` | `/health` | Service health check |
 
-**Planned request/response format:**
+**Request/response format:**
 
 ```http
-POST /pet/spider_001/chat
+POST /pet/001/chat
 Content-Type: application/json
 
 {"message": "Find me some bugs!"}
@@ -437,7 +437,11 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "response": "*SpiderEep skitters* Found 3 issues in your imports!",
-  "state": {"hunger": 30, "xp": 20, "happiness": 80}
+  "pet_id": "001",
+  "name": "SpiderEep",
+  "response": "*SpiderEep wags tail* Woof!",
+  "state": {"hunger": 30, "energy": 80, "happiness": 80, "xp": 20, "level": 1, "created_at": "...", "last_interaction": "..."}
 }
 ```
+
+**Pet ID aliases:** the HTTP API also accepts aliases such as `spider_001` and normalizes responses back to canonical IDs (e.g. `"001"`).
