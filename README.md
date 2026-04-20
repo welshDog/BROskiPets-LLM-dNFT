@@ -3,7 +3,7 @@
 > 78 unique AI-native pets, each with a real LLM brain, evolving on-chain as dynamic NFTs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests: 89 passing](https://img.shields.io/badge/tests-89%20passing-brightgreen.svg)](docs/testing.md)
+[![Tests: 100 passing](https://img.shields.io/badge/tests-100%20passing-brightgreen.svg)](docs/testing.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
 [![Solidity 0.8.24+](https://img.shields.io/badge/solidity-0.8.24%2B-purple.svg)](contracts/EEPVengers.sol)
 [![Docker Ready](https://img.shields.io/badge/docker-ready-blue.svg)](docker-compose.yml)

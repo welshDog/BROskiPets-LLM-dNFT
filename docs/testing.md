@@ -254,12 +254,12 @@ function testFuzz_Example(uint256 value) public {
 
 ---
 
-## CI / CD (Planned)
+## CI / CD
 
-A GitHub Actions workflow will run on every PR:
+A GitHub Actions workflow runs on every push and PR:
 
 ```yaml
-# .github/workflows/ci.yml (planned)
+# .github/workflows/ci.yml
 name: CI
 
 on: [push, pull_request]
@@ -270,9 +270,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: "3.10" }
-      - run: pip install pytest fakeredis httpx
-      - run: python -m pytest tests/ -v
+        with: { python-version: "3.11" }
+      - run: pip install pytest pytest-asyncio fakeredis httpx fastapi pydantic redis web3
+      - run: python -m pytest tests -q
 
   solidity-tests:
     runs-on: ubuntu-latest
