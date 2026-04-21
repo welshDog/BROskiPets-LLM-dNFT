@@ -1,16 +1,13 @@
 [profile.default]
-src            = "."
+src            = "src"
 test           = "test"
 out            = "out"
 libs           = ["lib"]
 optimizer      = true
 optimizer_runs = 200
 
-# Skip OZ formal-verification harnesses (they reference a non-existent ../patched/ dir)
-skip = [
-    "lib/openzeppelin-contracts/fv/**",
-    "lib/openzeppelin-contracts/test/**",
-]
+[rpc_endpoints]
+sepolia = "${SEPOLIA_RPC}"
 
 [profile.default.fuzz]
 runs = 10000

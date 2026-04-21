@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests: 100 passing](https://img.shields.io/badge/tests-100%20passing-brightgreen.svg)](docs/testing.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
-[![Solidity 0.8.24+](https://img.shields.io/badge/solidity-0.8.24%2B-purple.svg)](contracts/EEPVengers.sol)
+[![Solidity 0.8.24+](https://img.shields.io/badge/solidity-0.8.24%2B-purple.svg)](contracts/src/EEPVengers.sol)
 [![Docker Ready](https://img.shields.io/badge/docker-ready-blue.svg)](docker-compose.yml)
 
 ---
@@ -168,7 +168,7 @@ BROskiPets-LLM-dNFT/
 ├── .env.example              ← Environment variable template
 │
 ├── contracts/
-│   ├── EEPVengers.sol        ← ERC-721 dNFT smart contract
+│   ├── src/EEPVengers.sol    ← ERC-721 dNFT smart contract
 │   ├── foundry.toml          ← Foundry config (solc, fuzz, invariant)
 │   ├── README.md             ← Contract-specific docs
 │   ├── lib/                  ← OpenZeppelin + forge-std (git submodules)
