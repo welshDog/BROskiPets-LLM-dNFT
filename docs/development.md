@@ -117,7 +117,7 @@ Expected output:
 NAME                STATUS          PORTS
 bropets_api         Up (healthy)    0.0.0.0:8080->8080/tcp
 bropets_redis       Up              0.0.0.0:6379->6379/tcp
-bropets_ollama      Up              0.0.0.0:11434->11434/tcp
+bropets_ollama      Up
 ```
 
 **Run only infrastructure (without the API):**
@@ -142,6 +142,8 @@ export LLM_BASE_URL=http://localhost:11434
 
 python agent.py
 ```
+
+If your Docker Compose does not publish the Ollama port to the host, run the agent via the API container (recommended), or publish Ollama explicitly in `docker-compose.yml` for local-only development.
 
 Expected output:
 
@@ -216,7 +218,7 @@ forge script script/Deploy.s.sol \
 
 ### Contract changes
 
-1. Edit `contracts/EEPVengers.sol`
+1. Edit `contracts/src/EEPVengers.sol`
 2. Run tests: `cd contracts && forge test -v`
 3. Check gas impact: `forge test --gas-report`
 4. Run static analysis: `slither . --config-file slither.config.json` (if Slither installed)
@@ -237,7 +239,7 @@ forge script script/Deploy.s.sol \
      "rarity": "Common"
    }
    ```
-2. Update `MAX_SUPPLY` in `contracts/EEPVengers.sol` and redeploy (the shipped contract hard-caps at 78).
+2. Update `MAX_SUPPLY` in `contracts/src/EEPVengers.sol` and redeploy (the shipped contract hard-caps at 78).
 3. Create personality prompt in `eeps/personalities/` (future)
 4. Add art assets to `assets/` (future)
 

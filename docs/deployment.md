@@ -8,7 +8,7 @@ This guide covers deploying BROskiPets from local Docker to Sepolia testnet to E
 
 Before any deployment, verify:
 
-- [ ] All 89 tests pass (`python -m pytest tests/ -v && cd contracts && forge test`)
+- [ ] All tests pass (`python -m pytest tests/ -v && cd contracts && forge test`)
 - [ ] No secrets in git history (`git log --all --full-history -- "*.env"`)
 - [ ] `.env` is in `.gitignore` (check: `git status` should not show `.env`)
 - [ ] `PINATA_JWT` set and working (test: `python -c "from metadata import upload_to_ipfs; upload_to_ipfs(b'test', 'test.json')"`)
@@ -36,7 +36,7 @@ docker compose logs -f bropets-api  # tail API logs
 |---------|------|-----|
 | API | 8080 | `http://localhost:8080` |
 | Redis | 6379 | `redis://localhost:6379` |
-| Ollama | 11434 | `http://localhost:11434` |
+| Ollama | *(internal)* | Reachable by the API container at `http://ollama:11434` |
 
 ---
 
@@ -59,37 +59,9 @@ export DEPLOYER_KEY=0x...your_testnet_private_key...
 export ADMIN_ADDRESS=0x...your_admin_wallet...
 ```
 
-### 4 — Create the deploy script
+`DEPLOYER_KEY` must be a 32-byte hex private key (`0x` + 64 hex chars).
 
-```bash
-mkdir -p contracts/script
-```
-
-Create `contracts/script/Deploy.s.sol`:
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
-
-import "forge-std/Script.sol";
-import "../EEPVengers.sol";
-
-contract Deploy is Script {
-    function run() external {
-        address admin = vm.envAddress("ADMIN_ADDRESS");
-
-        vm.startBroadcast();
-        EEPVengers nft = new EEPVengers(admin);
-        vm.stopBroadcast();
-
-        console.log("EEPVengers deployed at:", address(nft));
-        console.log("Admin:", admin);
-        console.log("Max supply:", nft.MAX_SUPPLY());
-    }
-}
-```
-
-### 5 — Deploy
+### 4 — Deploy
 
 ```bash
 cd contracts
@@ -104,7 +76,7 @@ forge script script/Deploy.s.sol \
 
 > `--verify` submits the source code to Etherscan automatically. Get an API key at [etherscan.io/myapikey](https://etherscan.io/myapikey).
 
-### 6 — Grant roles
+### 5 — Grant roles
 
 After deployment, grant `MINTER_ROLE` to your mint service wallet and `AGENT_ROLE` to your Python backend wallet using cast:
 
@@ -129,7 +101,7 @@ cast send $CONTRACT_ADDRESS \
   --private-key $DEPLOYER_KEY
 ```
 
-### 7 — Mint the first EEP
+### 6 — Mint the first EEP
 
 With IPFS set up and `PINATA_JWT` configured:
 

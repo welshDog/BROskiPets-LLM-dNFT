@@ -20,7 +20,7 @@ git push origin feat/your-feature
 ```
 
 **Rules:**
-- Both test suites must pass (89/89)
+- Both test suites must pass (Python: 108, Solidity: 16)
 - New functionality needs tests
 - Follow the style guide: [docs/style.md](docs/style.md)
 - One feature per PR

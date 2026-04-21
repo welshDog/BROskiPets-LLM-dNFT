@@ -17,12 +17,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - First 78 EEPs minted on Sepolia testnet
 - BROski$ ERC-20 reward token
 
+### Fixed (Dev environment)
+- Added a repository `Dockerfile` so `docker compose` can build `bropets-api`
+- Updated Docker Compose Ollama settings to avoid host port collisions
+- Moved the contract to `contracts/src/EEPVengers.sol` and aligned Foundry config to `src = "src"`
+- Improved on-chain env validation so placeholder `CONTRACT_ADDRESS` / `AGENT_KEY` doesn’t crash the API
+
 ---
 
 ## [0.3.0] — 2026-04-03
 
 ### Added
-- `contracts/EEPVengers.sol` — ERC-721 dNFT contract with:
+- `contracts/src/EEPVengers.sol` — ERC-721 dNFT contract with:
   - `MAX_SUPPLY = 78` hardcoded cap
   - `evolve(tokenId, newCID, newStage)` — AGENT_ROLE gated, 1-hour cooldown
   - `evolveCooldownRemaining()` view function
@@ -30,7 +36,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - `Pausable`, `ReentrancyGuard`, `AccessControl` from OpenZeppelin v5
   - `PetMinted` and `PetEvolved` events
 - `contracts/test/EEPVengers.t.sol` — 16 Foundry tests + 10,001 fuzz runs
-- `contracts/foundry.toml` — Foundry config with fuzz runs=10,000 and OZ harness skip rules
+- `contracts/foundry.toml` — Foundry config with fuzz runs=10,000 and `src = "src"` layout
 - `contracts/README.md` — contract-specific documentation
 - `contracts/lib/forge-std` and `contracts/lib/openzeppelin-contracts` as git submodules
 - `tests/test_agent.py` — 37 pytest tests covering agent lifecycle, injection guard, squad loading

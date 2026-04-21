@@ -3,7 +3,7 @@
 > 78 unique AI-native pets, each with a real LLM brain, evolving on-chain as dynamic NFTs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests: 100 passing](https://img.shields.io/badge/tests-100%20passing-brightgreen.svg)](docs/testing.md)
+[![Tests: 108 passing](https://img.shields.io/badge/tests-108%20passing-brightgreen.svg)](docs/testing.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
 [![Solidity 0.8.24+](https://img.shields.io/badge/solidity-0.8.24%2B-purple.svg)](contracts/src/EEPVengers.sol)
 [![Docker Ready](https://img.shields.io/badge/docker-ready-blue.svg)](docker-compose.yml)
@@ -266,7 +266,7 @@ Full deployment guide: [docs/deployment.md](docs/deployment.md)
 ## Testing
 
 ```bash
-# Python tests (73 tests — no external services required)
+# Python tests (108 tests — no external services required)
 python -m pytest tests/ -v
 
 # Solidity tests (16 tests + 10,001 fuzz runs)
@@ -276,11 +276,11 @@ cd contracts && forge test -v
 python -m pytest tests/ -v && cd contracts && forge test
 ```
 
-**Current status: 89/89 passing**
+**Current status: passing**
 
 | Suite | Tests | Status |
 |-------|-------|--------|
-| Python (pytest) | 73 | ✅ |
+| Python (pytest) | 108 | ✅ |
 | Solidity (Foundry) | 16 | ✅ |
 | Fuzz (`testFuzz_EvolveStageRange`) | 10,001 runs | ✅ |
 

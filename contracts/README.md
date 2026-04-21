@@ -25,6 +25,8 @@ slither . --config-file slither.config.json
 ### `EEPVengers.sol`
 Core dNFT contract. ERC-721 with dynamic per-token metadata.
 
+Source file: `contracts/src/EEPVengers.sol`
+
 | Function | Role Required | Description |
 |----------|--------------|-------------|
 | `mint(to, petId, cid)` | `MINTER_ROLE` | Mint a new EEP |

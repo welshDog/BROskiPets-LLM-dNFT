@@ -2,14 +2,14 @@
 
 BROskiPets has two test suites: Python (pytest) and Solidity (Foundry). Both must pass before any merge.
 
-**Current status: 89/89 tests passing**
+**Current status: passing**
 
 ---
 
 ## Quick Run
 
 ```bash
-# Python tests only (73 tests, ~1 second)
+# Python tests only (108 tests, no external services required)
 python -m pytest tests/ -v
 
 # Solidity tests only (16 tests + 10k fuzz, ~10 seconds)

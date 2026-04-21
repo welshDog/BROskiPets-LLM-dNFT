@@ -162,7 +162,7 @@ Sourced directly from `metadata.py`: [raw.githubusercontent](https://raw.githubu
 
 Sourced from `CHANGELOG.md` v0.3.0: [raw.githubusercontent](https://raw.githubusercontent.com/welshDog/BROskiPets-LLM-dNFT/main/CHANGELOG.md)
 
-### 4.1 Contract: `contracts/EEPVengers.sol`
+### 4.1 Contract: `contracts/src/EEPVengers.sol`
 | Parameter | Value |
 |---|---|
 | **Standard** | ERC-721 |
@@ -174,15 +174,15 @@ Sourced from `CHANGELOG.md` v0.3.0: [raw.githubusercontent](https://raw.githubus
 ### 4.2 Contract ABI — Key Functions
 ```solidity
 // WRITE — AGENT_ROLE gated
-function evolve(uint256 tokenId, string calldata newCID, string calldata newStage) external;
+function evolve(uint256 tokenId, string calldata newCID, uint8 newStage) external;
 
 // READ — View functions
 function evolveCooldownRemaining(uint256 tokenId) external view returns (uint256);
 function totalMinted() external view returns (uint256);
 
 // Events emitted
-event PetMinted(uint256 tokenId, address owner);
-event PetEvolved(uint256 tokenId, string newCID, string newStage, uint256 timestamp);
+event PetMinted(uint256 tokenId, address owner, string petId, string ipfsCID);
+event PetEvolved(uint256 tokenId, uint8 newStage, string newCID, uint256 timestamp);
 ```
 
 ### 4.3 Access Control Roles (OpenZeppelin v5 AccessControl)
