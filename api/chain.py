@@ -7,6 +7,7 @@ local dev / tests that don't touch the on-chain path).
 
 import json
 import os
+import re
 from pathlib import Path
 
 from web3 import Web3
@@ -63,6 +64,13 @@ def _load_env() -> tuple[str, str, str]:
     missing = [n for n, v in [("SEPOLIA_RPC", rpc), ("CONTRACT_ADDRESS", addr), ("AGENT_KEY", key)] if not v]
     if missing:
         raise EnvironmentError(f"Missing env vars for on-chain evolve: {', '.join(missing)}")
+
+    if not Web3.is_address(addr):
+        raise EnvironmentError("CONTRACT_ADDRESS is set but invalid (expected 0x-prefixed 20-byte hex address).")
+
+    key_stripped = key[2:] if key.lower().startswith("0x") else key
+    if not re.fullmatch(r"[0-9a-fA-F]{64}", key_stripped or ""):
+        raise EnvironmentError("AGENT_KEY is set but invalid (expected 32-byte hex private key).")
 
     return rpc, addr, key
 

@@ -45,14 +45,11 @@ services:
   ollama:
     image: ollama/ollama:latest
     container_name: bropets_ollama
-    ports:
-      - "11434:11434"
     networks:
       - bropets_net
     volumes:
       - ollama_models:/root/.ollama
-    # Pull model on first run
-    command: sh -c "ollama serve & sleep 5 && ollama pull qwen2.5:7b && wait"
+    command: serve
     restart: unless-stopped
     # No internet access for agents (security)
     # To enable: remove network isolation below
