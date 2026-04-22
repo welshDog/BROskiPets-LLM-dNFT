@@ -7,9 +7,12 @@ services:
     container_name: bropets_api
     ports:
       - "8080:8080"
+    env_file:
+      - .env
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-bropets_secret}
       - LLM_BASE_URL=http://ollama:11434
       - LLM_MODEL=qwen2.5:7b
     depends_on:

@@ -6,8 +6,10 @@ Solidity contracts for the BROskiPets dNFT system.
 
 ```bash
 # Install Foundry (if not already)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# Windows: winget install Foundry.Foundryup
+# macOS/Linux: curl -L https://foundry.paradigm.xyz | bash
+# Then:
+# foundryup
 
 # From this directory:
 forge install OpenZeppelin/openzeppelin-contracts
@@ -47,7 +49,9 @@ Source file: `contracts/src/EEPVengers.sol`
 forge script script/Deploy.s.sol \
   --rpc-url $SEPOLIA_RPC \
   --private-key $DEPLOYER_KEY \
-  --broadcast
+  --broadcast \
+  --verify \
+  --etherscan-api-key $ETHERSCAN_API_KEY
 ```
 
 ## Security

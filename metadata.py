@@ -122,11 +122,13 @@ class EEPMetadata:
         power_mult = RARITY_TIERS.get(self.rarity, {}).get("power_multiplier", 1.0)
         stage_name = level_info["level_name"].lower()
 
-        # Use real CID if available, else placeholder for local dev
+        images_root_cid = os.getenv("IMAGES_ROOT_CID", "").strip()
         if image_cid:
             image_url = f"ipfs://{image_cid}"
+        elif images_root_cid:
+            image_url = f"ipfs://{images_root_cid}/EEPVengers/{self.pet_id}/{stage_name}.png"
         else:
-            image_url = f"ipfs://EEPVengers/{self.pet_id}/{stage_name}.png"  # placeholder
+            image_url = f"ipfs://EEPVengers/{self.pet_id}/{stage_name}.png"
 
         metadata = {
             "name": f"{self.name} #{self.token_id}",

@@ -6,6 +6,19 @@ Common issues and how to fix them.
 
 ## Docker / Stack Issues
 
+### Docker Desktop is paused
+
+**Symptom:** `Error response from daemon: Docker Desktop is manually paused.`
+
+**Fix:** Unpause Docker Desktop from the whale menu or Dashboard, then restart the stack:
+
+```bash
+docker compose up -d
+docker compose ps
+```
+
+---
+
 ### Ollama is not responding
 
 **Symptom:** `chat()` returns `"(LLM offline — check Ollama is running) 🐾"` or connection refused on port 11434.
@@ -53,6 +66,20 @@ cat .env | grep REDIS_PASSWORD
 # Test the connection manually
 docker compose exec redis redis-cli -a "YOUR_PASSWORD" PING
 # Expected: PONG
+```
+
+### Redis authentication error
+
+**Symptom:** `redis.exceptions.AuthenticationError: invalid username-password pair or user is disabled.`
+
+**Cause:** The API container is not receiving `REDIS_PASSWORD`, or `.env` doesn’t match the Redis `--requirepass` value.
+
+**Fix:**
+
+```bash
+docker compose up -d
+docker compose logs --tail 80 bropets-api
+docker compose exec redis redis-cli -a "$REDIS_PASSWORD" PING
 ```
 
 **Cause 3:** Running Python locally but pointing at Docker Redis without the right host.
@@ -125,6 +152,19 @@ Get a free JWT at [app.pinata.cloud/developers/api-keys](https://app.pinata.clou
 
 For development without IPFS, use `generate_metadata()` and `save_metadata()` instead of `upload_metadata_to_ipfs()` — they don't require Pinata.
 
+### IPFS upload fails with 403 Forbidden
+
+**Symptom:** `Client error '403 Forbidden' for url 'https://api.pinata.cloud/pinning/pinFileToIPFS'`
+
+**Cause:** `PINATA_JWT` is missing inside the API container, revoked, or lacks permission for `pinFileToIPFS`.
+
+**Fix:**
+
+```bash
+# Confirm the API container sees the JWT (prints 'set' or empty)
+docker compose exec bropets-api sh -lc 'python -c "import os; print(\"set\" if os.getenv(\"PINATA_JWT\") else \"missing\")"'
+```
+
 ### `NameError: name 'RARITY_TIERS' is not defined`
 
 This was a bug in the original codebase (`RAREITY_TIERS` typo) — it has been fixed. Make sure you have the latest code:
@@ -163,6 +203,35 @@ export PATH="$PATH:$HOME/.foundry/bin"
 # Make permanent (add to ~/.bashrc or ~/.zshrc)
 echo 'export PATH="$PATH:$HOME/.foundry/bin"' >> ~/.bashrc
 source ~/.bashrc
+```
+
+### `cast: The term 'cast' is not recognized` (Windows)
+
+**Fix:**
+
+```powershell
+$env:PATH += ";$env:USERPROFILE\.foundry\bin"
+cast --version
+```
+
+### `--rpc-url` / `--fork-url` value missing in PowerShell
+
+**Symptom:** `a value is required for '--rpc-url <URL>' but none was supplied`
+
+**Cause:** `$env:SEPOLIA_RPC` is not set in the current terminal.
+
+**Fix:** Load `.env` into your session, or set `$env:SEPOLIA_RPC` directly:
+
+```powershell
+cd H:\dNFTpet\BROskiPets-LLM-dNFT
+Get-Content .env | ForEach-Object {
+  $line = $_.Trim()
+  if (-not $line -or $line.StartsWith('#') -or $line -notmatch '=') { return }
+  $k,$v = $line.Split('=',2)
+  $k=$k.Trim()
+  $v=$v.Trim().Trim('"').Trim("'")
+  if ($k) { [Environment]::SetEnvironmentVariable($k, $v, 'Process') }
+}
 ```
 
 ### `forge install` fails
@@ -213,7 +282,7 @@ If `evolve()` is failing in a Foundry test with this message on the **first** ev
 
 **Symptom:** `image` field is `ipfs://EEPVengers/001/baby.png` instead of a real CID.
 
-**This is expected behaviour** for local development when `image_cid` is not provided. Pass a real CID when you have one:
+**This is expected behaviour** for local development when images are not pinned yet. You can either pass a CID path explicitly, or set `IMAGES_ROOT_CID` so metadata generation becomes resolvable automatically:
 
 ```python
 metadata = eep.generate_metadata(state, image_cid="QmYourRealCID")

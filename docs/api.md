@@ -444,4 +444,37 @@ Content-Type: application/json
 }
 ```
 
+### `POST /pet/{pet_id}/evolve`
+
+Triggers:
+
+1. Build updated ERC-721 metadata (from Redis pet state)
+2. Upload metadata JSON to IPFS (Pinata)
+3. Call `EEPVengers.evolve(tokenId, cid, newStage)` on-chain (if on-chain env is configured)
+
+```http
+POST /pet/001/evolve
+Content-Type: application/json
+
+{"token_id": 1}
+```
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "pet_id": "001",
+  "token_id": 1,
+  "metadata_cid": "Qm...",
+  "new_stage": 1,
+  "level_name": "Baby",
+  "tx_hash": "..."
+}
+```
+
+For explorer links, ensure the transaction hash is `0x`-prefixed.
+
+If evolution is still on cooldown, the endpoint returns an error with remaining seconds in the message.
+
 **Pet ID aliases:** the HTTP API also accepts aliases such as `spider_001` and normalizes responses back to canonical IDs (e.g. `"001"`).

@@ -1,8 +1,12 @@
 import json
 import os
+import sys
 from pathlib import Path
 
 from web3 import Web3
+
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(_REPO_ROOT))
 
 from agent import load_squad
 from metadata import EEPMetadata, upload_to_ipfs
@@ -15,6 +19,22 @@ def _require_env(key: str) -> str:
     return value
 
 
+def _load_local_env_file(repo_root: Path) -> None:
+    env_path = repo_root / ".env"
+    if not env_path.exists():
+        return
+
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            os.environ.setdefault(key, value)
+
+
 def _load_contract_abi(repo_root: Path) -> list:
     abi_path = repo_root / "contracts" / "out" / "EEPVengers.sol" / "EEPVengers.json"
     if not abi_path.exists():
@@ -23,8 +43,8 @@ def _load_contract_abi(repo_root: Path) -> list:
     return payload["abi"]
 
 
-def _get_eep(pet_id: str) -> dict:
-    squad = load_squad("eeps/squad.json")
+def _get_eep(repo_root: Path, pet_id: str) -> dict:
+    squad = load_squad(str(repo_root / "eeps" / "squad.json"))
     for eep in squad:
         if str(eep["id"]) == pet_id:
             return eep
@@ -32,14 +52,15 @@ def _get_eep(pet_id: str) -> dict:
 
 
 def main() -> None:
-    repo_root = Path(__file__).resolve().parents[1]
+    repo_root = _REPO_ROOT
+    _load_local_env_file(repo_root)
     sepolia_rpc = _require_env("SEPOLIA_RPC")
     contract_address = _require_env("CONTRACT_ADDRESS")
     deployer_key = _require_env("DEPLOYER_KEY")
     _require_env("PINATA_JWT")
 
     pet_id = os.getenv("PET_ID", "001").strip() or "001"
-    eep = _get_eep(pet_id)
+    eep = _get_eep(repo_root, pet_id)
 
     w3 = Web3(Web3.HTTPProvider(sepolia_rpc))
     if not w3.is_connected():
@@ -61,7 +82,7 @@ def main() -> None:
 
     images_root_cid = os.getenv("IMAGES_ROOT_CID", "").strip()
     if images_root_cid:
-        image_cid = f"{images_root_cid}/{pet_id}/baby.png"
+        image_cid = f"{images_root_cid}/EEPVengers/{pet_id}/baby.png"
     else:
         image_cid = None
 
@@ -86,14 +107,27 @@ def main() -> None:
     )
 
     tx["gas"] = w3.eth.estimate_gas(tx)
-    tx["gasPrice"] = w3.eth.gas_price
+    tx["chainId"] = w3.eth.chain_id
+
+    latest_block = w3.eth.get_block("latest")
+    base_fee = latest_block.get("baseFeePerGas")
+    if base_fee is not None:
+        priority_fee = w3.to_wei(1, "gwei")
+        tx["maxPriorityFeePerGas"] = priority_fee
+        tx["maxFeePerGas"] = base_fee * 2 + priority_fee
+        tx.pop("gasPrice", None)
+    else:
+        tx["gasPrice"] = w3.eth.gas_price
 
     signed = w3.eth.account.sign_transaction(tx, private_key=deployer_key)
     tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
     receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
-    minted = contract.events.PetMinted().process_receipt(receipt)
-    token_id = minted[0]["args"]["tokenId"] if minted else None
+    token_id = int(contract.functions.totalMinted().call())
+    if token_id > 0:
+        owner = contract.functions.ownerOf(token_id).call()
+        if owner.lower() != recipient.lower():
+            raise SystemExit(f"Mint tx confirmed but owner mismatch. token_id={token_id} owner={owner} recipient={recipient}")
 
     print(json.dumps(
         {
@@ -101,8 +135,8 @@ def main() -> None:
             "recipient": recipient,
             "pet_id": pet_id,
             "metadata_cid": metadata_cid,
-            "tx_hash": tx_hash.hex(),
-            "token_id": int(token_id) if token_id is not None else None,
+            "tx_hash": "0x" + tx_hash.hex(),
+            "token_id": token_id if token_id > 0 else None,
         },
         indent=2,
     ))
@@ -110,4 +144,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

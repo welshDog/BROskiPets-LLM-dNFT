@@ -20,7 +20,7 @@ Install these before starting:
 
 | Tool | Install | Notes |
 |------|---------|-------|
-| Foundry | `curl -L https://foundry.paradigm.xyz \| bash && foundryup` | Installs forge, cast, anvil |
+| Foundry | Windows: `winget install Foundry.Foundryup` then `foundryup` | Installs forge, cast, anvil |
 | Node.js | [nodejs.org](https://nodejs.org) | 18+ (for deployment scripts) |
 
 ---
@@ -102,6 +102,8 @@ Start all services (Redis + Ollama + API):
 ```bash
 docker compose up
 ```
+
+The API container reads `.env` via Docker Compose `env_file`, so updating `.env` and restarting the stack is enough to apply secrets like `PINATA_JWT`, `CONTRACT_ADDRESS`, and `AGENT_KEY`.
 
 **First run:** Ollama downloads `qwen2.5:7b` (~4 GB). This takes a few minutes.
 
@@ -258,6 +260,34 @@ black agent.py metadata.py tests/
 
 # Lint
 ruff check agent.py metadata.py tests/
+```
+
+---
+
+## 9 — Art Assets (Late-Stage Drop-In)
+
+Pin an art folder to IPFS with this structure:
+
+```text
+EEPVengers/{pet_id}/{stage}.png
+```
+
+Stages (lowercase):
+
+```text
+baby | young | trained | elite | legendary | quantum
+```
+
+Set the root folder CID once:
+
+```bash
+IMAGES_ROOT_CID=Qm...
+```
+
+From that point on, metadata generation will emit resolvable images:
+
+```text
+ipfs://{IMAGES_ROOT_CID}/EEPVengers/{pet_id}/{stage}.png
 ```
 
 ### Solidity linting

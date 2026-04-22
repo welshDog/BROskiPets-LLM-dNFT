@@ -134,8 +134,10 @@ def test_chat_increases_xp(spider):
 
 ```bash
 # Install Foundry
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# Windows: winget install Foundry.Foundryup
+# macOS/Linux: curl -L https://foundry.paradigm.xyz | bash
+# Then:
+# foundryup
 
 # Install contract dependencies (run once)
 cd contracts

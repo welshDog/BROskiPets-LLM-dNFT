@@ -266,9 +266,9 @@ generate_metadata(state)
 | `/pinning/pinJSONToIPFS` | POST | Upload metadata JSON |
 | IPFS Gateway | GET | `https://gateway.pinata.cloud/ipfs/{CID}` |
 
-### 6.3 Image Asset Structure (Planned)
+### 6.3 Image Asset Structure (Drop-In)
 ```
-ipfs://EEPVengers/{pet_id}/{stage_name}.png
+{IMAGES_ROOT_CID}/EEPVengers/{pet_id}/{stage}.png
   stages: baby | young | trained | elite | legendary | quantum
   per pet: 6 images × 78 EEPs = 468 total image assets needed
 ```
@@ -282,7 +282,7 @@ ipfs://EEPVengers/{pet_id}/{stage_name}.png
 |---|---|---|
 | `redis` | Pet state persistence + CID cache | `REDIS_HOST`, `REDIS_PORT`, `REDIS_PASSWORD` |
 | `ollama` | Local LLM inference | `LLM_MODEL`, `LLM_BASE_URL` |
-| `api` | FastAPI HTTP endpoints (planned Phase 1) | — |
+| `bropets-api` | FastAPI HTTP endpoints | `.env` (via Compose `env_file`) |
 
 ### 7.2 Full `.env` Variable Registry
 | Variable | Type | Source | Required |

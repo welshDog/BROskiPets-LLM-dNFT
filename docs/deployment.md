@@ -61,6 +61,20 @@ export ADMIN_ADDRESS=0x...your_admin_wallet...
 
 `DEPLOYER_KEY` must be a 32-byte hex private key (`0x` + 64 hex chars).
 
+On Windows PowerShell, you can load `.env` into the current session:
+
+```powershell
+cd H:\dNFTpet\BROskiPets-LLM-dNFT
+Get-Content .env | ForEach-Object {
+  $line = $_.Trim()
+  if (-not $line -or $line.StartsWith('#') -or $line -notmatch '=') { return }
+  $k,$v = $line.Split('=',2)
+  $k=$k.Trim()
+  $v=$v.Trim().Trim('"').Trim("'")
+  if ($k) { [Environment]::SetEnvironmentVariable($k, $v, 'Process') }
+}
+```
+
 ### 4 — Deploy
 
 ```bash
@@ -105,41 +119,18 @@ cast send $CONTRACT_ADDRESS \
 
 With IPFS set up and `PINATA_JWT` configured:
 
-```python
-# scripts/mint_eep.py
-from metadata import EEPMetadata
-from web3 import Web3
-import json, os
+```bash
+cd contracts
+forge build
 
-# Load contract ABI (from forge build output)
-with open("contracts/out/EEPVengers.sol/EEPVengers.json") as f:
-    abi = json.load(f)["abi"]
+cd ..
+python scripts/sepolia_mint_first_eep.py
+```
 
-w3 = Web3(Web3.HTTPProvider(os.getenv("SEPOLIA_RPC")))
-contract = w3.eth.contract(address=os.getenv("CONTRACT_ADDRESS"), abi=abi)
+Optional: if you have pinned art already, set `IMAGES_ROOT_CID` to a folder CID and minted metadata will reference a resolvable image path:
 
-# Generate and upload metadata
-eep = EEPMetadata("001", "SpiderEep", "Spider", "Legendary", token_id=1)
-initial_state = {"xp": 0, "happiness": 70, "hunger": 50, "energy": 80,
-                 "last_interaction": "2026-04-03T12:00:00"}
-
-cid = eep.upload_metadata_to_ipfs(initial_state)
-print(f"Metadata CID: {cid}")
-
-# Mint on-chain
-minter = w3.eth.account.from_key(os.getenv("DEPLOYER_KEY"))
-tx = contract.functions.mint(
-    os.getenv("RECIPIENT_ADDRESS"),
-    "001",
-    cid
-).build_transaction({
-    "from": minter.address,
-    "nonce": w3.eth.get_transaction_count(minter.address),
-})
-
-signed = w3.eth.account.sign_transaction(tx, os.getenv("DEPLOYER_KEY"))
-tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
-print(f"Minted: https://sepolia.etherscan.io/tx/{tx_hash.hex()}")
+```bash
+IMAGES_ROOT_CID=Qm...
 ```
 
 ---
@@ -226,15 +217,6 @@ https://etherscan.io/address/{CONTRACT_ADDRESS}#code
 
 ```bash
 CONTRACT_ADDRESS=0x...your_deployed_contract...
-```
-
-Commit the address (not the keys) to a `deployments/` tracking file:
-
-```bash
-mkdir deployments
-echo '{"sepolia": "0x...", "mainnet": "0x..."}' > deployments/addresses.json
-git add deployments/addresses.json
-git commit -m "chore: add deployed contract addresses"
 ```
 
 ---

@@ -263,6 +263,41 @@ Full deployment guide: [docs/deployment.md](docs/deployment.md)
 
 ---
 
+## Art Assets (Drop-In at the End)
+
+Metadata currently uses a placeholder image path:
+
+```text
+ipfs://EEPVengers/{pet_id}/{stage}.png
+```
+
+When you’re ready to add real art, pin a folder to IPFS that contains:
+
+```text
+EEPVengers/001/baby.png
+EEPVengers/001/young.png
+EEPVengers/001/trained.png
+EEPVengers/001/elite.png
+EEPVengers/001/legendary.png
+EEPVengers/001/quantum.png
+...
+EEPVengers/078/quantum.png
+```
+
+Then set:
+
+```bash
+IMAGES_ROOT_CID=Qm...  # root CID of the pinned folder
+```
+
+From that point on, newly generated metadata uses:
+
+```text
+ipfs://{IMAGES_ROOT_CID}/EEPVengers/{pet_id}/{stage}.png
+```
+
+---
+
 ## Testing
 
 ```bash

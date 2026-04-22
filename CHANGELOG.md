@@ -8,20 +8,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-### Planned (Phase 1 — 2026 Q2-Q4)
-- FastAPI HTTP endpoints wrapping `BROskiPet` agent
-- Full personality prompts for all 78 EEPs
-- IPFS image assets for all 6 evolution stages per EEP
-- `contracts/script/Deploy.s.sol` — deployment script for Sepolia testnet
-- GitHub Actions CI pipeline (Python + Solidity tests on every PR)
-- First 78 EEPs minted on Sepolia testnet
-- BROski$ ERC-20 reward token
+### Added
+- Sepolia deploy + Etherscan verification flow (`forge script ... --verify`)
+- Working end-to-end flow: mint → IPFS metadata → on-chain evolve → tokenURI updated
+- `scripts/sepolia_mint_first_eep.py` (EIP-1559 tx fields, loads `.env`, reads ABI from `forge build`)
+- Docker Compose loads `.env` into the API container (`env_file`) for `PINATA_JWT`, `CONTRACT_ADDRESS`, `AGENT_KEY`
+- `IMAGES_ROOT_CID` support for “drop art at the end” image URIs
 
-### Fixed (Dev environment)
-- Added a repository `Dockerfile` so `docker compose` can build `bropets-api`
-- Updated Docker Compose Ollama settings to avoid host port collisions
-- Moved the contract to `contracts/src/EEPVengers.sol` and aligned Foundry config to `src = "src"`
-- Improved on-chain env validation so placeholder `CONTRACT_ADDRESS` / `AGENT_KEY` doesn’t crash the API
+### Fixed
+- Redis auth mismatch between API and Redis container (`REDIS_PASSWORD` propagation)
+- IPFS upload failures caused by missing `PINATA_JWT` in the API container environment
+- Mint script import path when executed from repo root (`ModuleNotFoundError: agent`)
 
 ---
 
