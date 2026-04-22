@@ -5,14 +5,30 @@ Last checked: 22 April 2026 — combining all 4 repos + your Space docs
 These are the manual steps that can't be automated — you need a browser/dashboard:
 
 B1 → Go to Supabase dashboard → Create DB webhook on token_transactions INSERT → point it at sync-tokens-to-v24 Edge Function
+✅ Done when:
+- Insert 1 row into `token_transactions` and the Edge Function runs (logs show 200)
+- Exactly-once behaviour confirmed (idempotency key blocks duplicates)
 
 B2 → Set COURSE_SYNC_SECRET in Supabase Edge Function secrets panel (value is in your .env line 112)
+✅ Done when:
+- Edge Function can read the secret (no “missing secret” / 401 logs)
+- A signed request succeeds end-to-end
 
 B3 → Run E2E Stripe checkout test — stripe listen --forward-to localhost:8000/api/stripe/webhook → use test card 4242 4242 4242 4242 → verify webhook fires + BROski tokens awarded
+✅ Done when:
+- Webhook endpoint receives `checkout.session.completed` (or your chosen “grant” event)
+- Token grant is written once (idempotency works; retry does not double-award)
+- User sees the updated balance/ledger entry
 
 Q3 → Set VITE_STRIPE_PAYMENT_LINK_URL in Vercel env vars → redeploy
+✅ Done when:
+- Checkout button uses the Vercel env value in production
+- Payment link opens and completes without redirect errors
 
 Q8 → npm publish --access public in HyperAgent-SDK → publish @w3lshdog/hyper-agent@0.1.7 to npm
+✅ Done when:
+- `npm view @w3lshdog/hyper-agent version` shows the published version
+- Install works from a clean machine/project
 
 🟠 Priority 2 — Gordon Tier 3 (Next Big Phase)
 These are the enterprise-level upgrades still outstanding:
@@ -52,6 +68,13 @@ Feature 5 Focus Panic Mode (make focus / make calm) — ~1h
 🔵 Priority 5 — BROskiPets × HyperCode Integration
 Full plan written in BROSKI_PETS_INTEGRATION_PLAN.md:
 
+BROskiPets Core (this repo) — ✅ DONE
+- ✅ Sepolia deploy + Etherscan verify
+- ✅ Mint works (token #1 minted)
+- ✅ Evolve works (API → IPFS → on-chain evolve → tokenURI updates)
+- ✅ Cooldown works (on-chain remaining seconds + API blocks)
+- ✅ Docker stack stable (Redis auth + Pinata env wiring)
+
 Phase 0 → Add to docker-compose.agents.yml, verify Ollama shared connection — ~1 day
 
 Phase 1 → Mint your first pet via BROski CLI — ~3 days
@@ -84,5 +107,5 @@ text
 3. Gordon Tier 3 (env_file fix first, easiest win)
 4. HyperAgent-SDK sync (pull spec + starter template in)
 5. Feature 1 Git Hook (quick win, 2h, builds momentum! 🔥)
-6. BROskiPets Phase 0 (Docker compose wiring)
+6. BROskiPets Phase 0 (HyperCode integration wiring)
 Nice one bro — that's the full picture in one place! 🎉👀
