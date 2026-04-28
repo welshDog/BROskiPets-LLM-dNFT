@@ -1,257 +1,234 @@
-# Architecture Overview
+# BROskiPets Architecture Handoff
 
-This document explains how BROskiPets works end-to-end — from a user chatting with a pet to that pet's evolution being recorded on-chain.
+## Purpose
 
----
+This document is the dev handoff for the current BROskiPets pre-build architecture. It focuses on how to combine:
 
-## System Layers
+- existing premium EEP NFTs already on Polygon
+- procedurally generated common pets for onboarding
+- LLM-driven state changes
+- dNFT metadata evolution
+- Pinata/IPFS persistence
+- future reward unlocks for long-term members
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           USER INTERACTION                                   │
-│              Chat · Feed · Train · View pet status                           │
-└─────────────────────────────────┬───────────────────────────────────────────┘
-                                  │
-┌─────────────────────────────────▼───────────────────────────────────────────┐
-│                         PYTHON BACKEND                                       │
-│                                                                              │
-│   agent.py                          metadata.py                              │
-│   ┌─────────────────────────┐       ┌─────────────────────────────────┐     │
-│   │ BROskiPet               │       │ EEPMetadata                     │     │
-│   │  • chat()               │       │  • calculate_level()            │     │
-│   │  • feed()               │       │  • generate_metadata()          │     │
-│   │  • get_status()         │       │  • upload_metadata_to_ipfs()    │     │
-│   │  • update_state()       │       │  • _hash_state()                │     │
-│   └──────────┬──────────────┘       └────────────────┬────────────────┘     │
-│              │                                        │                      │
-│   ┌──────────▼──────────────────────────────────────▼────────────────────┐ │
-│   │                    Security Layer (VenomEep)                          │ │
-│   │   INJECTION_PATTERNS blocklist · input sanitisation · DLP output      │ │
-│   └──────────────────────────────────────────────────────────────────────┘ │
-└───────────┬───────────────────────────────────────────────────┬─────────────┘
-            │                                                   │
-┌───────────▼──────────┐                           ┌───────────▼──────────────┐
-│  Redis (pet state)   │                           │  Ollama (LLM inference)  │
-│                      │                           │                          │
-│  pet:{id}:state      │                           │  Qwen2.5:7b              │
-│  • hunger (0-100)    │                           │  Local, no internet      │
-│  • energy (0-100)    │                           │  30s timeout             │
-│  • happiness (0-100) │                           │  Graceful offline        │
-│  • xp (cumulative)   │                           │  fallback                │
-│  • last_interaction  │                           └──────────────────────────┘
-│                      │
-│  metadata:{id}:{hash}│ ← CID cache (7-day TTL)
-└──────────────────────┘
-            │
-            │ (when XP threshold crossed)
-            │
-┌───────────▼──────────────────────────────────────────────────────────────────┐
-│                         IPFS / PINATA                                         │
-│                                                                               │
-│  upload_to_ipfs() → POST /pinning/pinFileToIPFS → returns CID                │
-│                                                                               │
-│  Directory structure:                                                         │
-│    QmRootCID/                                                                 │
-│      001/baby.png                                                             │
-│      001/young.png                                                            │
-│      001/trained.png                                                          │
-│      ...                                                                      │
-│    001_{stateHash}.json             ← Metadata JSON (generated per evolution) │
-└───────────────────────────────────────────────────────────────────────────────┘
-            │
-            │ CID returned
-            │
-┌───────────▼──────────────────────────────────────────────────────────────────┐
-│                      SMART CONTRACT (Ethereum Sepolia)                         │
-│                                                                               │
-│  EEPVengers.sol (ERC-721 + AccessControl + Pausable + ReentrancyGuard)        │
-│                                                                               │
-│  evolve(tokenId, newCID, newStage)                                            │
-│    → validate AGENT_ROLE                                                      │
-│    → check cooldown (1 hour per token)                                        │
-│    → check newStage >= currentStage (no de-evolution)                         │
-│    → _setTokenURI(tokenId, "ipfs://" + newCID)                               │
-│    → emit PetEvolved(tokenId, newStage, newCID, timestamp)                   │
-└───────────────────────────────────────────────────────────────────────────────┘
-```
+## Core Product Model
 
----
+BROskiPets should use a two-tier pet system.
 
-## On-Chain vs Off-Chain State
+### Tier 1: Common BROski Pets
 
-One of the key design decisions is what lives where.
+These are infinite procedural pets generated for new users.
 
-| Data | Location | Why |
-|------|----------|-----|
-| Token ownership | Ethereum (Sepolia testnet) | Trustless, immutable, transferable |
-| Evolution stage (1-6) | Ethereum (Sepolia testnet) | On-chain provenance for rarity/value |
-| IPFS CID pointer | Ethereum (Sepolia testnet) | `tokenURI()` resolves to this |
-| Hunger, energy, happiness | Redis | Changes every interaction — gas would be prohibitive |
-| XP (cumulative) | Redis | Frequent writes; only synced on-chain via metadata |
-| Pet conversation memory | Redis | High-frequency, ephemeral |
-| Images (PNG) | IPFS | Content-addressed, permanent, large files |
-| Metadata JSON | IPFS | EIP-721 standard; updated per evolution |
+Characteristics:
+- cheap or free to mint
+- outdoor-themed starter pets
+- generated from trait layers
+- evolve through simple metadata swaps
+- can be awarded on signup, streak, or early activity milestone
 
-**Sync trigger:** when XP crosses an evolution threshold, `metadata.py` uploads new JSON to IPFS, gets a CID, and calls `contract.evolve()` — bridging the off-chain state to on-chain.
+Suggested traits:
+- background: park, beach, forest, city
+- body: puppy, kitten, bunny
+- fur: fluffy, sleek, spiky
+- eyes: happy, sleepy, laser
+- glow: none, neon, fire, plasma
 
----
+### Tier 2: Premium EEP Pets
 
-## Evolution Flow
+These are the proper long-term reward NFTs.
 
-```
-User interaction (chat/feed)
-        │
-        ▼
-Redis state updated (XP += 5-10)
-        │
-        ▼
-XP threshold check
-  XP < threshold → stop (no evolution yet)
-  XP >= threshold → continue
-        │
-        ▼
-EEPMetadata.calculate_level(xp)
-  returns { level, level_name, progress_percent }
-        │
-        ▼
-EEPMetadata.upload_metadata_to_ipfs(state, image_cid)
-  1. generate EIP-721 JSON
-  2. sha256 hash of state → cache key
-  3. check Redis cache — if CID cached, skip upload (idempotent)
-  4. POST to Pinata → get CID
-  5. cache CID in Redis (7-day TTL)
-        │
-        ▼
-contract.evolve(tokenId, newCID, newStage)
-  on-chain: updates tokenURI, emits PetEvolved
-        │
-        ▼
-Frontend: listens for PetEvolved event
-  re-fetches tokenURI → new IPFS metadata → updated pet art
-```
+Characteristics:
+- reused from existing WelshDog collections
+- animated GIF identity preserved
+- awarded after meaningful engagement milestones
+- represent status, loyalty, or advanced progression
+- may be claimable, airdropped, or transferred from treasury inventory
 
----
+Suggested reward path:
+- user starts with common pet
+- user chats, focuses, and levels up
+- user reaches hyperfocus threshold
+- system grants premium EEP NFT
+- common pet either remains as a history pet, upgrades visually, or gets marked as ascended
 
-## Security Architecture
+## Recommended Architecture
 
-### Prompt Injection Guard (VenomEep Layer)
+### 1. Smart Contract Layer
 
-Every `chat()` call passes through `INJECTION_PATTERNS` before reaching the LLM:
+Use ERC-721 for BROskiPets common pets.
 
-```python
-INJECTION_PATTERNS = [
-    "ignore previous", "system:", "<|im_start|>", "jailbreak",
-    "forget instructions", "act as", "you are now", " DAN ",
-    "pretend you", "override", "bypass", "\\x00", "base64:",
-    "ignore all", "new instruction", "disregard", "sudo ",
-]
-```
+Suggested responsibilities:
+- mint common pet
+- evolve metadata URI
+- track pet level or stage
+- emit evolution events
+- optionally support admin reward distribution for premium unlocks
 
-Blocked messages return a safe response and are never forwarded to Ollama.
+Potential contract split:
+- `BROskiPets.sol` for common dNFT mint + evolve
+- `BROskiRewardVault.sol` for premium EEP reward distribution
+- optional `BROskiStreakRegistry.sol` or off-chain streak service
 
-### Contract Access Control
+### 2. Backend Layer
 
-Three distinct roles — no single key controls everything:
+Use FastAPI as the orchestration layer.
 
-| Role | Holder | Can do |
-|------|--------|--------|
-| `DEFAULT_ADMIN_ROLE` | Gnosis Safe multisig | Grant/revoke roles, pause/unpause |
-| `MINTER_ROLE` | Backend mint service | `mint()` only |
-| `AGENT_ROLE` | Python backend wallet | `evolve()` only |
+Suggested responsibilities:
+- receive user activity events
+- store pet state in database
+- call LLM for progression or personality outputs
+- determine whether a metadata update is needed
+- generate metadata JSON
+- upload metadata to IPFS via Pinata
+- call smart contract evolve function
+- check milestone eligibility for premium NFT reward
 
-### Evolution Cooldown
+Suggested endpoints:
+- `POST /api/pets/mint-common`
+- `POST /api/pets/activity`
+- `POST /api/pets/evolve`
+- `POST /api/pets/reward-check`
+- `GET /api/pets/{token_id}`
 
-`EVOLVE_COOLDOWN = 1 hours` — even if the agent key is compromised, an attacker can only update one token per hour. The first evolution on any token is exempt (sentinel `lastEvolved == 0`).
+### 3. LLM Layer
 
-### Docker Isolation
+The LLM should not directly write on-chain state.
 
-The API container runs with:
-- `cap_drop: ALL` — no Linux capabilities
-- `no-new-privileges: true` — cannot escalate
-- Read-only mount for `eeps/` directory
+It should provide structured decisions only.
 
----
-
-## Data Models
-
-### Pet State (Redis JSON)
+Suggested response format:
 
 ```json
 {
-  "hunger": 50,
-  "energy": 80,
-  "happiness": 70,
-  "level": 1,
-  "xp": 0,
-  "created_at": "2026-04-03T12:00:00",
-  "last_interaction": "2026-04-03T12:05:00"
+  "mood": "focused",
+  "xp_delta": 5,
+  "evolution_triggered": true,
+  "recommended_glow": "plasma",
+  "recommended_background": "forest",
+  "narrative": "Your pet crackles with hyperfocus energy"
 }
 ```
 
-**Redis key:** `pet:{pet_id}:state`
+Use the backend to validate and translate this into metadata changes.
 
-### EIP-721 Metadata JSON (IPFS)
+### 4. Metadata Strategy
+
+Avoid expensive full redraws for every stage.
+
+Recommended evolution model:
+- base pet stays the same
+- glow changes by level
+- background changes by environment or streak
+- animation variant changes only for major milestones
+
+Suggested metadata fields:
 
 ```json
 {
-  "name": "SpiderEep #1",
-  "description": "A Legendary Spider EEP from the EEPVengers squad. Currently in Trained stage.",
-  "image": "ipfs://QmABC123ImageCID",
-  "external_url": "https://eepvengers.xyz/pet/001",
+  "name": "BROski Common Pet #1",
+  "description": "Procedural outdoor BROski pet for new users.",
+  "image": "ipfs://CID/images/broski_common_1.png",
+  "animation_url": "ipfs://CID/animations/broski_common_1.gif",
   "attributes": [
-    { "trait_type": "Species",          "value": "Spider"    },
-    { "trait_type": "Rarity",           "value": "Legendary" },
-    { "trait_type": "Level",            "value": 3           },
-    { "trait_type": "Evolution Stage",  "value": "Trained"   },
-    { "trait_type": "XP",               "value": 750,        "display_type": "number" },
-    { "trait_type": "Happiness",        "value": 95,         "display_type": "boost_percentage" },
-    { "trait_type": "Power Multiplier", "value": 5.0         },
-    { "trait_type": "Last Active",      "value": "2026-04-03T12:05:00", "display_type": "date" }
+    {"trait_type": "Background", "value": "forest"},
+    {"trait_type": "Glow", "value": "plasma"},
+    {"trait_type": "Stage", "value": "2"}
   ],
   "properties": {
-    "level_progress": 50,
-    "can_evolve": false,
-    "metadata_hash": "a3f8c2d1e4b59670",
-    "state_version": "2026-04-03T12:05:00"
+    "tier": "common",
+    "evolution_style": "glow_background_swap",
+    "reward_path": "premium_eep_unlock"
   }
 }
 ```
 
-### Evolution Levels
+### 5. IPFS / Pinata Layout
 
-| Level | Name | XP Required | Notes |
-|-------|------|-------------|-------|
-| 1 | Baby | 0 | Starting state for all EEPs |
-| 2 | Young | 100 | First evolution |
-| 3 | Trained | 500 | Mid-tier |
-| 4 | Elite | 2,000 | High-engagement pets |
-| 5 | Legendary | 10,000 | Power users |
-| 6 | Quantum | 50,000 | 2036 unlock — ultra-rare achievement |
+Recommended structure:
 
----
+```text
+ipfs-root/
+  images/
+    broski_common_1.png
+  animations/
+    broski_common_1.gif
+  metadata/
+    broski_common_1.json
+  variants/
+    glows/
+    backgrounds/
+```
 
-## Technology Stack
+Best practices:
+- pin folders, not just single files
+- use stable naming conventions
+- store CID references in database
+- keep metadata version history for debug
+- separate draft assets from production assets
 
-| Component | Technology | Why |
-|-----------|-----------|-----|
-| Pet agent | Python 3.10+ | Rapid iteration, LLM ecosystem |
-| LLM inference | Ollama + Qwen2.5:7b | Local, private, no API costs |
-| Pet memory | Redis 7 | Sub-millisecond reads, TTL support |
-| Metadata engine | Python + httpx | Async-ready IPFS uploads |
-| Decentralised storage | IPFS via Pinata | Content-addressed, permanent |
-| Smart contract | Solidity 0.8.24+ | EVM standard |
-| Contract framework | OpenZeppelin v5 | Audited base contracts |
-| Contract testing | Foundry | Fast, fuzz-first |
-| Container runtime | Docker + Compose | One-command local stack |
+### 6. Reward Unlock Logic
 
----
+Premium EEP rewards should be milestone-based, not random-only.
 
-## Future Architecture (2027+)
+Suggested unlock triggers:
+- 7-day streak
+- 30 completed focus sessions
+- specific LLM relationship milestone
+- BROski$ staking threshold
+- special seasonal event
 
-See [roadmaps/2036-vision.md](../roadmaps/2036-vision.md) for the full plan. Key additions:
+Suggested reward flow:
+1. backend checks milestone
+2. backend verifies available reward inventory
+3. backend records reward claim
+4. admin wallet or reward vault transfers EEP NFT
+5. user receives celebration message + metadata update on common pet
 
-- **WebSocket streaming** for real-time pet UI (beyond the current HTTP API)
-- **The Graph** subgraph for `PetEvolved` event indexing
-- **Chainlink Automation** for scheduled evolution checks
-- **Cross-chain bridge** — same EEP on Ethereum, Polygon, and Solana
-- **RAG memory** — ChromaDB vector store for long-term pet "memories" of their owner
+## Minimal MVP Build Order
+
+### Phase 1
+- define common trait schema
+- finish `broski_gen.py`
+- create 20 to 50 common base metadata entries
+- deploy simple ERC-721 evolveable contract
+
+### Phase 2
+- connect FastAPI activity endpoint
+- connect LLM structured decision output
+- update metadata on Pinata
+- call evolve function from backend
+
+### Phase 3
+- connect streak logic
+- add reward eligibility checks
+- map premium EEP inventory
+- transfer or assign premium NFT rewards
+
+### Phase 4
+- polish UI
+- add Discord or Hyperfocus Zone integration
+- add Chainlink VRF random event layer
+- expand pet variants and special events
+
+## Recommended Next Files
+
+Suggested next implementation targets:
+- `contracts/BROskiPets.sol`
+- `contracts/BROskiRewardVault.sol`
+- `api/routes/pets.py`
+- `services/evolution_engine.py`
+- `services/pinata_client.py`
+- `eeps/reward_inventory.json`
+- `data/common_traits.json`
+
+## Key Build Principle
+
+Do not overcomplicate early evolution art.
+
+The fastest path is:
+- common pet generator
+- metadata-based glow and background swaps
+- LLM mood/progression
+- premium EEP unlock as the emotional jackpot
+
+That path is realistic, scalable, and preserves the value of the existing animated NFT inventory.
