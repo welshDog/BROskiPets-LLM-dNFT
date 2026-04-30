@@ -16,10 +16,18 @@ services:
       - LLM_BASE_URL=http://ollama:11434
       - LLM_MODEL=qwen2.5:7b
     depends_on:
-      - redis
-      - ollama
+      redis:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
     networks:
       - bropets_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
     # Security: read-only filesystem, no extra capabilities
     read_only: false
     cap_drop:
@@ -42,6 +50,12 @@ services:
     volumes:
       - redis_data:/data
     command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD:-bropets_secret}"
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-bropets_secret}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     restart: unless-stopped
 
   # Local LLM (Ollama)
@@ -53,6 +67,12 @@ services:
     volumes:
       - ollama_models:/root/.ollama
     command: serve
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
     restart: unless-stopped
     # No internet access for agents (security)
     # To enable: remove network isolation below
