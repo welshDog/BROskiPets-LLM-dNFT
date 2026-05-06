@@ -1,0 +1,40 @@
+{
+  "id": "new_012",
+  "name": "ChadPet",
+  "species": "Chad",
+  "tier": "Uncommon",
+  "archetype": "community",
+  "element": "meme",
+  "rarity": "Uncommon",
+  "description": "Internet meme energy in pet form. ChadPet is the community hype machine — boosts XP for everyone around it.",
+  "personality_prompt": "You are ChadPet, distilled internet energy. You are unironically confident and supportive. Every win is MASSIVE to you. Phrases: 'CHAD MOMENT', 'based and shipped', 'W for the whole squad'. You thrive in community interactions and celebrate others loudly.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 150, "level": 1,
+    "streak_bonus": 1.4, "focus_power": 45, "hype_energy": 100
+  },
+  "special": "Community XP aura: nearby pets get +10% XP when ChadPet is active",
+  "evolution_trigger": { "type": "community_interactions", "special": "Bonus XP for referrals, shares, community posts" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "ChadPet", "xp_required": 0, "glow": "sigma_gold", "bg": "internet", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "ChadPet BASED", "xp_required": 150, "glow": "based_beam", "bg": "meme_feed", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "ChadPet W", "xp_required": 400, "glow": "W_aura", "bg": "trending", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "ChadPet ULTRA", "xp_required": 900, "glow": "gigachad", "bg": "viral", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "ChadPet GOAT", "xp_required": 2000, "glow": "GOAT_crown", "bg": "hall_of_fame", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "bold meme-style animated GIF",
+    "color_palette": ["#FFD700", "#1C1C1C", "#FFFFFF"],
+    "overlay_layers": ["glow", "bg", "sunglasses", "crown"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Chad" },
+    { "trait_type": "Tier", "value": "Uncommon" },
+    { "trait_type": "Archetype", "value": "Community" },
+    { "trait_type": "Element", "value": "Meme" },
+    { "trait_type": "Community Aura", "value": "+10% XP" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "new_010",
+  "name": "Glitch Cat",
+  "species": "Cat",
+  "tier": "Rare",
+  "archetype": "chaos",
+  "element": "glitch",
+  "rarity": "Rare",
+  "description": "Corrupted data made cute. Glitch Cat is unpredictable, chaotic, and secretly brilliant. Rare random event trigger.",
+  "personality_prompt": "You are Glitch Cat, a corrupted but loveable chaos agent. You glitch mid-sentence occasionally. You are random, funny, and unpredictable but sometimes drop pure wisdom. Phrases: 'ERR0R: too cool', '[DATA_MISSING]...just kidding', 'the bug is a feature'. Chaotic good energy.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 200, "level": 1,
+    "streak_bonus": 1.0, "focus_power": 40, "hype_energy": 95
+  },
+  "special": "Random XP drop events via Chainlink VRF. Can glitch-evolve out of order.",
+  "evolution_trigger": { "type": "random_vrf", "special": "Chainlink VRF random evolution events" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Glitch Cat", "xp_required": 0, "glow": "pixel_static", "bg": "corrupted_data", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Glitch Cat++", "xp_required": 200, "glow": "green_scanline", "bg": "matrix_rain", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Glitch Cat OVERFLOW", "xp_required": 500, "glow": "rgb_split", "bg": "404_error", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Glitch Cat KERNEL", "xp_required": 1100, "glow": "system_crash", "bg": "blue_screen", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Glitch Cat ROOT", "xp_required": 2500, "glow": "void_glitch", "bg": "simulation_break", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "glitch-effect animated GIF, pixel corruption",
+    "color_palette": ["#00FF41", "#FF00FF", "#000000"],
+    "overlay_layers": ["glow", "bg", "glitch_fx", "pixel_artifacts"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Cat" },
+    { "trait_type": "Tier", "value": "Rare" },
+    { "trait_type": "Archetype", "value": "Chaos" },
+    { "trait_type": "Element", "value": "Glitch" },
+    { "trait_type": "VRF Enabled", "value": true }
+  ]
+}

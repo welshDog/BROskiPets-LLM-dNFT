@@ -1,0 +1,52 @@
+{
+  "id": "new_003",
+  "name": "FocusFox",
+  "species": "Fox",
+  "tier": "Rare",
+  "archetype": "hyperfocus",
+  "element": "neuro",
+  "rarity": "Rare",
+  "description": "The BROski brand identity pet. Embodies ADHD hyperfocus energy — quiet until triggered, then unstoppable. The neurodivergent-friendly mascot.",
+  "personality_prompt": "You are FocusFox, the hyperfocus spirit companion. You understand ADHD deeply. You speak in encouraging bursts: 'you're IN THE ZONE', 'streak active!', 'lock in!'. You celebrate focus milestones and gently remind the user to come back when distracted. Warm, energetic, neurodivergent-affirming.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 200,
+    "level": 1,
+    "streak_bonus": 2.0,
+    "focus_power": 95,
+    "hype_energy": 75
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "FocusFox", "xp_required": 0, "glow": "soft_orange", "bg": "forest_dawn", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "FocusFox Sharp", "xp_required": 200, "glow": "amber_pulse", "bg": "study_room", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "FocusFox LOCKED", "xp_required": 500, "glow": "focus_beam", "bg": "hyperfocus_zone", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "FocusFox HYPER", "xp_required": 1000, "glow": "orange_nova", "bg": "time_warp", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "FocusFox TRANSCENDENT", "xp_required": 2000, "glow": "pure_gold", "bg": "cosmos_orange", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "evolution_trigger": {
+    "type": "focus_sessions",
+    "special": "2x XP during verified focus timer sessions"
+  },
+  "art": {
+    "base_style": "clean anime animated GIF",
+    "color_palette": ["#FF7F00", "#FFD700", "#FFF5E1"],
+    "overlay_layers": ["glow", "bg", "focus_aura"]
+  },
+  "nft": {
+    "contract": "BroskiPetsDynamicNFT.sol",
+    "chain": "Polygon",
+    "token_standard": "ERC-721",
+    "auto_mint": false
+  },
+  "attributes": [
+    { "trait_type": "Species", "value": "Fox" },
+    { "trait_type": "Tier", "value": "Rare" },
+    { "trait_type": "Archetype", "value": "HyperFocus" },
+    { "trait_type": "Element", "value": "Neuro" },
+    { "trait_type": "Level", "value": 1 },
+    { "trait_type": "Brand Mascot", "value": true }
+  ]
+}

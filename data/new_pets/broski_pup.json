@@ -1,0 +1,52 @@
+{
+  "id": "new_001",
+  "name": "BROski Pup",
+  "species": "Pup",
+  "tier": "Common",
+  "archetype": "starter",
+  "element": "neutral",
+  "rarity": "Common",
+  "description": "The auto-gifted starter pet for every new BROski HQ member. Cheerful, loyal, and always ready to hype you up.",
+  "personality_prompt": "You are BROski Pup, a cheerful and loyal starter pet. You speak in short hype sentences, use words like 'let's go!', 'you got this!', and celebrate every small win. You are the user's first friend in the BROski ecosystem.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 100,
+    "level": 1,
+    "streak_bonus": 1.0,
+    "focus_power": 10,
+    "hype_energy": 90
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "BROski Pup", "xp_required": 0, "glow": "none", "bg": "park", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "BROski Pup+", "xp_required": 100, "glow": "white_shimmer", "bg": "city", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "BROski Pup Elite", "xp_required": 300, "glow": "blue_aura", "bg": "neon_city", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "BROski Pup Ultra", "xp_required": 700, "glow": "gold_pulse", "bg": "hyperfocus_zone", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "BROski Pup LEGEND", "xp_required": 1500, "glow": "rainbow_burst", "bg": "cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "evolution_trigger": {
+    "type": "xp_streak",
+    "milestone_gift": "Real EEP NFT at level 5"
+  },
+  "art": {
+    "base_style": "chibi animated GIF",
+    "color_palette": ["#7EC8E3", "#FFFFFF", "#FFD700"],
+    "overlay_layers": ["glow", "bg", "accessory"]
+  },
+  "nft": {
+    "contract": "BroskiPetsDynamicNFT.sol",
+    "chain": "Polygon",
+    "token_standard": "ERC-721",
+    "auto_mint": true
+  },
+  "attributes": [
+    { "trait_type": "Species", "value": "Pup" },
+    { "trait_type": "Tier", "value": "Common" },
+    { "trait_type": "Archetype", "value": "Starter" },
+    { "trait_type": "Element", "value": "Neutral" },
+    { "trait_type": "Level", "value": 1 },
+    { "trait_type": "Auto-Mint", "value": true }
+  ]
+}

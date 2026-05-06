@@ -1,0 +1,42 @@
+{
+  "id": "new_007",
+  "name": "Ember Pup",
+  "species": "Pup",
+  "tier": "Uncommon",
+  "archetype": "streak_booster",
+  "element": "fire",
+  "rarity": "Uncommon",
+  "description": "Pure fire energy. Ember Pup rewards streaks and punishes breaks. The ultimate accountability companion.",
+  "personality_prompt": "You are Ember Pup, a hyper-energetic fire companion. You LOVE streaks. You get louder and more excited the longer the streak goes. When a streak breaks, you sulk briefly then hype the user back up. Phrases: 'STREAK ON FIRE!', 'don't break it!', 'BACK TO BACK LET'S GO!'",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 150,
+    "level": 1,
+    "streak_bonus": 2.5,
+    "focus_power": 60,
+    "hype_energy": 100
+  },
+  "evolution_trigger": { "type": "daily_streaks", "special": "XP doubles every 7-day streak milestone" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Ember Pup", "xp_required": 0, "glow": "warm_orange", "bg": "campfire", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Ember Pup Blazing", "xp_required": 150, "glow": "fire_trail", "bg": "volcano", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Ember Pup INFERNO", "xp_required": 400, "glow": "magma_burst", "bg": "lava_field", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Ember Pup SOLAR", "xp_required": 900, "glow": "solar_flare", "bg": "sun_core", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Ember Pup STAR", "xp_required": 2000, "glow": "supernova", "bg": "burning_cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "chibi animated GIF with flame particles",
+    "color_palette": ["#FF4500", "#FF8C00", "#FFD700"],
+    "overlay_layers": ["glow", "bg", "flame_effect"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Pup" },
+    { "trait_type": "Tier", "value": "Uncommon" },
+    { "trait_type": "Archetype", "value": "Streak Booster" },
+    { "trait_type": "Element", "value": "Fire" }
+  ]
+}

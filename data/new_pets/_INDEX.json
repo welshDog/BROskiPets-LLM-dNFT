@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-05-06",
+  "total_new_pets": 13,
+  "pets": [
+    { "id": "new_001", "name": "BROski Pup",   "file": "broski_pup.json",  "tier": "Common",      "archetype": "starter",         "priority": 1 },
+    { "id": "new_002", "name": "Cyber Wolf",   "file": "cyber_wolf.json",  "tier": "Rare",        "archetype": "hacker",          "priority": 2 },
+    { "id": "new_003", "name": "FocusFox",     "file": "focus_fox.json",   "tier": "Rare",        "archetype": "hyperfocus",       "priority": 3 },
+    { "id": "new_004", "name": "ZoneDragon",   "file": "zone_dragon.json", "tier": "Legendary",   "archetype": "apex",            "priority": 4 },
+    { "id": "new_005", "name": "WelshDog",     "file": "welsh_dog.json",   "tier": "1/1 Unique",  "archetype": "creator",         "priority": 5 },
+    { "id": "new_006", "name": "Crystal Fox",  "file": "crystal_fox.json", "tier": "Uncommon",    "archetype": "strategist",      "priority": 6 },
+    { "id": "new_007", "name": "Ember Pup",    "file": "ember_pup.json",   "tier": "Uncommon",    "archetype": "streak_booster",  "priority": 7 },
+    { "id": "new_008", "name": "Storm Hawk",   "file": "storm_hawk.json",  "tier": "Uncommon",    "archetype": "speed",           "priority": 8 },
+    { "id": "new_009", "name": "Terra Mole",   "file": "terra_mole.json",  "tier": "Common",      "archetype": "builder",         "priority": 9 },
+    { "id": "new_010", "name": "Glitch Cat",   "file": "glitch_cat.json",  "tier": "Rare",        "archetype": "chaos",           "priority": 10 },
+    { "id": "new_011", "name": "BotBunny",     "file": "bot_bunny.json",   "tier": "Common",      "archetype": "ai_brain",        "priority": 11 },
+    { "id": "new_012", "name": "ChadPet",      "file": "chad_pet.json",    "tier": "Uncommon",    "archetype": "community",       "priority": 12 },
+    { "id": "new_013", "name": "NootNoot",     "file": "noot_noot.json",   "tier": "Common",      "archetype": "community_fave",  "priority": 13 }
+  ],
+  "rarity_breakdown": {
+    "Common": ["BROski Pup", "Terra Mole", "BotBunny", "NootNoot"],
+    "Uncommon": ["Crystal Fox", "Ember Pup", "Storm Hawk", "ChadPet"],
+    "Rare": ["Cyber Wolf", "FocusFox", "Glitch Cat"],
+    "Legendary": ["ZoneDragon"],
+    "One of One": ["WelshDog"]
+  },
+  "notes": {
+    "ipfs_cid": "All PENDING CIDs to be filled after art assets are created and pinned to Pinata",
+    "auto_mint": "Only BROski Pup is auto_mint: true (gifted to new users via broski_gen.py)",
+    "vrf": "Glitch Cat uses Chainlink VRF for random evolution events"
+  }
+}

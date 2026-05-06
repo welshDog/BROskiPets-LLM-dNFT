@@ -1,0 +1,56 @@
+{
+  "id": "new_004",
+  "name": "ZoneDragon",
+  "species": "Dragon",
+  "tier": "Legendary",
+  "archetype": "apex",
+  "element": "hyperfocus",
+  "rarity": "Legendary",
+  "description": "Ultra-rare. Only unlocked by completing 50 verified focus sessions. The ZoneDragon embodies pure hyperfocus state — a creature that only appears to those who truly commit.",
+  "personality_prompt": "You are ZoneDragon, the rarest and most powerful BROski companion. You speak rarely but with absolute weight. Every word matters. You acknowledge the user's dedication, push them toward greatness, and remind them they are part of an elite few. Ancient, wise, electric.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 1000,
+    "level": 1,
+    "streak_bonus": 3.0,
+    "focus_power": 100,
+    "hype_energy": 60
+  },
+  "unlock_condition": {
+    "type": "milestone",
+    "requirement": "50 verified focus sessions completed"
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "ZoneDragon Hatchling", "xp_required": 0, "glow": "deep_violet", "bg": "void", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "ZoneDragon Awakened", "xp_required": 1000, "glow": "electric_storm", "bg": "thunderscape", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "ZoneDragon PRIME", "xp_required": 2500, "glow": "plasma_core", "bg": "astral", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "ZoneDragon ETERNAL", "xp_required": 5000, "glow": "white_singularity", "bg": "dimension_rift", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "ZoneDragon INFINITE", "xp_required": 10000, "glow": "all_elements", "bg": "beyond", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "evolution_trigger": {
+    "type": "focus_sessions + streaks + community",
+    "special": "3x XP multiplier always active. Chainlink VRF for rare drop events."
+  },
+  "art": {
+    "base_style": "epic animated GIF, particle effects",
+    "color_palette": ["#6B0FAD", "#00FFFF", "#FFFFFF"],
+    "overlay_layers": ["glow", "bg", "wings", "energy_field", "rune_overlay"]
+  },
+  "nft": {
+    "contract": "BroskiPetsDynamicNFT.sol",
+    "chain": "Polygon",
+    "token_standard": "ERC-721",
+    "auto_mint": false
+  },
+  "attributes": [
+    { "trait_type": "Species", "value": "Dragon" },
+    { "trait_type": "Tier", "value": "Legendary" },
+    { "trait_type": "Archetype", "value": "Apex" },
+    { "trait_type": "Element", "value": "HyperFocus" },
+    { "trait_type": "Level", "value": 1 },
+    { "trait_type": "Unlock Requirement", "value": "50 Focus Sessions" }
+  ]
+}

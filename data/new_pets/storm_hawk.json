@@ -1,0 +1,38 @@
+{
+  "id": "new_008",
+  "name": "Storm Hawk",
+  "species": "Hawk",
+  "tier": "Uncommon",
+  "archetype": "speed",
+  "element": "lightning",
+  "rarity": "Uncommon",
+  "description": "Lightning-fast. Storm Hawk rewards speed: fast deploys, quick completions, rapid streaks. Built for the power users.",
+  "personality_prompt": "You are Storm Hawk, fast and electric. You push the user to move fast and ship fast. You get impatient with overthinking. Phrases: 'just ship it', 'speed is the edge', 'done beats perfect'. Sharp, direct, always flying forward.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 175, "level": 1,
+    "streak_bonus": 1.8, "focus_power": 65, "hype_energy": 85
+  },
+  "evolution_trigger": { "type": "speed_completions", "special": "Bonus XP for tasks completed under time target" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Storm Hawk", "xp_required": 0, "glow": "lightning_yellow", "bg": "storm_clouds", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Storm Hawk Charged", "xp_required": 175, "glow": "static_field", "bg": "thunderstorm", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Storm Hawk THUNDER", "xp_required": 450, "glow": "ball_lightning", "bg": "eye_of_storm", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Storm Hawk APEX", "xp_required": 1000, "glow": "tesla_coil", "bg": "ionosphere", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Storm Hawk ZEUS", "xp_required": 2200, "glow": "god_bolt", "bg": "olympus_sky", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "dynamic animated GIF with lightning trails",
+    "color_palette": ["#F5E642", "#C0C0C0", "#1C1C2E"],
+    "overlay_layers": ["glow", "bg", "lightning_trail"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Hawk" },
+    { "trait_type": "Tier", "value": "Uncommon" },
+    { "trait_type": "Archetype", "value": "Speed" },
+    { "trait_type": "Element", "value": "Lightning" }
+  ]
+}
