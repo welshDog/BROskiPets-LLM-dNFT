@@ -1,0 +1,16 @@
+# BROski Pet Evolver Agent — pinned deps
+# Install: pip install -r requirements.evolver.txt
+
+# Web3 + Base chain
+web3==6.15.1
+requests==2.31.0
+
+# Env management
+python-dotenv==1.0.0
+
+# OpenAI (optional — skip if USE_OLLAMA=true)
+openai==1.12.0
+
+# Existing deps from agent.py (already in main requirements.txt)
+# redis==5.0.1
+# httpx==0.26.0
