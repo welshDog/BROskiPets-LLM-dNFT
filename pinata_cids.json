@@ -1,50 +1,80 @@
 {
   "dry_run": false,
   "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca",
-  "ok_count": 0,
-  "fail_count": 10,
-  "failures": [
+  "ok_count": 10,
+  "fail_count": 0,
+  "failures": [],
+  "results": [
     {
       "species": "apex_dragon",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Apex Dragon",
+      "image_cid": "bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+      "metadata_cid": "bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+      "metadata_url": "ipfs://bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte"
     },
     {
       "species": "blizzard_lizard",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Blizzard Lizard",
+      "image_cid": "bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+      "metadata_cid": "bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+      "metadata_url": "ipfs://bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4"
     },
     {
       "species": "chaos_cat",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Chaos Cat",
+      "image_cid": "bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+      "metadata_cid": "bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+      "metadata_url": "ipfs://bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy"
     },
     {
       "species": "cyber_fox",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Cyber Fox",
+      "image_cid": "bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+      "metadata_cid": "bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+      "metadata_url": "ipfs://bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua"
     },
     {
       "species": "gigabyte_guinea_pig",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Gigabyte Guinea Pig",
+      "image_cid": "bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+      "metadata_cid": "bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+      "metadata_url": "ipfs://bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4"
     },
     {
       "species": "hyper_beam_bunny",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Hyper Beam Bunny",
+      "image_cid": "bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+      "metadata_cid": "bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+      "metadata_url": "ipfs://bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y"
     },
     {
       "species": "hyper_hamster",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Hyper Hamster",
+      "image_cid": "bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+      "metadata_cid": "bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+      "metadata_url": "ipfs://bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe"
     },
     {
       "species": "hyperfocus_horse",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Hyperfocus Horse",
+      "image_cid": "bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+      "metadata_cid": "bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+      "metadata_url": "ipfs://bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay"
     },
     {
       "species": "power_pup",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Power Pup",
+      "image_cid": "bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+      "metadata_cid": "bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+      "metadata_url": "ipfs://bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy"
     },
     {
       "species": "sonic_spider",
-      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+      "display_name": "Sonic Spider",
+      "image_cid": "bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+      "metadata_cid": "bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+      "metadata_url": "ipfs://bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna"
     }
   ],
-  "results": [],
-  "ts_snippet": "// no successful uploads"
+  "ts_snippet": "// Paste over the matching SPECIES entries in frontend/src/lib/species.ts\n// Apex Dragon              babyMetadataCid: 'bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte',\n// Blizzard Lizard          babyMetadataCid: 'bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4',\n// Chaos Cat                babyMetadataCid: 'bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy',\n// Cyber Fox                babyMetadataCid: 'bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua',\n// Gigabyte Guinea Pig      babyMetadataCid: 'bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4',\n// Hyper Beam Bunny         babyMetadataCid: 'bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y',\n// Hyper Hamster            babyMetadataCid: 'bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe',\n// Hyperfocus Horse         babyMetadataCid: 'bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay',\n// Power Pup                babyMetadataCid: 'bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy',\n// Sonic Spider             babyMetadataCid: 'bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna',"
 }

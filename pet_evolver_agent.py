@@ -381,7 +381,13 @@ def evolve_single_pet(
             }
         }
 
-        # Update image to next evo stage
+        # Update image to next evo stage.
+        # Evo1 (Baby) CIDs are pinned per-file, see pinata_cids.json (2026-05-07).
+        # Evo2–5 PNGs have NOT been uploaded yet — until they are, this URL
+        # uses {CID_PLACEHOLDER} and the evolver will write a non-resolving
+        # image link. Two ways to fix when ready:
+        #   A) Upload broski_pets/ as a Pinata folder, drop the root CID here.
+        #   B) Build a per-species per-stage CID map and look up by (species, stage).
         if species != "unknown":
             new_meta["image"] = f"https://{IPFS_GATEWAY}/ipfs/{{CID_PLACEHOLDER}}/{species}/{species}_evo{next_stage}.png"
 
