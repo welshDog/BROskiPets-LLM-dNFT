@@ -1,0 +1,50 @@
+{
+  "dry_run": false,
+  "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca",
+  "ok_count": 0,
+  "fail_count": 10,
+  "failures": [
+    {
+      "species": "apex_dragon",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "blizzard_lizard",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "chaos_cat",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "cyber_fox",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "gigabyte_guinea_pig",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "hyper_beam_bunny",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "hyper_hamster",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "hyperfocus_horse",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "power_pup",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    },
+    {
+      "species": "sonic_spider",
+      "error": "Client error '401 Unauthorized' for url 'https://uploads.pinata.cloud/v3/files'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    }
+  ],
+  "results": [],
+  "ts_snippet": "// no successful uploads"
+}

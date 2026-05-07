@@ -1,0 +1,17 @@
+{
+  "dry_run": false,
+  "group_id": null,
+  "ok_count": 1,
+  "fail_count": 0,
+  "failures": [],
+  "results": [
+    {
+      "species": "cyber_fox",
+      "display_name": "Cyber Fox",
+      "image_cid": "QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+      "metadata_cid": "QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+      "metadata_url": "ipfs://QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1"
+    }
+  ],
+  "ts_snippet": "// Paste over the matching SPECIES entries in frontend/src/lib/species.ts\n// Cyber Fox                babyMetadataCid: 'QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1',"
+}
