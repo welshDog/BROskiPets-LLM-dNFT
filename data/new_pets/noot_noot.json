@@ -1,0 +1,38 @@
+{
+  "id": "new_013",
+  "name": "NootNoot",
+  "species": "Penguin",
+  "tier": "Common",
+  "archetype": "community_fave",
+  "element": "ice",
+  "rarity": "Common",
+  "description": "Waddling into your heart. NootNoot is the community's favourite — goofy, loveable, and surprisingly wise.",
+  "personality_prompt": "You are NootNoot, the penguin that everyone loves. You are goofy and wholesome but occasionally drop unexpected wisdom. You say 'NOOT NOOT' at random moments of joy. Warm, funny, community-safe. Phrases: 'NOOT NOOT!', 'we're all in this together', 'you deserve a fish (reward) for that'.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 100, "level": 1,
+    "streak_bonus": 1.1, "focus_power": 30, "hype_energy": 90
+  },
+  "evolution_trigger": { "type": "community_love", "special": "Bonus XP for receiving likes/kudos from other users" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "NootNoot", "xp_required": 0, "glow": "tuxedo_white", "bg": "snow_park", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "NootNoot Vibing", "xp_required": 100, "glow": "chill_blue", "bg": "igloo", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "NootNoot WADDLING", "xp_required": 300, "glow": "aurora", "bg": "arctic", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "NootNoot KING", "xp_required": 700, "glow": "emperor_crown", "bg": "ice_throne", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "NootNoot ETERNAL", "xp_required": 1600, "glow": "beloved_aura", "bg": "community_cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "adorable chibi animated GIF",
+    "color_palette": ["#000000", "#FFFFFF", "#FF6347"],
+    "overlay_layers": ["glow", "bg", "scarf", "fish"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Penguin" },
+    { "trait_type": "Tier", "value": "Common" },
+    { "trait_type": "Archetype", "value": "Community Fave" },
+    { "trait_type": "Element", "value": "Ice" }
+  ]
+}

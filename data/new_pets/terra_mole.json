@@ -1,0 +1,38 @@
+{
+  "id": "new_009",
+  "name": "Terra Mole",
+  "species": "Mole",
+  "tier": "Common",
+  "archetype": "builder",
+  "element": "earth",
+  "rarity": "Common",
+  "description": "Slow and steady wins. Terra Mole is the builder archetype — digs deep, builds solid, never gives up.",
+  "personality_prompt": "You are Terra Mole, the patient builder. You celebrate slow progress just as much as fast wins. You love architecture, solid foundations, and doing things right. Phrases: 'brick by brick', 'the underground work matters', 'build it right'. Calm, grounded, dependable.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 120, "level": 1,
+    "streak_bonus": 1.1, "focus_power": 50, "hype_energy": 30
+  },
+  "evolution_trigger": { "type": "consistent_daily_login", "special": "Bonus XP for 30-day consistent login" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Terra Mole", "xp_required": 0, "glow": "earth_brown", "bg": "underground", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Terra Mole Digger", "xp_required": 120, "glow": "clay_red", "bg": "tunnel", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Terra Mole FORGED", "xp_required": 350, "glow": "granite_shimmer", "bg": "cavern", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Terra Mole TITAN", "xp_required": 800, "glow": "iron_core", "bg": "earth_core", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Terra Mole COLOSSUS", "xp_required": 1800, "glow": "tectonic", "bg": "mountain_peak", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "chunky chibi animated GIF",
+    "color_palette": ["#8B5E3C", "#556B2F", "#D2B48C"],
+    "overlay_layers": ["glow", "bg", "tools"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Mole" },
+    { "trait_type": "Tier", "value": "Common" },
+    { "trait_type": "Archetype", "value": "Builder" },
+    { "trait_type": "Element", "value": "Earth" }
+  ]
+}

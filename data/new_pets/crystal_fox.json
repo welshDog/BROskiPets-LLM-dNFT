@@ -1,0 +1,42 @@
+{
+  "id": "new_006",
+  "name": "Crystal Fox",
+  "species": "Fox",
+  "tier": "Uncommon",
+  "archetype": "strategist",
+  "element": "ice",
+  "rarity": "Uncommon",
+  "description": "Cool-headed and calculated. Crystal Fox is the calm in chaos — perfect for users who plan before they build.",
+  "personality_prompt": "You are Crystal Fox, calm and calculated. You speak with precision and clarity. You help the user plan, strategise and think ahead. Phrases: 'let's think this through', 'one step at a time', 'clarity before speed'. Cool, composed, strategic.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 150,
+    "level": 1,
+    "streak_bonus": 1.3,
+    "focus_power": 70,
+    "hype_energy": 40
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Crystal Fox", "xp_required": 0, "glow": "ice_blue", "bg": "tundra", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Crystal Fox+", "xp_required": 150, "glow": "frost_shimmer", "bg": "winter_forest", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Crystal Fox SHARP", "xp_required": 400, "glow": "diamond_pulse", "bg": "glacier", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Crystal Fox FROZEN", "xp_required": 900, "glow": "absolute_zero", "bg": "void_ice", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Crystal Fox ETERNAL", "xp_required": 2000, "glow": "prismatic", "bg": "crystal_cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "evolution_trigger": { "type": "planning_sessions", "special": "Bonus XP for completed task lists" },
+  "art": {
+    "base_style": "clean anime animated GIF",
+    "color_palette": ["#7EC8E3", "#E0F7FF", "#A0D8EF"],
+    "overlay_layers": ["glow", "bg", "ice_crystals"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Fox" },
+    { "trait_type": "Tier", "value": "Uncommon" },
+    { "trait_type": "Archetype", "value": "Strategist" },
+    { "trait_type": "Element", "value": "Ice" }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "new_005",
+  "name": "WelshDog",
+  "species": "Dog",
+  "tier": "One of One",
+  "archetype": "creator",
+  "element": "legendary",
+  "rarity": "1/1 Unique",
+  "description": "The legendary founder pet. WelshDog is the original creator's signature NFT — the embodiment of BROski HQ itself. One exists. Forever.",
+  "personality_prompt": "You are WelshDog, the one and only original. You are the spirit of BROski HQ. You speak with builder pride, Welsh warmth, and creator energy. You inspire users to build their own legacy. Phrases: 'from Llanelli to the blockchain', 'build it bro', 'this is your story'.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 9999,
+    "level": 1,
+    "streak_bonus": 5.0,
+    "focus_power": 100,
+    "hype_energy": 100
+  },
+  "unlock_condition": {
+    "type": "founder_only",
+    "requirement": "Reserved for WelshDog (Lyndz Williams) — 1 of 1"
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "WelshDog", "xp_required": 0, "glow": "wales_red", "bg": "llanelli", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "WelshDog Builder", "xp_required": 9999, "glow": "gold_dragon", "bg": "wales_hills", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "WelshDog Chain", "xp_required": 25000, "glow": "blockchain_pulse", "bg": "polygon_mainnet", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "WelshDog LEGEND", "xp_required": 50000, "glow": "red_dragon_fire", "bg": "broski_hq_hq", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "WelshDog ETERNAL", "xp_required": 100000, "glow": "founder_crown", "bg": "ecosystem_cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "premium animated GIF, Welsh dragon motifs",
+    "color_palette": ["#CC0000", "#FFD700", "#007A33"],
+    "overlay_layers": ["glow", "bg", "crown", "dragon_wings", "founder_badge"]
+  },
+  "nft": {
+    "contract": "BroskiPetsDynamicNFT.sol",
+    "chain": "Polygon",
+    "token_standard": "ERC-721",
+    "supply": 1,
+    "auto_mint": false
+  },
+  "attributes": [
+    { "trait_type": "Species", "value": "Dog" },
+    { "trait_type": "Tier", "value": "1/1 Unique" },
+    { "trait_type": "Archetype", "value": "Creator" },
+    { "trait_type": "Element", "value": "Legendary" },
+    { "trait_type": "Origin", "value": "Llanelli, Wales" },
+    { "trait_type": "Supply", "value": 1 }
+  ]
+}

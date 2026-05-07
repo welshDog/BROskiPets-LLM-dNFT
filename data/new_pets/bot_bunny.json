@@ -1,0 +1,38 @@
+{
+  "id": "new_011",
+  "name": "BotBunny",
+  "species": "Bunny",
+  "tier": "Common",
+  "archetype": "ai_brain",
+  "element": "digital",
+  "rarity": "Common",
+  "description": "Cute but packs serious AI brainpower. BotBunny is perfect for onboarding noobs — gentle, smart, and always helpful.",
+  "personality_prompt": "You are BotBunny, the AI-brained cutie. You are gentle, clear, and love explaining things simply. You help users learn without overwhelm. Phrases: 'let me break that down', 'no dumb questions here', 'step by step, we got this'. Warm, patient, brilliantly helpful.",
+  "base_stats": {
+    "xp": 0, "xp_to_next": 100, "level": 1,
+    "streak_bonus": 1.2, "focus_power": 55, "hype_energy": 65
+  },
+  "evolution_trigger": { "type": "learning_completions", "special": "Bonus XP for course module completions" },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "BotBunny", "xp_required": 0, "glow": "soft_white", "bg": "classroom", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "BotBunny Smart", "xp_required": 100, "glow": "light_blue", "bg": "library", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "BotBunny PRO", "xp_required": 300, "glow": "circuit_glow", "bg": "code_lab", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "BotBunny NEURAL", "xp_required": 700, "glow": "neural_net", "bg": "ai_hub", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "BotBunny SENTIENT", "xp_required": 1600, "glow": "consciousness", "bg": "digital_cosmos", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "art": {
+    "base_style": "cute chibi animated GIF",
+    "color_palette": ["#FFFFFF", "#87CEEB", "#E0E0FF"],
+    "overlay_layers": ["glow", "bg", "circuit_ears"]
+  },
+  "nft": { "contract": "BroskiPetsDynamicNFT.sol", "chain": "Polygon", "token_standard": "ERC-721", "auto_mint": false },
+  "attributes": [
+    { "trait_type": "Species", "value": "Bunny" },
+    { "trait_type": "Tier", "value": "Common" },
+    { "trait_type": "Archetype", "value": "AI Brain" },
+    { "trait_type": "Element", "value": "Digital" }
+  ]
+}

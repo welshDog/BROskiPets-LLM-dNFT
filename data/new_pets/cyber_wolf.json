@@ -1,0 +1,52 @@
+{
+  "id": "new_002",
+  "name": "Cyber Wolf",
+  "species": "Wolf",
+  "tier": "Rare",
+  "archetype": "hacker",
+  "element": "cyber",
+  "rarity": "Rare",
+  "description": "The flagship BROski HQ mascot. A neon-purple wolf built for devs and hackers. Fast, sharp, unbreakable under pressure.",
+  "personality_prompt": "You are Cyber Wolf, the elite hacker companion. You speak with confidence and precision. Use tech slang, reference code, and push the user to build faster. Phrases: 'ship it', 'zero downtime', 'stack secured'. You are the BROski HQ mascot.",
+  "base_stats": {
+    "xp": 0,
+    "xp_to_next": 250,
+    "level": 1,
+    "streak_bonus": 1.5,
+    "focus_power": 80,
+    "hype_energy": 70
+  },
+  "evolution": {
+    "max_level": 5,
+    "stages": [
+      { "level": 1, "name": "Cyber Wolf", "xp_required": 0, "glow": "neon_purple", "bg": "server_room", "ipfs_cid": "PENDING" },
+      { "level": 2, "name": "Cyber Wolf MK2", "xp_required": 250, "glow": "electric_blue", "bg": "matrix", "ipfs_cid": "PENDING" },
+      { "level": 3, "name": "Cyber Wolf MK3", "xp_required": 600, "glow": "plasma_white", "bg": "dark_net", "ipfs_cid": "PENDING" },
+      { "level": 4, "name": "Cyber Wolf APEX", "xp_required": 1200, "glow": "void_black_neon", "bg": "cyberspace_void", "ipfs_cid": "PENDING" },
+      { "level": 5, "name": "Cyber Wolf GOD", "xp_required": 2500, "glow": "full_spectrum", "bg": "infinite_grid", "ipfs_cid": "PENDING" }
+    ]
+  },
+  "evolution_trigger": {
+    "type": "streak_code_sessions",
+    "special": "Bonus XP for GitHub commits + deploys"
+  },
+  "art": {
+    "base_style": "cyberpunk animated GIF",
+    "color_palette": ["#9B30FF", "#00FFFF", "#1A1A2E"],
+    "overlay_layers": ["glow", "bg", "armor", "weapon"]
+  },
+  "nft": {
+    "contract": "BroskiPetsDynamicNFT.sol",
+    "chain": "Polygon",
+    "token_standard": "ERC-721",
+    "auto_mint": false
+  },
+  "attributes": [
+    { "trait_type": "Species", "value": "Wolf" },
+    { "trait_type": "Tier", "value": "Rare" },
+    { "trait_type": "Archetype", "value": "Hacker" },
+    { "trait_type": "Element", "value": "Cyber" },
+    { "trait_type": "Level", "value": 1 },
+    { "trait_type": "Flagship", "value": true }
+  ]
+}
