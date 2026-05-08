@@ -1,6 +1,35 @@
 # 🦅 BROskiPets — Agent Handoff Doc
 > Read this FIRST. Every session. No exceptions.
-> Last updated: May 2026 — welshDog / Lyndz Williams, Llanelli 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+> Last updated: 2026-05-08 — welshDog / Lyndz Williams, Llanelli 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+
+---
+
+## 📍 Resume Here — 2026-05-08
+
+**Status:** 🟢 Steps 1, 2, 3 complete. 🔴 Step 4 blocked on Base Sepolia funding.
+
+**Active blocker:**
+- Deployer wallet `0xb58B8e2E80451CC4Ba8064Cf8a0Ad67aAa88FD41` has **0 ETH on Base Sepolia (chain 84532)**
+- Same wallet has **2.83 ETH on OG Ethereum Sepolia (chain 11155111)** — free testnet ETH, just on the wrong chain
+- Most public Base faucets gate on mainnet ETH balance; Bware Labs / unauth'd ones rejected
+
+**To resume Step 4 next session:**
+1. Fund the deployer with Base Sepolia ETH. Three working options:
+   - **Bridge** (already have funds): https://superbridge.app/base-sepolia → connect Trust Wallet on Sepolia → bridge 0.05 ETH to Base Sepolia
+   - **LearnWeb3 faucet** (free email signup, no mainnet ETH check): https://learnweb3.io/faucets/base_sepolia/
+   - **Superchain faucet** (GitHub login): https://app.optimism.io/faucet
+2. Verify with: `python -c "import httpx; r=httpx.post('https://sepolia.base.org', json={'jsonrpc':'2.0','id':1,'method':'eth_getBalance','params':['0xb58B8e2E80451CC4Ba8064Cf8a0Ad67aAa88FD41','latest']}); print(int(r.json()['result'],16)/1e18, 'ETH')"`
+3. Need ≥ 0.005 ETH for deploy gas.
+4. Then run forge script (Step 4 below).
+
+**Reminder for future sessions:** `.env` stores config strings — **it does not fund wallets**. Wallet balances live on-chain and only change via real transactions (faucet, bridge, or transfer). Editing `.env` to "add an address" never moves ETH.
+
+**Pre-flight already verified 2026-05-08 (no need to redo):**
+- `forge build` clean (one lint hint about keccak256, no errors)
+- `forge test --match-contract BROskiPet` → **22 passed / 0 failed**
+- Deploy script env vars all set: ADMIN, BACKEND_SIGNER, AGENT addresses present, non-zero
+- `BACKEND_SIGNER_ADDRESS` = `0xFF24DA010049388b3c9c0eD39F03C88E709b2654` (PRIVATE_KEY in local `.env` + Pinata agent vault + Supabase Edge Function vault per Bro)
+- Step 0 (Supabase migration `20260507080000_broskipet_mint_hardening.sql`) status **unconfirmed this session** — verify before further DB work
 
 ---
 
@@ -88,56 +117,45 @@ IPFS_GATEWAY                = https://aqua-few-dolphin-310.mypinata.cloud
 | `MintPetButton.tsx` | ✅ Scaffolded | Drives `useMintPet()`, balance gate, step trail |
 | `Pets.tsx` | ✅ Scaffolded | 3-step flow, replaces mock data |
 | Species images (local) | ✅ Exist | `H:/dNFTpet/BROskiPets-LLM-dNFT/broski_pets/{species}/{species}_evo1-5.png` |
+| Pinata evo1 pins (10 species) | ✅ 2026-05-07 | Group `BROski_pets_dNFTs` / `2aedcf70-...` — see `pinata_cids.json`, commit `d5630a6` |
+| `species.ts` real CIDs wired | ✅ 2026-05-07 | Hyper-Vibe-Coding-Course commit `ed25c47` — 10 PLACEHOLDERs → real `bafkrei*` |
+| Public PNGs in live frontend | ✅ Verified byte-identical | `H:/Hyper-Vibe-Coding-Course/frontend/public/pets/{species}.png` |
+| Backend signer wallet | ✅ 2026-05-07 | Address `0xFF24DA010049388b3c9c0eD39F03C88E709b2654` — key in local `.env` + cloud vaults |
+| Pinata + Supabase vault secrets | ✅ Per Bro 2026-05-07 | `BACKEND_SIGNER_PRIVATE_KEY` placed in both clouds (still need contract address after Step 4) |
 
 ---
 
 ## ⏳ What Still Needs Doing (in order)
 
 ```
-0. Apply pending migration to Supabase:
+0. (verify) Apply Supabase migration if not already applied:
    supabase/migrations/20260507080000_broskipet_mint_hardening.sql
    → fixes search_path on next_pet_id() + prune_expired_nonces()
    → removes duplicate RLS policy on mint_nonces
    → clears 10 advisor warnings
-   → RUN THIS BEFORE any further DB work
+   → STATUS UNCONFIRMED 2026-05-08 — check supabase advisor before further DB work
 
-1. Upload 10x evo1 images to Pinata BROski_pets_dNFTs group:
-   python pinata_upload_all.py
-   → outputs pinata_cids.json
-   → replace {CID_PLACEHOLDER} in pet_evolver_agent.py with real root CID
-   → replace PLACEHOLDER_CID in Pets.tsx with real CID
+1. ✅ DONE 2026-05-07 — see pinata_cids.json + commits d5630a6, ed25c47
 
-2. Copy evo1 PNGs to frontend/public/pets/ (for Vercel static serving):
-   mkdir -p frontend/public/pets
-   for species in apex_dragon blizzard_lizard chaos_cat cyber_fox \
-     gigabyte_guinea_pig hyper_beam_bunny hyper_hamster \
-     hyperfocus_horse power_pup sonic_spider; do
-     mkdir -p "frontend/public/pets/$species"
-     cp "H:/dNFTpet/BROskiPets-LLM-dNFT/broski_pets/$species/${species}_evo1.png" \
-        "frontend/public/pets/$species/"
-   done
+2. ✅ DONE — public/pets/{species}.png byte-identical to source
 
-3. Generate signer wallet:
-   cast wallet new
-   → save BACKEND_SIGNER_ADDRESS
-   → save BACKEND_SIGNER_PRIVATE_KEY (never commit)
+3. ✅ DONE — BACKEND_SIGNER_ADDRESS = 0xFF24DA010049388b3c9c0eD39F03C88E709b2654
 
-4. Deploy BROskiPet.sol to Base Sepolia:
-   cd contracts
-   forge script script/DeployBROskiPet.s.sol \
-     --rpc-url https://sepolia.base.org \
-     --private-key $DEPLOYER_KEY \
-     --broadcast --verify
-   → save BROSKIPET_CONTRACT_ADDRESS
+4. 🔴 BLOCKED on Base Sepolia funding (see Resume Here block at top)
+   When funded:
+     forge script script/DeployBROskiPet.s.sol \
+       --rpc-url https://sepolia.base.org \
+       --private-key $DEPLOYER_KEY \
+       --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY \
+       --root H:/dNFTpet/BROskiPets-LLM-dNFT/contracts
+   → save deployed address as BROSKIPET_CONTRACT_ADDRESS in .env
 
-5. Add 3 secrets to Supabase Edge Functions:
-   BACKEND_SIGNER_PRIVATE_KEY  = from step 3
+5. Add to Supabase Edge Functions (BACKEND_SIGNER_PRIVATE_KEY already there per Bro):
    BROSKIPET_CONTRACT_ADDRESS  = from step 4
    BROSKIPET_CHAIN_ID          = 84532
 
-6. Create broski-pet-evolver agent on Pinata OpenClaw:
-   https://agents.pinata.cloud/agents
-   See PINATA_DEPLOY_CHECKLIST.md for full config
+6. Add to broski-pet-evolver Pinata agent vault (PRIVATE_KEY already there per Bro):
+   BROSKIPET_CONTRACT_ADDRESS  = from step 4
 
 7. Get free WalletConnect Project ID:
    https://cloud.walletconnect.com (1 min, free)
