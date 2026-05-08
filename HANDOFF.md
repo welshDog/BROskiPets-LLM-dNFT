@@ -122,6 +122,7 @@ IPFS_GATEWAY                = https://aqua-few-dolphin-310.mypinata.cloud
 | Public PNGs in live frontend | ✅ Verified byte-identical | `H:/Hyper-Vibe-Coding-Course/frontend/public/pets/{species}.png` |
 | Backend signer wallet | ✅ 2026-05-07 | Address `0xFF24DA010049388b3c9c0eD39F03C88E709b2654` — key in local `.env` + cloud vaults |
 | Pinata + Supabase vault secrets | ✅ Per Bro 2026-05-07 | `BACKEND_SIGNER_PRIVATE_KEY` placed in both clouds (still need contract address after Step 4) |
+| Path A — backend mint relay | ✅ 2026-05-08 | `mint-pet-auth/index.ts` v3 + `useMintPet.ts` flagged build. Set `VITE_MINT_VIA_RELAY=true` to enable. Users mint without ETH; backend pays gas. |
 
 ---
 
@@ -160,6 +161,14 @@ IPFS_GATEWAY                = https://aqua-few-dolphin-310.mypinata.cloud
 7. Get free WalletConnect Project ID:
    https://cloud.walletconnect.com (1 min, free)
    → add to frontend .env as VITE_WALLETCONNECT_PROJECT_ID
+
+8. (Path A activation — when Step 4 done and relayer funded)
+   Frontend: VITE_MINT_VIA_RELAY=true  (default off — backwards-compatible)
+   Edge Function: BACKEND_SIGNER_PRIVATE_KEY already set; optionally add
+                  RELAYER_PRIVATE_KEY (separate wallet for the on-chain submit)
+                  and MINT_RPC_URL (defaults to https://sepolia.base.org)
+   Funding: relayer wallet needs Base Sepolia ETH (defaults to backend signer
+            0xFF24DA010049388b3c9c0eD39F03C88E709b2654 — fund this OR override)
 ```
 
 ---
