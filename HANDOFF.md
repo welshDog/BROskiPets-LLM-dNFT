@@ -4,31 +4,43 @@
 
 ---
 
-## 📍 Resume Here — 2026-05-08
+## 📍 Resume Here — 2026-05-08 (afternoon)
 
-**Status:** 🟢 Steps 1, 2, 3 complete. 🔴 Step 4 blocked on Base Sepolia funding.
+**Status:** 🟢 Steps 1, 2, 3 done. 🟢 Path A backend relay shipped (commits `8827d2d`, `fcc1d34`). 🔴 Step 4 deploy blocked on a wallet KEY/ADDRESS mismatch.
 
-**Active blocker:**
-- Deployer wallet `0xb58B8e2E80451CC4Ba8064Cf8a0Ad67aAa88FD41` has **0 ETH on Base Sepolia (chain 84532)**
-- Same wallet has **2.83 ETH on OG Ethereum Sepolia (chain 11155111)** — free testnet ETH, just on the wrong chain
-- Most public Base faucets gate on mainnet ETH balance; Bware Labs / unauth'd ones rejected
+**The wallet mess (read this carefully tomorrow):**
 
-**To resume Step 4 next session:**
-1. Fund the deployer with Base Sepolia ETH. Three working options:
-   - **Bridge** (already have funds): https://superbridge.app/base-sepolia → connect Trust Wallet on Sepolia → bridge 0.05 ETH to Base Sepolia
-   - **LearnWeb3 faucet** (free email signup, no mainnet ETH check): https://learnweb3.io/faucets/base_sepolia/
-   - **Superchain faucet** (GitHub login): https://app.optimism.io/faucet
-2. Verify with: `python -c "import httpx; r=httpx.post('https://sepolia.base.org', json={'jsonrpc':'2.0','id':1,'method':'eth_getBalance','params':['0xb58B8e2E80451CC4Ba8064Cf8a0Ad67aAa88FD41','latest']}); print(int(r.json()['result'],16)/1e18, 'ETH')"`
-3. Need ≥ 0.005 ETH for deploy gas.
-4. Then run forge script (Step 4 below).
+Funded wallets on Base Sepolia (we **DO NOT have keys** for them):
+- `0xBc548e52e63f31B40101B303Ec9bBFd94a97dFDf` — 0.008 ETH — labelled `DEPLOYER_ADDRESS` in `.env`
+- `0x2c241735B3bc7261487B3B9cFdcce27a321B7198` — 0.0037 ETH — labelled `AGENT_ADDRESS` in `.env`
 
-**Reminder for future sessions:** `.env` stores config strings — **it does not fund wallets**. Wallet balances live on-chain and only change via real transactions (faucet, bridge, or transfer). Editing `.env` to "add an address" never moves ETH.
+Wallets with keys we **DO have** (no Base Sepolia funding):
+- `DEPLOYER_KEY` unlocks `0xb58B8e2E80451CC4Ba8064Cf8a0Ad67aAa88FD41` (was the OG deployer; lost-access per Bro). Has 2.83 ETH on OG Ethereum Sepolia (chain 11155111) but 0 on Base.
+- `AGENT_KEY` unlocks `0x2e95e28F49d634393ab07556762a5AA06fC7991d` (old agent wallet, 0 ETH).
+
+Why we can't fix it via Trust Wallet:
+- Bro uses **Trust Wallet Extension** for the funded wallets (`0xBc548e...` + `0x2c2417...`).
+- Trust Wallet Extension **does not support private key export** — mobile-only feature.
+- The "encoded private key download" is an encrypted backup blob (96 bytes after base64 decode, password-encrypted). Decoding alone does not yield a usable raw key.
+
+**`BACKEND_SIGNER_PRIVATE_KEY` was accidentally deleted from local `.env`** during the wallet edits today. The address `0xFF24...2654` is still labelled. Cloud vaults (Pinata agent + Supabase Edge Functions) still have the key per Bro's confirmation 2026-05-07, so live mint flow is unaffected, but local Path A testing won't work until the local `.env` is restored or a fresh signer is generated.
+
+**Recommended next-session unblock — generate fresh wallets + transfer in:**
+1. Run `~/.foundry/bin/cast.exe wallet new` — get a fresh deployer wallet whose key we own immediately.
+2. Append the new `DEPLOYER_KEY` + `DEPLOYER_ADDRESS` to `.env`.
+3. From Trust Wallet Extension, use the normal **Send** button on `0xBc548e...` to transfer ~0.005 ETH to the fresh address (Trust Wallet Extension CAN sign txs even if it can't export keys).
+4. Repeat for the agent: generate fresh wallet, transfer 0.001 ETH from `0x2c2417...` to it, update `AGENT_KEY` + `AGENT_ADDRESS`.
+5. Optionally regenerate `BACKEND_SIGNER_*` locally and re-add to cloud vaults (or leave the cloud-only setup — local copy is only needed for local relay testing).
+6. Then `forge script script/DeployBROskiPet.s.sol --rpc-url https://sepolia.base.org --private-key $DEPLOYER_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY --root H:/dNFTpet/BROskiPets-LLM-dNFT/contracts`.
+
+**Alternative — Trust Wallet Mobile:** Install on phone, import same seed, mobile lets you export raw private keys. Slower but keeps the same `0xBc548e...` and `0x2c2417...` addresses.
+
+**Reminder for future sessions:** `.env` stores config strings — **it does not fund wallets**. Wallet balances live on-chain and only change via real transactions (faucet, bridge, or transfer). Also: a label `DEPLOYER_ADDRESS=0xFoo` in `.env` does **nothing on its own** — only `DEPLOYER_KEY` is what `forge --private-key` actually uses.
 
 **Pre-flight already verified 2026-05-08 (no need to redo):**
 - `forge build` clean (one lint hint about keccak256, no errors)
 - `forge test --match-contract BROskiPet` → **22 passed / 0 failed**
-- Deploy script env vars all set: ADMIN, BACKEND_SIGNER, AGENT addresses present, non-zero
-- `BACKEND_SIGNER_ADDRESS` = `0xFF24DA010049388b3c9c0eD39F03C88E709b2654` (PRIVATE_KEY in local `.env` + Pinata agent vault + Supabase Edge Function vault per Bro)
+- Deploy script reads `ADMIN_ADDRESS`, `BACKEND_SIGNER_ADDRESS`, `AGENT_ADDRESS` from env — all currently set and non-zero
 - Step 0 (Supabase migration `20260507080000_broskipet_mint_hardening.sql`) status **unconfirmed this session** — verify before further DB work
 
 ---
