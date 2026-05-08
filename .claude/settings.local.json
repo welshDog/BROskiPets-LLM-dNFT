@@ -35,7 +35,10 @@
       "Bash(/c/Users/Lyndz/.foundry/bin/cast.exe wallet *)",
       "Bash(git check-ignore *)",
       "Bash(/c/Users/Lyndz/.foundry/bin/forge.exe build *)",
-      "Bash(/c/Users/Lyndz/.foundry/bin/forge.exe test *)"
+      "Bash(/c/Users/Lyndz/.foundry/bin/forge.exe test *)",
+      "Bash(git fetch *)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/src/**)",
+      "Read(//h/Hyper-Vibe-Coding-Course/supabase/functions/mint-pet-auth/**)"
     ]
   }
 }
