@@ -23,7 +23,19 @@
       "Bash(python -c \"import web3; print\\('web3 version:', web3.__version__\\)\")",
       "Bash(python -c \"import json; d=json.load\\(open\\('contracts/out/EEPVengers.sol/EEPVengers.json'\\)\\); print\\(json.dumps\\([x for x in d['abi'] if x.get\\('name'\\) in \\('evolve','tokenURI','totalMinted','evolutionStage','evolveCooldownRemaining','EVOLVE_COOLDOWN','MAX_SUPPLY'\\) or x.get\\('type'\\)=='event' and x.get\\('name'\\)=='PetEvolved'], indent=2\\)\\)\")",
       "Bash(python pinata_upload_all.py --dry-run --species cyber_fox)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/src/lib/**)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/src/pages/**)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/src/components/pets//**)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/public//**)",
+      "Read(//h/Hyper-Vibe-Coding-Course/frontend/public/pets//**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(cast --version)",
+      "Bash(/c/Users/Lyndz/.foundry/bin/cast.exe wallet *)",
+      "Bash(git check-ignore *)",
+      "Bash(/c/Users/Lyndz/.foundry/bin/forge.exe build *)",
+      "Bash(/c/Users/Lyndz/.foundry/bin/forge.exe test *)"
     ]
   }
 }
