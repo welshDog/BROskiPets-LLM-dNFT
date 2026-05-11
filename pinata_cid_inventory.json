@@ -1,0 +1,2987 @@
+{
+  "_meta": {
+    "generated": "2026-05-11T08:50:14.016497Z",
+    "gateway": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs",
+    "groups": [
+      "BROski_pets_dNFTs",
+      "BROski_OG_EEPs_dNFTs",
+      "BROski_Dark_EEPs_dNFTs",
+      "BROski_EEPVENGERS_dNFTs",
+      "BROski_Token_dNFT"
+    ]
+  },
+  "groups": {
+    "BROski_pets_dNFTs": [
+      {
+        "name": "078_mint.json",
+        "cid": "QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+        "size_bytes": 1055,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "077_mint.json",
+        "cid": "QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+        "size_bytes": 1051,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "076_mint.json",
+        "cid": "QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+        "size_bytes": 1047,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "075_mint.json",
+        "cid": "QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "074_mint.json",
+        "cid": "QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+        "size_bytes": 1050,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "073_mint.json",
+        "cid": "QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+        "size_bytes": 1050,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "072_mint.json",
+        "cid": "QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "071_mint.json",
+        "cid": "QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+        "size_bytes": 1052,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "070_mint.json",
+        "cid": "QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+        "size_bytes": 1042,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "069_mint.json",
+        "cid": "QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+        "size_bytes": 1052,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "068_mint.json",
+        "cid": "QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+        "size_bytes": 1051,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "067_mint.json",
+        "cid": "QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+        "size_bytes": 1058,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "066_mint.json",
+        "cid": "QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+        "size_bytes": 1047,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "065_mint.json",
+        "cid": "QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+        "size_bytes": 1056,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "064_mint.json",
+        "cid": "QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "063_mint.json",
+        "cid": "QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "062_mint.json",
+        "cid": "QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+        "size_bytes": 1049,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "061_mint.json",
+        "cid": "Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+        "size_bytes": 1053,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "060_mint.json",
+        "cid": "QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+        "size_bytes": 1059,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "059_mint.json",
+        "cid": "QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+        "size_bytes": 1047,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "058_mint.json",
+        "cid": "QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+        "size_bytes": 1043,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "057_mint.json",
+        "cid": "QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+        "size_bytes": 1054,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "056_mint.json",
+        "cid": "QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+        "size_bytes": 1053,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "055_mint.json",
+        "cid": "QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+        "size_bytes": 1054,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "054_mint.json",
+        "cid": "Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+        "size_bytes": 1053,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "053_mint.json",
+        "cid": "QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+        "size_bytes": 1051,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "052_mint.json",
+        "cid": "Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "051_mint.json",
+        "cid": "QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+        "size_bytes": 1043,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "050_mint.json",
+        "cid": "QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+        "size_bytes": 1046,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "049_mint.json",
+        "cid": "QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+        "size_bytes": 1054,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "048_mint.json",
+        "cid": "QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "047_mint.json",
+        "cid": "QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "046_mint.json",
+        "cid": "QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "045_mint.json",
+        "cid": "QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+        "size_bytes": 1051,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "044_mint.json",
+        "cid": "QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+        "size_bytes": 1046,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "043_mint.json",
+        "cid": "QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+        "size_bytes": 1042,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "042_mint.json",
+        "cid": "QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+        "size_bytes": 1046,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "041_mint.json",
+        "cid": "QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+        "size_bytes": 1035,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "040_mint.json",
+        "cid": "QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+        "size_bytes": 1038,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "039_mint.json",
+        "cid": "QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+        "size_bytes": 1057,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "038_mint.json",
+        "cid": "QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+        "size_bytes": 1035,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "037_mint.json",
+        "cid": "Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+        "size_bytes": 1042,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "036_mint.json",
+        "cid": "QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+        "size_bytes": 1043,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "035_mint.json",
+        "cid": "QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "034_mint.json",
+        "cid": "QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+        "size_bytes": 1038,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "033_mint.json",
+        "cid": "QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+        "size_bytes": 1045,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "032_mint.json",
+        "cid": "QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+        "size_bytes": 1050,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "031_mint.json",
+        "cid": "QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+        "size_bytes": 1053,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "030_mint.json",
+        "cid": "QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "029_mint.json",
+        "cid": "QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+        "size_bytes": 1044,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "028_mint.json",
+        "cid": "QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+        "size_bytes": 1047,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "027_mint.json",
+        "cid": "QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+        "size_bytes": 1048,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "026_mint.json",
+        "cid": "QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+        "size_bytes": 1040,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "025_mint.json",
+        "cid": "QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+        "size_bytes": 1048,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "024_mint.json",
+        "cid": "QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "023_mint.json",
+        "cid": "QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "022_mint.json",
+        "cid": "Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+        "size_bytes": 1035,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "021_mint.json",
+        "cid": "QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+        "size_bytes": 1035,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "020_mint.json",
+        "cid": "QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "019_mint.json",
+        "cid": "QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+        "size_bytes": 1048,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "018_mint.json",
+        "cid": "QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "017_mint.json",
+        "cid": "QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+        "size_bytes": 1048,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "016_mint.json",
+        "cid": "QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "015_mint.json",
+        "cid": "QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "014_mint.json",
+        "cid": "QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+        "size_bytes": 1045,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "013_mint.json",
+        "cid": "QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "012_mint.json",
+        "cid": "QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+        "size_bytes": 1042,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "011_mint.json",
+        "cid": "QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+        "size_bytes": 1039,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "010_mint.json",
+        "cid": "Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+        "size_bytes": 1031,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "009_mint.json",
+        "cid": "QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+        "size_bytes": 1034,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "008_mint.json",
+        "cid": "QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+        "size_bytes": 1050,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "007_mint.json",
+        "cid": "QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "006_mint.json",
+        "cid": "QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+        "size_bytes": 1041,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "005_mint.json",
+        "cid": "Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+        "size_bytes": 1054,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "004_mint.json",
+        "cid": "QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+        "size_bytes": 1037,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "003_mint.json",
+        "cid": "QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+        "size_bytes": 1034,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "002_mint.json",
+        "cid": "QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+        "size_bytes": 1047,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Sonic Spider \u2014 Baby metadata",
+        "cid": "bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+        "size_bytes": 1108,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Sonic Spider \u2014 Baby image",
+        "cid": "bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "size_bytes": 2050074,
+        "size_mb": 2.05,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Power Pup \u2014 Baby metadata",
+        "cid": "bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+        "size_bytes": 1102,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Power Pup \u2014 Baby image",
+        "cid": "bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "size_bytes": 1222474,
+        "size_mb": 1.22,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyperfocus Horse \u2014 Baby metadata",
+        "cid": "bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+        "size_bytes": 1116,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyperfocus Horse \u2014 Baby image",
+        "cid": "bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "size_bytes": 1703703,
+        "size_mb": 1.7,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyper Hamster \u2014 Baby metadata",
+        "cid": "bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+        "size_bytes": 1110,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyper Hamster \u2014 Baby image",
+        "cid": "bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "size_bytes": 1664838,
+        "size_mb": 1.66,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyper Beam Bunny \u2014 Baby metadata",
+        "cid": "bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+        "size_bytes": 1116,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Hyper Beam Bunny \u2014 Baby image",
+        "cid": "bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "size_bytes": 1703065,
+        "size_mb": 1.7,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Gigabyte Guinea Pig \u2014 Baby metadata",
+        "cid": "bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+        "size_bytes": 1122,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Gigabyte Guinea Pig \u2014 Baby image",
+        "cid": "bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "size_bytes": 1646225,
+        "size_mb": 1.65,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Cyber Fox \u2014 Baby metadata",
+        "cid": "bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+        "size_bytes": 1102,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Cyber Fox \u2014 Baby image",
+        "cid": "bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "size_bytes": 1401255,
+        "size_mb": 1.4,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Chaos Cat \u2014 Baby metadata",
+        "cid": "bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+        "size_bytes": 1102,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Chaos Cat \u2014 Baby image",
+        "cid": "bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "size_bytes": 1750378,
+        "size_mb": 1.75,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Blizzard Lizard \u2014 Baby metadata",
+        "cid": "bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+        "size_bytes": 1114,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Blizzard Lizard \u2014 Baby image",
+        "cid": "bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "size_bytes": 1631708,
+        "size_mb": 1.63,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Apex Dragon \u2014 Baby metadata",
+        "cid": "bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+        "size_bytes": 1106,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "Apex Dragon \u2014 Baby image",
+        "cid": "bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "size_bytes": 1481946,
+        "size_mb": 1.48,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "jwt-scope-probe",
+        "cid": "bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+        "size_bytes": 1,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "cyber_fox_baby.json",
+        "cid": "QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+        "size_bytes": 1100,
+        "size_mb": 0.0,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      },
+      {
+        "name": "cyber_fox_evo1.png",
+        "cid": "QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+        "size_bytes": 1401327,
+        "size_mb": 1.4,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+        "group": "BROski_pets_dNFTs",
+        "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+      }
+    ],
+    "BROski_OG_EEPs_dNFTs": [
+      {
+        "name": "TomEEP.gif",
+        "cid": "bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+        "size_bytes": 8896282,
+        "size_mb": 8.9,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "SlaughterEEp.gif",
+        "cid": "bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+        "size_bytes": 7390007,
+        "size_mb": 7.39,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "RudolphEEp.gif",
+        "cid": "bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+        "size_bytes": 7454655,
+        "size_mb": 7.45,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Rov3rEEP.jpg",
+        "cid": "bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+        "size_bytes": 68395,
+        "size_mb": 0.07,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "MuskEEp.gif",
+        "cid": "bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+        "size_bytes": 10696180,
+        "size_mb": 10.7,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "LuckyEEP.gif",
+        "cid": "bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+        "size_bytes": 3604562,
+        "size_mb": 3.6,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "LollyEEP.jpg",
+        "cid": "bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+        "size_bytes": 70226,
+        "size_mb": 0.07,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Laszer_EyeEEp.gif",
+        "cid": "bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+        "size_bytes": 8388110,
+        "size_mb": 8.39,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "INVISIBLEEP.gif",
+        "cid": "bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+        "size_bytes": 2806694,
+        "size_mb": 2.81,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "HoudiniEEp.gif",
+        "cid": "bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+        "size_bytes": 4747459,
+        "size_mb": 4.75,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "HecateEEp.gif",
+        "cid": "bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+        "size_bytes": 4696224,
+        "size_mb": 4.7,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "GoldEEP.gif",
+        "cid": "bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+        "size_bytes": 27686355,
+        "size_mb": 27.69,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Father_EEPmas.gif",
+        "cid": "bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+        "size_bytes": 9105896,
+        "size_mb": 9.11,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "DudeEEP.jpg",
+        "cid": "bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+        "size_bytes": 69085,
+        "size_mb": 0.07,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "DonutEEP.jpg",
+        "cid": "bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+        "size_bytes": 84675,
+        "size_mb": 0.08,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "DocEEP.gif",
+        "cid": "bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+        "size_bytes": 19937223,
+        "size_mb": 19.94,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "DiamondEEP.gif",
+        "cid": "bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+        "size_bytes": 16225354,
+        "size_mb": 16.23,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "ConeyEEP.jpg",
+        "cid": "bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+        "size_bytes": 63623,
+        "size_mb": 0.06,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Donut EEp Vid.mp4",
+        "cid": "QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+        "size_bytes": 12663081,
+        "size_mb": 12.66,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Dude EEp Vid.mp4",
+        "cid": "QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+        "size_bytes": 14589167,
+        "size_mb": 14.59,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Hecate EEp Vid.mp4",
+        "cid": "QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+        "size_bytes": 22227708,
+        "size_mb": 22.23,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Houdini EEp Vid.mp4",
+        "cid": "QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+        "size_bytes": 13462560,
+        "size_mb": 13.46,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "INVISIBLE EEP Vid.mp4",
+        "cid": "Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+        "size_bytes": 7904171,
+        "size_mb": 7.9,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Laszer Eye EEp Vid.mp4",
+        "cid": "QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+        "size_bytes": 14785815,
+        "size_mb": 14.79,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Musk EEp Vid.mp4",
+        "cid": "QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+        "size_bytes": 14272399,
+        "size_mb": 14.27,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Rover EEp Vid.mp4",
+        "cid": "QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+        "size_bytes": 12063594,
+        "size_mb": 12.06,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "Slaughter EEp  vid.mp4",
+        "cid": "Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+        "size_bytes": 11990977,
+        "size_mb": 11.99,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      },
+      {
+        "name": "BROski Token.gif",
+        "cid": "QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+        "size_bytes": 2180043,
+        "size_mb": 2.18,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+        "group": "BROski_OG_EEPs_dNFTs",
+        "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+      }
+    ],
+    "BROski_Dark_EEPs_dNFTs": [
+      {
+        "name": "VoorhEEp.gif",
+        "cid": "bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+        "size_bytes": 29038903,
+        "size_mb": 29.04,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "Squid_Games.gif",
+        "cid": "bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+        "size_bytes": 5779515,
+        "size_mb": 5.78,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "Slendeep.gif",
+        "cid": "bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+        "size_bytes": 6149724,
+        "size_mb": 6.15,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "PennyEEPwise .gif",
+        "cid": "bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+        "size_bytes": 21967811,
+        "size_mb": 21.97,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "Jokeep.gif",
+        "cid": "bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+        "size_bytes": 5960380,
+        "size_mb": 5.96,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "fredEEP_krueger.gif",
+        "cid": "bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+        "size_bytes": 18724391,
+        "size_mb": 18.72,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      },
+      {
+        "name": "Eeple_juice.gif",
+        "cid": "bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+        "size_bytes": 14669744,
+        "size_mb": 14.67,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+        "group": "BROski_Dark_EEPs_dNFTs",
+        "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+      }
+    ],
+    "BROski_EEPVENGERS_dNFTs": [
+      {
+        "name": "WOLVEREEP.gif",
+        "cid": "bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+        "size_bytes": 5654589,
+        "size_mb": 5.65,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "VemonEEp.gif",
+        "cid": "bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+        "size_bytes": 12303805,
+        "size_mb": 12.3,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "THOREEP.gif",
+        "cid": "bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+        "size_bytes": 4604565,
+        "size_mb": 4.6,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "SuperEEP.gif",
+        "cid": "bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+        "size_bytes": 3612746,
+        "size_mb": 3.61,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "SpiderEEP.gif",
+        "cid": "bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+        "size_bytes": 5866552,
+        "size_mb": 5.87,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "MystquEEP.gif",
+        "cid": "bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+        "size_bytes": 10566741,
+        "size_mb": 10.57,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "IRONEEP.gif",
+        "cid": "bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+        "size_bytes": 5636501,
+        "size_mb": 5.64,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "HULKEEP.gif",
+        "cid": "bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+        "size_bytes": 3187964,
+        "size_mb": 3.19,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "FlashEEP.gif",
+        "cid": "bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+        "size_bytes": 4102735,
+        "size_mb": 4.1,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "DEAD_EEP_PooL.gif",
+        "cid": "bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+        "size_bytes": 4039732,
+        "size_mb": 4.04,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "CaptEEP_Ameaica.gif",
+        "cid": "bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+        "size_bytes": 4591067,
+        "size_mb": 4.59,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      },
+      {
+        "name": "BatEEP.gif",
+        "cid": "bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+        "size_bytes": 8060911,
+        "size_mb": 8.06,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+        "group": "BROski_EEPVENGERS_dNFTs",
+        "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+      }
+    ],
+    "BROski_Token_dNFT": [
+      {
+        "name": "BROski$ Token gif.gif",
+        "cid": "bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+        "size_bytes": 1769500,
+        "size_mb": 1.77,
+        "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+        "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+        "group": "BROski_Token_dNFT",
+        "group_id": "57d6e6bb-8587-4d67-b567-5ce5c9c9752b"
+      }
+    ]
+  },
+  "flat": [
+    {
+      "name": "078_mint.json",
+      "cid": "QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+      "size_bytes": 1055,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQdPYWnMsDxPgXzjopPRzeFSJTDqedWmGfxaZu1wreG6q",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "077_mint.json",
+      "cid": "QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+      "size_bytes": 1051,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNz5jpCVjcqjamZVbgEM1fJt6hCVfY8M4yFjbZU1Sbipi",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "076_mint.json",
+      "cid": "QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+      "size_bytes": 1047,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWM5LtdeU96XCVtReQjkArxW5ATRcrsYubNLprxf4vCxc",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "075_mint.json",
+      "cid": "QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRjfbAWF5EHuoQJ7a4JmJggFPrXAF8M3dPyN8H3Haya2i",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "074_mint.json",
+      "cid": "QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+      "size_bytes": 1050,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRqzdgbQsv5JNtP77A3UYNykHYAD5uNsFdHtnekwB2WpC",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "073_mint.json",
+      "cid": "QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+      "size_bytes": 1050,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNT452BvZScKUznes1QyPFtxh44mNXwzoSyS1HP5UjTYg",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "072_mint.json",
+      "cid": "QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaUFxTXgJHdEfKx5E5Q1cKh1hSZjFb1Bww2KUiijq49e9",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "071_mint.json",
+      "cid": "QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+      "size_bytes": 1052,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWr8hnK4Jo6KYqAVznPSedjh52AJETihVeumrBXGG9vuc",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "070_mint.json",
+      "cid": "QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+      "size_bytes": 1042,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmS2e6eEybrfgx6nGimHaXgbRhmS7uivo3f9ZLuhc2rJRG",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "069_mint.json",
+      "cid": "QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+      "size_bytes": 1052,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmYS6xboGrWHFpBmtW3kzbiaPZ6qCCNRQFSaMkWArzgX11",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "068_mint.json",
+      "cid": "QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+      "size_bytes": 1051,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPN9JDY2ANS4G3tTboBxvtE6VgJbx7BFS3k3RFcavQnGp",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "067_mint.json",
+      "cid": "QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+      "size_bytes": 1058,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmREmbEki4ZUY1Q6AnuHHFokXArwsVrT3XMW3gTuYQrr5C",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "066_mint.json",
+      "cid": "QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+      "size_bytes": 1047,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTSvDdnSQaM9MPRFwhXTMegKE5Am6oTWgrdbhF8MLvSr5",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "065_mint.json",
+      "cid": "QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+      "size_bytes": 1056,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWfWesAirjdmj8AsUSWMZUPMNyycGHdjpFaVMZugAei2f",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "064_mint.json",
+      "cid": "QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcNZHMKEHJ6xddCUthjpkZeDZVbmthGhzECrq4vU3pnbg",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "063_mint.json",
+      "cid": "QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNr7NKNoSi8F5f3pENofrS8rdvy4PEBrCCQULPsmrrynV",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "062_mint.json",
+      "cid": "QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+      "size_bytes": 1049,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmdJGC5QREAzyz7unHayv7toRX8QxhoCKyKp55MrAQdKTw",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "061_mint.json",
+      "cid": "Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+      "size_bytes": 1053,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmar5gT5PBugZRkZAv3ZniDJKiJj7Ctaqw8JEmnc34pjQF",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "060_mint.json",
+      "cid": "QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+      "size_bytes": 1059,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWBaktE9ymYr8MKN79B6ySWz9s5PwF9krufQXjGvE5PtX",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "059_mint.json",
+      "cid": "QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+      "size_bytes": 1047,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeW1XLo7dNx9cyQavzaYLYWKUtXnqL3x92wCxHxigKg6u",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "058_mint.json",
+      "cid": "QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+      "size_bytes": 1043,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNT8iwzYMNfPccEiG58xv1ugpKTQBTuqAXw4KFCg5oJwe",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "057_mint.json",
+      "cid": "QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+      "size_bytes": 1054,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWvDeWVdzUw9rUqtJgWK8dQnrf3eTnXzMisQ3FchSU9zd",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "056_mint.json",
+      "cid": "QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+      "size_bytes": 1053,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaNHcDE1Fy5j9gpJwvVBRc8e9ZWPvfXuFhgv2ayudEVYn",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "055_mint.json",
+      "cid": "QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+      "size_bytes": 1054,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSeicqckbVfh8uLPizpWMYuN9W13c5KxeBd7fLYfE7RvR",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "054_mint.json",
+      "cid": "Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+      "size_bytes": 1053,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmb9EQbCCoxTa3VvCmsWCzWtQtByPqzXfbLKhTnezc7s9g",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "053_mint.json",
+      "cid": "QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+      "size_bytes": 1051,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZbD3wivbQLeWqxuKz9bPNTcjGXa1TKgPjs79XbwRdFPU",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "052_mint.json",
+      "cid": "Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdp1VKAVtmosffoZ1RNEZ4RV2LFbJCKhKofhsnk76DEPR",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "051_mint.json",
+      "cid": "QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+      "size_bytes": 1043,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmVPen9DL7fhufAeffavwyVUP11w6gLDVV1ZhqyCdTC715",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "050_mint.json",
+      "cid": "QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+      "size_bytes": 1046,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWTgGFkRytQLYWdNpobmNe3rqKXqhPr9ujG6V7tAFYavd",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "049_mint.json",
+      "cid": "QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+      "size_bytes": 1054,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmYf5r6BhJsWXyDKDikAtAJ7YriRo6A5BCYr9oUvSzs2Wx",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "048_mint.json",
+      "cid": "QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSnsqqQxd5FMXFQRaHpf585W978b6HY29ngw1HH2SJdJd",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "047_mint.json",
+      "cid": "QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPGSjywqtQTYJ2whk9mhqnSPHZ1wBhht4dsr3r31ACSBY",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "046_mint.json",
+      "cid": "QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZFQQTtGfjq6QWKfzj69WupongCQbAbiXAh6RLMdam7Bt",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "045_mint.json",
+      "cid": "QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+      "size_bytes": 1051,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcN9vhq43uNimoD8TaDWJW5WxhpVmaWP1Fx1nA87Qm8X1",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "044_mint.json",
+      "cid": "QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+      "size_bytes": 1046,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPUv1t26UAJrGkS54Mu7Tq7R3K9YDEjkzUQ2tn6fQxsLE",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "043_mint.json",
+      "cid": "QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+      "size_bytes": 1042,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRDk7HisQzRL9VeRRgTkjK73fJXP7g9ddVkEMmppfzcVj",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "042_mint.json",
+      "cid": "QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+      "size_bytes": 1046,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmfHNPq8BGsRC7yDYfxpim5VHFQTnx49zmcAfa3E3bwLfB",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "041_mint.json",
+      "cid": "QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+      "size_bytes": 1035,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUbo1qtGE8yntP7ZtgPG12MXR8bYTi8s1iFpaWPwFyFNA",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "040_mint.json",
+      "cid": "QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+      "size_bytes": 1038,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRUsKedf9187sZXTKPnVFfPJ56A6sqRqP2U92oAXfJRRh",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "039_mint.json",
+      "cid": "QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+      "size_bytes": 1057,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNZdEXQhuXd1Rsx8vYQA2ZZhXuvHK1eGnrMVQntXbGRuF",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "038_mint.json",
+      "cid": "QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+      "size_bytes": 1035,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcVcrgSCTvTZfftX6PvbLVBfJiNhNMpNsBv5v6RfwuQju",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "037_mint.json",
+      "cid": "Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+      "size_bytes": 1042,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdg9hG5ti9BD5eaTV146ZG53iWEHHWSPkstfER1dVQ4B5",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "036_mint.json",
+      "cid": "QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+      "size_bytes": 1043,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmW9QfegY9DGv8wmks22RzQRkvcy8i6kqj3WHNddJ5BTva",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "035_mint.json",
+      "cid": "QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUKBBW7kzY4jPYZ5Zn5hctS6Yzxdit9LW41bjLu8NWNxR",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "034_mint.json",
+      "cid": "QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+      "size_bytes": 1038,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWzHARN885GNXw85xMJM3pLiysRR68pua9xQ7kNGtyM56",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "033_mint.json",
+      "cid": "QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+      "size_bytes": 1045,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTAhYMDT6uvQoWGLg6epsPX9x6ZZ33dvBwJrF4KhtQF7J",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "032_mint.json",
+      "cid": "QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+      "size_bytes": 1050,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPgEWSpf1H3YerwMEscrzazaWo2cT2mhVKfqcQutHxsLa",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "031_mint.json",
+      "cid": "QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+      "size_bytes": 1053,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNrcB8wURGRAbpy8VxKNkxpzKoMCQjwnBrTXcxshfQA8T",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "030_mint.json",
+      "cid": "QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQ7ZYMLv7ZcxXdqTZTkQtam9geVyoukxchSKV1KxbPJNe",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "029_mint.json",
+      "cid": "QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+      "size_bytes": 1044,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmNi67gY18uKd1a6Mkb2SvmcenTTYaAK1JoeKXW5Jr2dYQ",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "028_mint.json",
+      "cid": "QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+      "size_bytes": 1047,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcxfBy92p1HuoUbTXBpfQFWLqEAGqE8EijwECR12dQJB2",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "027_mint.json",
+      "cid": "QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+      "size_bytes": 1048,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRVzaqJQjR5KiLbJ5uMWAjz3gzsjdX2Ew38MUa8PzU4So",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "026_mint.json",
+      "cid": "QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+      "size_bytes": 1040,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWeGoAvXd2z1Q1Mr6WtviS5q7EBfX8vuuFTX9uQ58AMyt",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "025_mint.json",
+      "cid": "QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+      "size_bytes": 1048,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXUQ4ys6Dde46Rh35hKxNwzodxzCRFY3GQh9n9JWWJgAE",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "024_mint.json",
+      "cid": "QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmcABGyXeZzJcphkr9dfyG1dxgeQfMxFrjG1aygUtzUWqw",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "023_mint.json",
+      "cid": "QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUfCosXTW2PvDFjW3fFe2WHJb963SYBFQPJZg3nQgTKQz",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "022_mint.json",
+      "cid": "Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+      "size_bytes": 1035,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmd785tiAtCPQDEjVhm7UZin2Eum4DZj6HUMMcGkrjLbHZ",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "021_mint.json",
+      "cid": "QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+      "size_bytes": 1035,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmahV5q4oc9qBydRgvydM9jor3aGr1WMADFPTDA5havBi7",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "020_mint.json",
+      "cid": "QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeBo1bEqAAZDoBeFiKfryogd4jui23c1LzpvFajPgKxZb",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "019_mint.json",
+      "cid": "QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+      "size_bytes": 1048,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmarAQPgmQE8BjwDpmBC6ae5QYHr5Mm4w6Mv8EJULxfi5v",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "018_mint.json",
+      "cid": "QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXnTMYV13SaDa9vnsdBtrPzjMQpZrVUu2G8VDWYqvK1gt",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "017_mint.json",
+      "cid": "QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+      "size_bytes": 1048,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmTiND9Wogs8Q375QVo6s1DPbFTrkYewEeBgSP6jS6B5RR",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "016_mint.json",
+      "cid": "QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWPwW6AAeSUgdmiBn4LUDQvivPzwXQVvZyypHR5ND91pP",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "015_mint.json",
+      "cid": "QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZp85ns9HkjqjTDcxSWqe6feLsxgRcXPc9rK1qoRNBPUL",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "014_mint.json",
+      "cid": "QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+      "size_bytes": 1045,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmS5hbgkSacosLJ6WLUP5WEciHe4SuhFo2Z5xto8MdjGxY",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "013_mint.json",
+      "cid": "QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmV28BcV3T5fjvKraM3wDJKWjVZkthMGJB9JBCvgZsdrgn",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "012_mint.json",
+      "cid": "QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+      "size_bytes": 1042,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmZ8dfPEVtx4sJBG8y4F1RmZvbiDMNsytS9ohTVEdCKxRD",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "011_mint.json",
+      "cid": "QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+      "size_bytes": 1039,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmRkkb4raq4y3SG97UKsaPkAtu7atiN9QrK9AfyeirKTqB",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "010_mint.json",
+      "cid": "Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+      "size_bytes": 1031,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmcc7Fz3QEnejofw4oP5T1rVR7AzDinRxdpC2RR7Tr985M",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "009_mint.json",
+      "cid": "QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+      "size_bytes": 1034,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmfVqML4Edf2rMzMwL43bNmXPp39NMnCLF8JpxZ7PiQJi3",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "008_mint.json",
+      "cid": "QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+      "size_bytes": 1050,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmXNGUcWKfBzXd1mdi6EssqEvjK2Kf5Xu6uCVRn9JsnQ65",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "007_mint.json",
+      "cid": "QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmR18k9nzqRaeayjWPJuyrdoftFxgQoptKnDWXudmvKP5w",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "006_mint.json",
+      "cid": "QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+      "size_bytes": 1041,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeaY9EcjpBgZsvCPVUbNVXeN31QETa6oRKjXUSKtwa6ue",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "005_mint.json",
+      "cid": "Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+      "size_bytes": 1054,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmf5ENFoVjLxuHnRP1xqTErcfb7FkLJB3MWNEVhrxtgEyw",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "004_mint.json",
+      "cid": "QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+      "size_bytes": 1037,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPz7L1JWKaRJSfS1aTyESvzqbitRfnPEces8ArqraH5r6",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "003_mint.json",
+      "cid": "QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+      "size_bytes": 1034,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmUH1KpMadTBqAZ9kPyDZkUCr9oNG1tTN4sm6VpiHa9T25",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "002_mint.json",
+      "cid": "QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+      "size_bytes": 1047,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmeYReraB67i1pnURHHafACVeYq1DwX4hw5aqySZCvnHpA",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Sonic Spider \u2014 Baby metadata",
+      "cid": "bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+      "size_bytes": 1108,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihtyvnywbollf5w47ovsjw7cbgs6scpacajrkrjp2fstydjqmdlna",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Sonic Spider \u2014 Baby image",
+      "cid": "bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+      "size_bytes": 2050074,
+      "size_mb": 2.05,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Power Pup \u2014 Baby metadata",
+      "cid": "bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+      "size_bytes": 1102,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigh4tin25yi7peyfk5r2lma34wgvrrws5biailihc3nbckdrgypdy",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Power Pup \u2014 Baby image",
+      "cid": "bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+      "size_bytes": 1222474,
+      "size_mb": 1.22,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyperfocus Horse \u2014 Baby metadata",
+      "cid": "bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+      "size_bytes": 1116,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreib6pnkjhzzwbrmrefulglijgelhbwt7sbmommdtm2etrdp44v2zay",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyperfocus Horse \u2014 Baby image",
+      "cid": "bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+      "size_bytes": 1703703,
+      "size_mb": 1.7,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyper Hamster \u2014 Baby metadata",
+      "cid": "bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+      "size_bytes": 1110,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihh6bswkdwnhgbvf37tqbv3z4wgmftx5n6jcsfz2nldyolbm2lgwe",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyper Hamster \u2014 Baby image",
+      "cid": "bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+      "size_bytes": 1664838,
+      "size_mb": 1.66,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyper Beam Bunny \u2014 Baby metadata",
+      "cid": "bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+      "size_bytes": 1116,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihanpom3j4kqztxqiqoxpmg54vup4obcgwp5e2rq5tposlvantl4y",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Hyper Beam Bunny \u2014 Baby image",
+      "cid": "bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+      "size_bytes": 1703065,
+      "size_mb": 1.7,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Gigabyte Guinea Pig \u2014 Baby metadata",
+      "cid": "bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+      "size_bytes": 1122,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigwuuqfqq2ikfpufms26d5ykwed6fozmr5c44uvx4ok7bcsk7ioy4",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Gigabyte Guinea Pig \u2014 Baby image",
+      "cid": "bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+      "size_bytes": 1646225,
+      "size_mb": 1.65,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Cyber Fox \u2014 Baby metadata",
+      "cid": "bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+      "size_bytes": 1102,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreigyzfipicwnwllxfkll55mbaztfhqehw3os5vmiezksntpxe7iaua",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Cyber Fox \u2014 Baby image",
+      "cid": "bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+      "size_bytes": 1401255,
+      "size_mb": 1.4,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Chaos Cat \u2014 Baby metadata",
+      "cid": "bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+      "size_bytes": 1102,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreiayrp3n742qr7p6z74ibtt27meaklik4iyhdhr7rq42vrqknpdndy",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Chaos Cat \u2014 Baby image",
+      "cid": "bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+      "size_bytes": 1750378,
+      "size_mb": 1.75,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Blizzard Lizard \u2014 Baby metadata",
+      "cid": "bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+      "size_bytes": 1114,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreib4w5w6rnyufxkbywxspb266r74lwbumjdhlnzzp2netkkdkfdft4",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Blizzard Lizard \u2014 Baby image",
+      "cid": "bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+      "size_bytes": 1631708,
+      "size_mb": 1.63,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Apex Dragon \u2014 Baby metadata",
+      "cid": "bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+      "size_bytes": 1106,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreifmbfuzdcy3rmaqywbymt4y23tfqx3fcu2bgv4n3vtbuj77yqqzte",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "Apex Dragon \u2014 Baby image",
+      "cid": "bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+      "size_bytes": 1481946,
+      "size_mb": 1.48,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "jwt-scope-probe",
+      "cid": "bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+      "size_bytes": 1,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreibnoelefnzgwbcacyt4vh52ymxvzbjq7mmqhtcnwarfq4lzegsiqe",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "cyber_fox_baby.json",
+      "cid": "QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+      "size_bytes": 1100,
+      "size_mb": 0.0,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmPxzhdmuARimDfMuv5ir5weQTab2hpGoMhrnnpqzhtYz1",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "cyber_fox_evo1.png",
+      "cid": "QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+      "size_bytes": 1401327,
+      "size_mb": 1.4,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmSyhqPuiNaruEKGhQz3SQRu51ifN6yfqJwhiFMYGnspff",
+      "group": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca"
+    },
+    {
+      "name": "TomEEP.gif",
+      "cid": "bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+      "size_bytes": 8896282,
+      "size_mb": 8.9,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibdbrms2vnilintsckpz5h4iuuvufjjwxpntjrydepv63l73d2bk4",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "SlaughterEEp.gif",
+      "cid": "bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+      "size_bytes": 7390007,
+      "size_mb": 7.39,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigfgbdaf4vkcoxoacd4afvp2mxgh4smv6sjatwrx6wa3yvifxtpbe",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "RudolphEEp.gif",
+      "cid": "bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+      "size_bytes": 7454655,
+      "size_mb": 7.45,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeienv552poppe3a5qi6t4i3qw4zwkhgtrdwrpr3utuviobac2g7oei",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Rov3rEEP.jpg",
+      "cid": "bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+      "size_bytes": 68395,
+      "size_mb": 0.07,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreidex3objung3axld36w2vgfjnhk6xntxnls2pnirwptj7n6pmufzy",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "MuskEEp.gif",
+      "cid": "bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+      "size_bytes": 10696180,
+      "size_mb": 10.7,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieyprh5zmpcmdvjdb72pxu23rc47orqq2i4envehf73vgghh62ho4",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "LuckyEEP.gif",
+      "cid": "bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+      "size_bytes": 3604562,
+      "size_mb": 3.6,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifwvqyplppka3ti35z2abe2colcyrb2seior6jzghzgmw43aatuua",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "LollyEEP.jpg",
+      "cid": "bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+      "size_bytes": 70226,
+      "size_mb": 0.07,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreihyrursmy3vfcgawhiexh7xlr7bjad5wohezddtq4cbpowsxplane",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Laszer_EyeEEp.gif",
+      "cid": "bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+      "size_bytes": 8388110,
+      "size_mb": 8.39,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigayb23ekso3qdes7ig67sccyvlhagowd76hnyiccertl7ymmh3pm",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "INVISIBLEEP.gif",
+      "cid": "bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+      "size_bytes": 2806694,
+      "size_mb": 2.81,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifitei3cfzqslvaal2ao3xo2ymzl4xpsimwpybc5uusu2o7fyt4tq",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "HoudiniEEp.gif",
+      "cid": "bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+      "size_bytes": 4747459,
+      "size_mb": 4.75,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibjk34nis6t4ls253idzpyz2xt4cbsvgdanhxzwkwknasfsnqplh4",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "HecateEEp.gif",
+      "cid": "bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+      "size_bytes": 4696224,
+      "size_mb": 4.7,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiex44b76vfxkdrfxotam7ldkjktkt3gug3ssxulxc75pbeakujrwe",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "GoldEEP.gif",
+      "cid": "bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+      "size_bytes": 27686355,
+      "size_mb": 27.69,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieujt7cq25wpabiiop2behuhep6g7ffnnukv27r4oyb7rc7pt3gge",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Father_EEPmas.gif",
+      "cid": "bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+      "size_bytes": 9105896,
+      "size_mb": 9.11,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiadam5se4xubglidn6wchxrmn7dtw2w6bwzgt5kvfywekeiuvpvf4",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "DudeEEP.jpg",
+      "cid": "bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+      "size_bytes": 69085,
+      "size_mb": 0.07,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreia5zw2nfbwpc5hkzwkcgyq27kbvkvcl5wphoiu7ylueybhwfkkefm",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "DonutEEP.jpg",
+      "cid": "bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+      "size_bytes": 84675,
+      "size_mb": 0.08,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreibrikcht54keemb4wiztohdjrpvlbket4n4o4542o4v4ybmh3wz5u",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "DocEEP.gif",
+      "cid": "bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+      "size_bytes": 19937223,
+      "size_mb": 19.94,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieibyoa4s2iftnxdyae2krthf52b22tenql6jkvuv32lpq67qzr3y",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "DiamondEEP.gif",
+      "cid": "bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+      "size_bytes": 16225354,
+      "size_mb": 16.23,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeigeq5w2awibrsfpco3z6i22lskkunpi4mhiukjcmujvgy3u4f3itu",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "ConeyEEP.jpg",
+      "cid": "bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+      "size_bytes": 63623,
+      "size_mb": 0.06,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafkreifpcqkjwbw5mlzd5m2mfanbbsxr3l6mb2gzpxllxuaezylsmvulu4",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Donut EEp Vid.mp4",
+      "cid": "QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+      "size_bytes": 12663081,
+      "size_mb": 12.66,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmVKrB4LcjaErpuQhvRooRjhyqUQ62eg44AkRG3hx9JjZE",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Dude EEp Vid.mp4",
+      "cid": "QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+      "size_bytes": 14589167,
+      "size_mb": 14.59,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmQEt9zHYsWbMdPmQj42CfyZwNezm6V5vLsoNXcqKjkNn9",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Hecate EEp Vid.mp4",
+      "cid": "QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+      "size_bytes": 22227708,
+      "size_mb": 22.23,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWGrciScLynGqgKzccFjj9VMibu4aUafoyNSFqBR8biHf",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Houdini EEp Vid.mp4",
+      "cid": "QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+      "size_bytes": 13462560,
+      "size_mb": 13.46,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmP6HagAJmQmLjtkWDeNDHTbUePL675mNiqY7QtbL4GFdd",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "INVISIBLE EEP Vid.mp4",
+      "cid": "Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+      "size_bytes": 7904171,
+      "size_mb": 7.9,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmdyd4iCLwfqzHhDa5WpDCLQkzXe62D3KUEwBWVqyDcbH5",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Laszer Eye EEp Vid.mp4",
+      "cid": "QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+      "size_bytes": 14785815,
+      "size_mb": 14.79,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmWqiZAVVfZKvyjbPfjSFTm2svXQAMhBTwZPPgjSM6A2Qc",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Musk EEp Vid.mp4",
+      "cid": "QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+      "size_bytes": 14272399,
+      "size_mb": 14.27,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmaJxcwsPuzogbfbvXzoGsgTxqVeoMfazKiw1iV61GizPm",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Rover EEp Vid.mp4",
+      "cid": "QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+      "size_bytes": 12063594,
+      "size_mb": 12.06,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmT3qenXU3VtTGLvKbAHeHsavhpctNNZ7dNWwnpMcLEHR5",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "Slaughter EEp  vid.mp4",
+      "cid": "Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+      "size_bytes": 11990977,
+      "size_mb": 11.99,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/Qmeeco42njVRyMmF9LJqUazZUQZZwgKnx8njoWvUfTCzDM",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "BROski Token.gif",
+      "cid": "QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+      "size_bytes": 2180043,
+      "size_mb": 2.18,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/QmW6uu8niX4uqZVvVQyATGkMsaypywLw6K2h11nBAQH3fC",
+      "group": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724"
+    },
+    {
+      "name": "VoorhEEp.gif",
+      "cid": "bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+      "size_bytes": 29038903,
+      "size_mb": 29.04,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeictys5newzbxquqbay25petyobypkh7evmx27s5mjnqnk2jkqdahu",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "Squid_Games.gif",
+      "cid": "bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+      "size_bytes": 5779515,
+      "size_mb": 5.78,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeid2tyfgieg7geonhjyeyr7tpfuyzkcbtvfihsv46c2mdfnzayreey",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "Slendeep.gif",
+      "cid": "bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+      "size_bytes": 6149724,
+      "size_mb": 6.15,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiaggbmjvphvder7q4u4rtf46vnfd224rbuhmwkxqemmfsluqxoa2u",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "PennyEEPwise .gif",
+      "cid": "bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+      "size_bytes": 21967811,
+      "size_mb": 21.97,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeid4472bmhp26djacp7zsc5nypcqidkqqxcskl2d5c7vgxsbxhgy6y",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "Jokeep.gif",
+      "cid": "bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+      "size_bytes": 5960380,
+      "size_mb": 5.96,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicwfhmvyiut2ge2diujy6iehcwk3xkvdhgufqln4gpk7yadufocaq",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "fredEEP_krueger.gif",
+      "cid": "bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+      "size_bytes": 18724391,
+      "size_mb": 18.72,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicedsuq7gypsjybjghvjdqoqwrld46w3i6bfo5fonpr4hvr2jbxhy",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "Eeple_juice.gif",
+      "cid": "bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+      "size_bytes": 14669744,
+      "size_mb": 14.67,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeifwpfcpmzn7cqfspvmtdivys7uxiykvtctfzu7u4pauocxicpghzi",
+      "group": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41"
+    },
+    {
+      "name": "WOLVEREEP.gif",
+      "cid": "bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+      "size_bytes": 5654589,
+      "size_mb": 5.65,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibypkbmde2itwcabxlbz4u65jrh6p2vslkeocblgiol5gmvmq2xdm",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "VemonEEp.gif",
+      "cid": "bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+      "size_bytes": 12303805,
+      "size_mb": 12.3,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeib3yqqlfof65vm3nynd35nue3qzjsph6acwthsadjudtmmnz3ybre",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "THOREEP.gif",
+      "cid": "bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+      "size_bytes": 4604565,
+      "size_mb": 4.6,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibo5wr2ceyegjl6tqqffoqp7vs7vsyiesmpqis4nu7gkluk3tq5sm",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "SuperEEP.gif",
+      "cid": "bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+      "size_bytes": 3612746,
+      "size_mb": 3.61,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeieeh5wwes5whlqspsbcxuwz2lxg4haxeagq65ofkbmjyvrcycg2am",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "SpiderEEP.gif",
+      "cid": "bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+      "size_bytes": 5866552,
+      "size_mb": 5.87,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiebdzvo3u624m4r5dojp5sw6gek3yupqbeem6ga7edqthjqb4xb6u",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "MystquEEP.gif",
+      "cid": "bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+      "size_bytes": 10566741,
+      "size_mb": 10.57,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihd7lmqpcear4owfvjg2aywxwr7xf4mxazyqvd5u7bjsnhksdvjjm",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "IRONEEP.gif",
+      "cid": "bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+      "size_bytes": 5636501,
+      "size_mb": 5.64,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeida6hxmqifgg4ldpsfjt5u46y3i5pspe6ze6qlkf4jchsg45os7ja",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "HULKEEP.gif",
+      "cid": "bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+      "size_bytes": 3187964,
+      "size_mb": 3.19,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeihdrvjl24xu2kcuziexzeuegqiqmdeyxfasmowpu2okmgs2yp7vlq",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "FlashEEP.gif",
+      "cid": "bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+      "size_bytes": 4102735,
+      "size_mb": 4.1,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeig7cs2xesl46bhr7jdm4n6m3laviwdjci2tzenj66obmuzxprinom",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "DEAD_EEP_PooL.gif",
+      "cid": "bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+      "size_bytes": 4039732,
+      "size_mb": 4.04,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeicsat7rsxx3d2a5rb2ol7hrv2lzk7g3qprydhbnrxqr6wvnuib2sm",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "CaptEEP_Ameaica.gif",
+      "cid": "bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+      "size_bytes": 4591067,
+      "size_mb": 4.59,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeiegl25tn4modvg4z3gq6p33oc3w4cpm4jdjjbbpubluulnt4x4cba",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "BatEEP.gif",
+      "cid": "bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+      "size_bytes": 8060911,
+      "size_mb": 8.06,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeibxngjdgk7r4a5e3mnexrezfrfaya2oujezgr3phjrs5x2sjnaspm",
+      "group": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e"
+    },
+    {
+      "name": "BROski$ Token gif.gif",
+      "cid": "bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+      "size_bytes": 1769500,
+      "size_mb": 1.77,
+      "gateway_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+      "pinata_url": "https://gateway.pinata.cloud/ipfs/bafybeig6erq5aoysl2g7kopf7w4gx4ghpcalmyy3dn5mgpyr4hnf2yzbcq",
+      "group": "BROski_Token_dNFT",
+      "group_id": "57d6e6bb-8587-4d67-b567-5ce5c9c9752b"
+    }
+  ]
+}
