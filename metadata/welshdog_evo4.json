@@ -1,0 +1,32 @@
+{
+  "name": "Welshdog \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Welshdog at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihrgpuoopp6tbh63t2k2tfzgi5vgzgx5tl5zpk4lawuhykikpmp2q",
+  "external_url": "https://broskipets.xyz/pet/welshdog/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Welshdog"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

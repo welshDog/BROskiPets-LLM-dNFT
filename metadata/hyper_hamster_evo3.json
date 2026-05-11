@@ -1,0 +1,32 @@
+{
+  "name": "Hyper Hamster \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Hyper Hamster at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiccsyxmvozmh6vl3marp5ayqzgo7gz66buuemqyzmzynftzkqpgay",
+  "external_url": "https://broskipets.xyz/pet/hyper_hamster/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Hyper Hamster"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

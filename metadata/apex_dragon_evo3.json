@@ -1,0 +1,32 @@
+{
+  "name": "Apex Dragon \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Apex Dragon at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiduumakdhvece4dvsk3lzvvuftlmxdtse76v2h4v43iomhk2sqjpe",
+  "external_url": "https://broskipets.xyz/pet/apex_dragon/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Apex Dragon"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

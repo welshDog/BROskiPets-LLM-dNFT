@@ -1,0 +1,32 @@
+{
+  "name": "Hyper Hamster \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Hyper Hamster at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihslhumdpjt4wntxc6uxf2hcdu5m5ji2vwkw5cpp6m4i32kyhzxha",
+  "external_url": "https://broskipets.xyz/pet/hyper_hamster/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Hyper Hamster"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

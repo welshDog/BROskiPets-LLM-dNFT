@@ -1,0 +1,32 @@
+{
+  "name": "Terra Mole \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Terra Mole at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeigtnbihlpqaawlv6j2alchosf4fl6re44ags526gt6nvwtsqhh67u",
+  "external_url": "https://broskipets.xyz/pet/terra_mole/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Terra Mole"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

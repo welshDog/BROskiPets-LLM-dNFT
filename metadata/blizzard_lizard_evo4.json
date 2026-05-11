@@ -1,0 +1,32 @@
+{
+  "name": "Blizzard Lizard \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Blizzard Lizard at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidnwr4feisonp5gnocjo3jomzcc2qrlurpxdtf2hb6lwd36wsuvy4",
+  "external_url": "https://broskipets.xyz/pet/blizzard_lizard/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Blizzard Lizard"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

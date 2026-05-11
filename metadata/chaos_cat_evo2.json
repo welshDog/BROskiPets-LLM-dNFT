@@ -1,0 +1,32 @@
+{
+  "name": "Chaos Cat \u2014 Juvenile",
+  "description": "A Common BROskiPet dNFT. The Chaos Cat at Juvenile stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidm7znybohmmsqnrorqxae4sfaouhn6k64fauqnhohesujkzbih2m",
+  "external_url": "https://broskipets.xyz/pet/chaos_cat/evo2",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Chaos Cat"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Juvenile"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 100
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

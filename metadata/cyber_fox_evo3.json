@@ -1,0 +1,32 @@
+{
+  "name": "Cyber Fox \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Cyber Fox at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihpyt7takzhwdmikwowkhaasqtvfo4u7awgpvdxbezmx6vd5fjooa",
+  "external_url": "https://broskipets.xyz/pet/cyber_fox/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Cyber Fox"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

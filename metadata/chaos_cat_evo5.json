@@ -1,0 +1,32 @@
+{
+  "name": "Chaos Cat \u2014 Legendary",
+  "description": "A Legendary BROskiPet dNFT. The Chaos Cat at Legendary stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeibztnhqek566qig2x3efwe4g224fk5bvsog4vh6jrqphu5nxbeimq",
+  "external_url": "https://broskipets.xyz/pet/chaos_cat/evo5",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Chaos Cat"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 5000
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

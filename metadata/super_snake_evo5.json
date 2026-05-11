@@ -1,0 +1,32 @@
+{
+  "name": "Super Snake \u2014 Legendary",
+  "description": "A Legendary BROskiPet dNFT. The Super Snake at Legendary stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifrpi27twmk3l7kvvsizeehxuygz2ql3hxfcmp7zv5efh2c2x7rke",
+  "external_url": "https://broskipets.xyz/pet/super_snake/evo5",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Super Snake"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 5000
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

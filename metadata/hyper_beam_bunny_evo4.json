@@ -1,0 +1,32 @@
+{
+  "name": "Hyper Beam Bunny \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Hyper Beam Bunny at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeib6x6kmkj3akup7xoatk3wxekscyqiaapzedpxklkchrcny63l4lm",
+  "external_url": "https://broskipets.xyz/pet/hyper_beam_bunny/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Hyper Beam Bunny"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

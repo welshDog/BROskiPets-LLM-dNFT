@@ -1,0 +1,32 @@
+{
+  "name": "Welshdog \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Welshdog at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidsrbaiwi7dtlirvimbsuq5c2b5hxpgk4ho2itdgh72jcv4tr47zu",
+  "external_url": "https://broskipets.xyz/pet/welshdog/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Welshdog"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Hyper Beam Bunny \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Hyper Beam Bunny at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihrtihqsotsagevaecq6pafrzcyvfx3og4srzfcqiwp6oq7iyedti",
+  "external_url": "https://broskipets.xyz/pet/hyper_beam_bunny/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Hyper Beam Bunny"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

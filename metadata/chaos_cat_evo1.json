@@ -1,0 +1,32 @@
+{
+  "name": "Chaos Cat \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Chaos Cat at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+  "external_url": "https://broskipets.xyz/pet/chaos_cat/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Chaos Cat"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

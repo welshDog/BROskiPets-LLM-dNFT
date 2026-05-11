@@ -1,0 +1,32 @@
+{
+  "name": "Gigabyte Guinea Pig \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Gigabyte Guinea Pig at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+  "external_url": "https://broskipets.xyz/pet/gigabyte_guinea_pig/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Gigabyte Guinea Pig"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

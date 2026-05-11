@@ -1,0 +1,32 @@
+{
+  "name": "Blizzard Lizard \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Blizzard Lizard at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+  "external_url": "https://broskipets.xyz/pet/blizzard_lizard/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Blizzard Lizard"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

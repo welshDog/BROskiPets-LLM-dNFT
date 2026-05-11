@@ -1,0 +1,32 @@
+{
+  "name": "Sonic Spider \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Sonic Spider at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeighyp3elcnt46ptb7qbae4u6puqmph26qsjobvqrrpdrccb7m6urq",
+  "external_url": "https://broskipets.xyz/pet/sonic_spider/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Sonic Spider"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

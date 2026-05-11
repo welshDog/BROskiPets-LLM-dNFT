@@ -1,0 +1,32 @@
+{
+  "name": "Hyper Hamster \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Hyper Hamster at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+  "external_url": "https://broskipets.xyz/pet/hyper_hamster/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Hyper Hamster"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

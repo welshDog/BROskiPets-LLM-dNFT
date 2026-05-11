@@ -1,0 +1,32 @@
+{
+  "name": "Terra Mole \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Terra Mole at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeigeecdq5oih4lrlzyldffdoy3hcdahbcgeo4dbyhcxqvr7hdpjkqa",
+  "external_url": "https://broskipets.xyz/pet/terra_mole/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Terra Mole"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

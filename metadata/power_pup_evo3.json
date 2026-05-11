@@ -1,0 +1,32 @@
+{
+  "name": "Power Pup \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Power Pup at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifmnmjshmpryfwab5p65utqyr6kqniphnxolxbq6fvpnjvvxmes7u",
+  "external_url": "https://broskipets.xyz/pet/power_pup/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Power Pup"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

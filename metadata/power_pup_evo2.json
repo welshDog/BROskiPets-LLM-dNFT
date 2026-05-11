@@ -1,0 +1,32 @@
+{
+  "name": "Power Pup \u2014 Juvenile",
+  "description": "A Common BROskiPet dNFT. The Power Pup at Juvenile stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiflmwhzsag5xmlrhrwskkehfmeuf6tacrug2evfwkt3vzd5xrup6e",
+  "external_url": "https://broskipets.xyz/pet/power_pup/evo2",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Power Pup"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Juvenile"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 100
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

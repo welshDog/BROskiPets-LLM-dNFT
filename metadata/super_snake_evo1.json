@@ -1,0 +1,32 @@
+{
+  "name": "Super Snake \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Super Snake at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeig3lf3626hyq6raiumsp5o2fei6ozgsqzesf22rf4mzdvbth7g3bi",
+  "external_url": "https://broskipets.xyz/pet/super_snake/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Super Snake"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

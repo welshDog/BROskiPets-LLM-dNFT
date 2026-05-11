@@ -1,0 +1,32 @@
+{
+  "name": "Storm Hawk \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Storm Hawk at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeieqxsbhe57dtqe26f336do3jnvghchvcbt3g4dbtsgmeyozl6cj3i",
+  "external_url": "https://broskipets.xyz/pet/storm_hawk/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Storm Hawk"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

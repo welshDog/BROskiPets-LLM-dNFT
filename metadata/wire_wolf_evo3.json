@@ -1,0 +1,32 @@
+{
+  "name": "Wire Wolf \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Wire Wolf at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiaihnd4bn4msj6e2rfcpbuke3hrfzr5jzr3lhbxx2pwlnansacjre",
+  "external_url": "https://broskipets.xyz/pet/wire_wolf/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Wire Wolf"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

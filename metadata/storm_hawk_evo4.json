@@ -1,0 +1,32 @@
+{
+  "name": "Storm Hawk \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Storm Hawk at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifakg3k2w3hk73cuskja6fhsnujpbzx3uzsc5rsbwtrecmmnpdcei",
+  "external_url": "https://broskipets.xyz/pet/storm_hawk/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Storm Hawk"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

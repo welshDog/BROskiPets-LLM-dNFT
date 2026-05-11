@@ -1,0 +1,32 @@
+{
+  "name": "Ultra Goldfish \u2014 Legendary",
+  "description": "A Legendary BROskiPet dNFT. The Ultra Goldfish at Legendary stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeibjim4ckrduvudqlldywmfizkdusn7clx6qyt25fpwcj5wgim4cmq",
+  "external_url": "https://broskipets.xyz/pet/ultra_goldfish/evo5",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Ultra Goldfish"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 5000
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

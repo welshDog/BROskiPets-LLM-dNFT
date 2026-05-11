@@ -1,0 +1,32 @@
+{
+  "name": "Ultra Goldfish \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Ultra Goldfish at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifwnr7gg6vapo6wf2k4fdizccj7hixrgdtsgwiih2ix2zcnayblxm",
+  "external_url": "https://broskipets.xyz/pet/ultra_goldfish/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Ultra Goldfish"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

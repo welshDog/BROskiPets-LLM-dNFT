@@ -1,0 +1,32 @@
+{
+  "name": "Terra Mole \u2014 Juvenile",
+  "description": "A Common BROskiPet dNFT. The Terra Mole at Juvenile stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeicd6uqtch3agsl4wkib3e3tpu77xgg4gabhkp36sanjycycaopcau",
+  "external_url": "https://broskipets.xyz/pet/terra_mole/evo2",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Terra Mole"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Juvenile"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 100
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

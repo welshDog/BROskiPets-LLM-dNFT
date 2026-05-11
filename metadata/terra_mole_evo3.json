@@ -1,0 +1,32 @@
+{
+  "name": "Terra Mole \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Terra Mole at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeieeqfugitato4jcm4wdit6nvjwdyyud2ecym264f3rshvzskzji24",
+  "external_url": "https://broskipets.xyz/pet/terra_mole/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Terra Mole"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

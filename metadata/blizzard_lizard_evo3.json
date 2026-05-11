@@ -1,0 +1,32 @@
+{
+  "name": "Blizzard Lizard \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Blizzard Lizard at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiea33xbxr5ynojkbsu7xdlql7km7rltu5fitg2vquxfcxfwmnigvu",
+  "external_url": "https://broskipets.xyz/pet/blizzard_lizard/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Blizzard Lizard"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

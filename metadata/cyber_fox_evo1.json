@@ -1,0 +1,32 @@
+{
+  "name": "Cyber Fox \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Cyber Fox at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+  "external_url": "https://broskipets.xyz/pet/cyber_fox/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Cyber Fox"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Power Pup \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Power Pup at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+  "external_url": "https://broskipets.xyz/pet/power_pup/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Power Pup"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

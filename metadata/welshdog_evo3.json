@@ -1,0 +1,32 @@
+{
+  "name": "Welshdog \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Welshdog at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeighmeyoanrsgqi25qvophrvn7lfujv5xp2whsa5d6znlxn55hl7b4",
+  "external_url": "https://broskipets.xyz/pet/welshdog/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Welshdog"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

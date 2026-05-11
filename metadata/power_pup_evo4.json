@@ -1,0 +1,32 @@
+{
+  "name": "Power Pup \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Power Pup at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifpmvhrii6nqtrnws4s27iub5wzt4wk3zguvfegv2bq5sp5wxngnq",
+  "external_url": "https://broskipets.xyz/pet/power_pup/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Power Pup"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

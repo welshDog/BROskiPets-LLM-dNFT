@@ -1,0 +1,32 @@
+{
+  "name": "Ultra Goldfish \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Ultra Goldfish at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeifvbnu5x74zeqpyzkmjk4gk2rptkcgjhdrnhh5cgojj6dalhsaxma",
+  "external_url": "https://broskipets.xyz/pet/ultra_goldfish/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Ultra Goldfish"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

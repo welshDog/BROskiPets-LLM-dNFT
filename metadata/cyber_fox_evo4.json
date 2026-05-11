@@ -1,0 +1,32 @@
+{
+  "name": "Cyber Fox \u2014 Champion",
+  "description": "A Epic BROskiPet dNFT. The Cyber Fox at Champion stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeidntenzlf6ym2slbq3kgl4amzd3eylctce6qestgv4bqiqglq4ppu",
+  "external_url": "https://broskipets.xyz/pet/cyber_fox/evo4",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Cyber Fox"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Champion"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 1500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

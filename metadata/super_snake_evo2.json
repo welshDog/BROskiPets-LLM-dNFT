@@ -1,0 +1,32 @@
+{
+  "name": "Super Snake \u2014 Juvenile",
+  "description": "A Common BROskiPet dNFT. The Super Snake at Juvenile stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiad7ckrhytqytrywedme4x3wdw6pdjidjlfpzmxwgskpe2k7hy65q",
+  "external_url": "https://broskipets.xyz/pet/super_snake/evo2",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Super Snake"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Juvenile"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 100
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}

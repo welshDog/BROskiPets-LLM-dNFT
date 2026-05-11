@@ -1,0 +1,32 @@
+{
+  "name": "Storm Hawk \u2014 Adult",
+  "description": "A Rare BROskiPet dNFT. The Storm Hawk at Adult stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeihrr3o5e4x7rum67bvz5kqrqyzxsdk4d3lydqa6qnphq3fabniuke",
+  "external_url": "https://broskipets.xyz/pet/storm_hawk/evo3",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Storm Hawk"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Adult"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 500
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}
