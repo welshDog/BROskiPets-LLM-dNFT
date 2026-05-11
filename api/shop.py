@@ -8,7 +8,7 @@ router = APIRouter(prefix="/api/shop", tags=["Shop"])
 
 SHOPSYNCSECRET = os.getenv("SHOPSYNCSECRET")
 SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")  # matches .env
 
 # Effect durations mapped to hours
 DURATION_MAP = {
@@ -72,7 +72,6 @@ def apply_effect_to_pet(sb: Client, pet_id: str, item: dict, metadata: dict) -> 
             "expires_at": expires_at,
             "applied_at": datetime.now(timezone.utc).isoformat(),
         }
-        # Remove any existing buff of same type (no stacking same type)
         active_effects = [e for e in active_effects if e.get("type") != effect_type]
         active_effects.append(buff)
         pet_updates["active_effects"] = active_effects
@@ -81,14 +80,12 @@ def apply_effect_to_pet(sb: Client, pet_id: str, item: dict, metadata: dict) -> 
     # --- HYGIENE: instant effect, clear debuffs or memory cleanup ---
     elif category == "hygiene":
         if effect_type == "status_clear":
-            # Clear all active debuffs (negative effects)
             active_effects = [e for e in active_effects if e.get("value", 0) > 0]
             pet_updates["active_effects"] = active_effects
             pet_updates["mood"] = "refreshed"
             effect_summary["cleared_debuffs"] = True
         elif effect_type == "memory_cleanup":
-            # Trim oldest effects to free "memory"
-            active_effects = active_effects[-5:]  # keep last 5 only
+            active_effects = active_effects[-5:]
             pet_updates["active_effects"] = active_effects
             effect_summary["memory_freed"] = True
         elif effect_type == "error_reduction":
@@ -121,7 +118,6 @@ def apply_effect_to_pet(sb: Client, pet_id: str, item: dict, metadata: dict) -> 
 
     # --- TOYS: add to inventory, apply happiness buff ---
     elif category == "toys":
-        # Add to inventory if not already owned
         owned_keys = [i.get("item_key") for i in inventory]
         if item_key not in owned_keys:
             inventory.append({
@@ -131,7 +127,6 @@ def apply_effect_to_pet(sb: Client, pet_id: str, item: dict, metadata: dict) -> 
                 "acquired_at": datetime.now(timezone.utc).isoformat(),
             })
             pet_updates["inventory"] = inventory
-        # Apply happiness boost as timed buff if applicable
         if effect_type == "happiness_boost":
             buff = {
                 "item_key": item_key,
@@ -151,7 +146,6 @@ def apply_effect_to_pet(sb: Client, pet_id: str, item: dict, metadata: dict) -> 
         pet_updates["equipped_cosmetics"] = equipped_cosmetics
         effect_summary["banner_equipped"] = item_key
 
-    # Write all updates in one patch
     if pet_updates:
         sb.table("pets").update(pet_updates).eq("pet_id", pet_id).execute()
 
@@ -196,7 +190,6 @@ async def get_categories():
 
 @router.get("/pet/{pet_id}/inventory")
 async def get_pet_inventory(pet_id: str):
-    """Returns a pet's inventory, equipped cosmetics and active effects."""
     sb = get_supabase()
     result = sb.table("pets").select(
         "pet_id, pet_name, active_effects, equipped_cosmetics, inventory"
@@ -222,7 +215,6 @@ async def purchase_item(
 
     sb = get_supabase()
 
-    # Fetch item
     item_result = sb.table("shop_items").select("*").eq("id", item_id).single().execute()
     item = item_result.data
     if not item:
@@ -236,7 +228,6 @@ async def purchase_item(
     metadata = item.get("metadata", {})
     price = item.get("price_tokens", 0)
 
-    # Unlock level gate
     unlock_level = metadata.get("unlock_level")
     if unlock_level:
         user_result = sb.table("users").select("level").eq("id", body.user_id).single().execute()
@@ -249,7 +240,6 @@ async def purchase_item(
                 detail=f"'{item['name']}' requires Level {unlock_level}. Keep grinding!"
             )
 
-    # Spend tokens — atomic, writes ledger, raises if broke
     try:
         spend_result = sb.rpc("spend_tokens", {
             "p_user_id": body.user_id,
@@ -265,10 +255,8 @@ async def purchase_item(
 
     new_balance = spend_result.data.get("new_balance", "?")
 
-    # Apply effect to pet
     effect_summary = apply_effect_to_pet(sb, body.pet_id, item, metadata)
 
-    # Write to shop_purchases log
     sb.table("shop_purchases").insert({
         "user_id": body.user_id,
         "pet_id": body.pet_id,
