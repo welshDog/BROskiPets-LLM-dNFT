@@ -1,0 +1,558 @@
+{
+  "pets": {
+    "apex_dragon": {
+      "evo1": {
+        "cid": "bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihepp2qt4i7cpx2ptsnjjaouja44xft2igd7ccdc77wv3zmhb2474",
+        "name": "apex_dragon_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiey2k3nirnejoog3nm2mybao3nel3lnpvdxd24pobz2og7lswt7h4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiey2k3nirnejoog3nm2mybao3nel3lnpvdxd24pobz2og7lswt7h4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiey2k3nirnejoog3nm2mybao3nel3lnpvdxd24pobz2og7lswt7h4",
+        "name": "apex_dragon_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeiduumakdhvece4dvsk3lzvvuftlmxdtse76v2h4v43iomhk2sqjpe",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiduumakdhvece4dvsk3lzvvuftlmxdtse76v2h4v43iomhk2sqjpe",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiduumakdhvece4dvsk3lzvvuftlmxdtse76v2h4v43iomhk2sqjpe",
+        "name": "apex_dragon_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeigw44jbcmp2fvb5epafplvarzs7jvue7jw43p2mhbykd3bpgkv7oa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigw44jbcmp2fvb5epafplvarzs7jvue7jw43p2mhbykd3bpgkv7oa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigw44jbcmp2fvb5epafplvarzs7jvue7jw43p2mhbykd3bpgkv7oa",
+        "name": "apex_dragon_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeiczwphl4sgny4al6bksu7ts25vroy2lgjpbpt7uopldb3gqnrfhma",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiczwphl4sgny4al6bksu7ts25vroy2lgjpbpt7uopldb3gqnrfhma",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiczwphl4sgny4al6bksu7ts25vroy2lgjpbpt7uopldb3gqnrfhma",
+        "name": "apex_dragon_evo5.png"
+      }
+    },
+    "blizzard_lizard": {
+      "evo1": {
+        "cid": "bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxx6bip5elpxl5hhi5bdbqwbqwhng3r62xrq3azprq75bmf5pjmm",
+        "name": "blizzard_lizard_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiavmpmqtf2qcqcpa6pkmtymutk5ajsn2al7vuhjtskgojdmzv3fuq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiavmpmqtf2qcqcpa6pkmtymutk5ajsn2al7vuhjtskgojdmzv3fuq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiavmpmqtf2qcqcpa6pkmtymutk5ajsn2al7vuhjtskgojdmzv3fuq",
+        "name": "blizzard_lizard_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeiea33xbxr5ynojkbsu7xdlql7km7rltu5fitg2vquxfcxfwmnigvu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiea33xbxr5ynojkbsu7xdlql7km7rltu5fitg2vquxfcxfwmnigvu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiea33xbxr5ynojkbsu7xdlql7km7rltu5fitg2vquxfcxfwmnigvu",
+        "name": "blizzard_lizard_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeidnwr4feisonp5gnocjo3jomzcc2qrlurpxdtf2hb6lwd36wsuvy4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidnwr4feisonp5gnocjo3jomzcc2qrlurpxdtf2hb6lwd36wsuvy4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidnwr4feisonp5gnocjo3jomzcc2qrlurpxdtf2hb6lwd36wsuvy4",
+        "name": "blizzard_lizard_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeigqluk5fewuxhmdkuyhigatw5ukwrxx5juumlamgxetvndotqiwge",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigqluk5fewuxhmdkuyhigatw5ukwrxx5juumlamgxetvndotqiwge",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigqluk5fewuxhmdkuyhigatw5ukwrxx5juumlamgxetvndotqiwge",
+        "name": "blizzard_lizard_evo5.png"
+      }
+    },
+    "chaos_cat": {
+      "evo1": {
+        "cid": "bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifn3yklexowlbtjr5ter3srcbgx6sihd6jh2nx7kdlgsdvyhdhisa",
+        "name": "chaos_cat_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeidm7znybohmmsqnrorqxae4sfaouhn6k64fauqnhohesujkzbih2m",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidm7znybohmmsqnrorqxae4sfaouhn6k64fauqnhohesujkzbih2m",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidm7znybohmmsqnrorqxae4sfaouhn6k64fauqnhohesujkzbih2m",
+        "name": "chaos_cat_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeia3w6eygmfzjnclj4i3pi5tatswz73h3oekq6pkef2birf4a2fgje",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeia3w6eygmfzjnclj4i3pi5tatswz73h3oekq6pkef2birf4a2fgje",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeia3w6eygmfzjnclj4i3pi5tatswz73h3oekq6pkef2birf4a2fgje",
+        "name": "chaos_cat_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeibtmxhjuxaf44rvg5risazfpscvo3yzzhhzfudyu6hyvhul6ugqaq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibtmxhjuxaf44rvg5risazfpscvo3yzzhhzfudyu6hyvhul6ugqaq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibtmxhjuxaf44rvg5risazfpscvo3yzzhhzfudyu6hyvhul6ugqaq",
+        "name": "chaos_cat_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeibztnhqek566qig2x3efwe4g224fk5bvsog4vh6jrqphu5nxbeimq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibztnhqek566qig2x3efwe4g224fk5bvsog4vh6jrqphu5nxbeimq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibztnhqek566qig2x3efwe4g224fk5bvsog4vh6jrqphu5nxbeimq",
+        "name": "chaos_cat_evo5.png"
+      }
+    },
+    "cyber_fox": {
+      "evo1": {
+        "cid": "bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihm5jjy4jsqy3jrzz2wviu3a3pgqvkxzcvbsqmgs7trmzr3lmomeq",
+        "name": "cyber_fox_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeihucj5obsczwgew74aq74q5psrjlaoohhdzjzf24uom3h24kpnjw4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihucj5obsczwgew74aq74q5psrjlaoohhdzjzf24uom3h24kpnjw4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihucj5obsczwgew74aq74q5psrjlaoohhdzjzf24uom3h24kpnjw4",
+        "name": "cyber_fox_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeihpyt7takzhwdmikwowkhaasqtvfo4u7awgpvdxbezmx6vd5fjooa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihpyt7takzhwdmikwowkhaasqtvfo4u7awgpvdxbezmx6vd5fjooa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihpyt7takzhwdmikwowkhaasqtvfo4u7awgpvdxbezmx6vd5fjooa",
+        "name": "cyber_fox_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeidntenzlf6ym2slbq3kgl4amzd3eylctce6qestgv4bqiqglq4ppu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidntenzlf6ym2slbq3kgl4amzd3eylctce6qestgv4bqiqglq4ppu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidntenzlf6ym2slbq3kgl4amzd3eylctce6qestgv4bqiqglq4ppu",
+        "name": "cyber_fox_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeidzf7ueon225rmfupkfqdsinggm2gjxgzk4ttmiyqvddejgw6tssu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidzf7ueon225rmfupkfqdsinggm2gjxgzk4ttmiyqvddejgw6tssu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidzf7ueon225rmfupkfqdsinggm2gjxgzk4ttmiyqvddejgw6tssu",
+        "name": "cyber_fox_evo5.png"
+      }
+    },
+    "gigabyte_guinea_pig": {
+      "evo1": {
+        "cid": "bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiep7tenvqb2q62tktyhpqtfl6prgp76sosqmb2xb2rwieinwtqvxa",
+        "name": "gigabyte_guinea_pig_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeidcdehuyf2adqv6mingn7oimz3gkojp4xlh5xrxk46falghanejge",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidcdehuyf2adqv6mingn7oimz3gkojp4xlh5xrxk46falghanejge",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidcdehuyf2adqv6mingn7oimz3gkojp4xlh5xrxk46falghanejge",
+        "name": "gigabyte_guinea_pig_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeico6uvmkihrnvzwuqurqz2kejaqszydrrenzxzpus2wvsa63xpspu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeico6uvmkihrnvzwuqurqz2kejaqszydrrenzxzpus2wvsa63xpspu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeico6uvmkihrnvzwuqurqz2kejaqszydrrenzxzpus2wvsa63xpspu",
+        "name": "gigabyte_guinea_pig_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeifqk2xbgi7z5nmaohidu7kjqjs43vrgskuhw3ew4hwjyy2chfhwlm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifqk2xbgi7z5nmaohidu7kjqjs43vrgskuhw3ew4hwjyy2chfhwlm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifqk2xbgi7z5nmaohidu7kjqjs43vrgskuhw3ew4hwjyy2chfhwlm",
+        "name": "gigabyte_guinea_pig_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeigrsxpikxnatgbi2ge2vfgedt67gh3z6y4ppplmpskc3hbhtmuntu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigrsxpikxnatgbi2ge2vfgedt67gh3z6y4ppplmpskc3hbhtmuntu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigrsxpikxnatgbi2ge2vfgedt67gh3z6y4ppplmpskc3hbhtmuntu",
+        "name": "gigabyte_guinea_pig_evo5.png"
+      }
+    },
+    "hyper_beam_bunny": {
+      "evo1": {
+        "cid": "bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibwhf2ofd4je4g2qlevle4twawjnbmx3hxgjvklagvopf6g5i2o2e",
+        "name": "hyper_beam_bunny_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeien27xuxuqn24h74sbonz2hwtef7nkpwjfplvintdzg22rw3eruua",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeien27xuxuqn24h74sbonz2hwtef7nkpwjfplvintdzg22rw3eruua",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeien27xuxuqn24h74sbonz2hwtef7nkpwjfplvintdzg22rw3eruua",
+        "name": "hyper_beam_bunny_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeihrtihqsotsagevaecq6pafrzcyvfx3og4srzfcqiwp6oq7iyedti",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihrtihqsotsagevaecq6pafrzcyvfx3og4srzfcqiwp6oq7iyedti",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihrtihqsotsagevaecq6pafrzcyvfx3og4srzfcqiwp6oq7iyedti",
+        "name": "hyper_beam_bunny_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeib6x6kmkj3akup7xoatk3wxekscyqiaapzedpxklkchrcny63l4lm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeib6x6kmkj3akup7xoatk3wxekscyqiaapzedpxklkchrcny63l4lm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeib6x6kmkj3akup7xoatk3wxekscyqiaapzedpxklkchrcny63l4lm",
+        "name": "hyper_beam_bunny_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeibzhephyln42gznjochf64p4xtsoadqzhzjzntveswwayhrv5r7mi",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibzhephyln42gznjochf64p4xtsoadqzhzjzntveswwayhrv5r7mi",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibzhephyln42gznjochf64p4xtsoadqzhzjzntveswwayhrv5r7mi",
+        "name": "hyper_beam_bunny_evo5.png"
+      }
+    },
+    "hyper_hamster": {
+      "evo1": {
+        "cid": "bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiduzfq6adxmyaoscumo7jhnrwujc67se6jeqjctbotr5jkitp7o64",
+        "name": "hyper_hamster_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeidwgpjduas6hahrzmdhapsbqunv3gnyfv4uass5k4cciefmsxbhfm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidwgpjduas6hahrzmdhapsbqunv3gnyfv4uass5k4cciefmsxbhfm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidwgpjduas6hahrzmdhapsbqunv3gnyfv4uass5k4cciefmsxbhfm",
+        "name": "hyper_hamster_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeiccsyxmvozmh6vl3marp5ayqzgo7gz66buuemqyzmzynftzkqpgay",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiccsyxmvozmh6vl3marp5ayqzgo7gz66buuemqyzmzynftzkqpgay",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiccsyxmvozmh6vl3marp5ayqzgo7gz66buuemqyzmzynftzkqpgay",
+        "name": "hyper_hamster_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeihslhumdpjt4wntxc6uxf2hcdu5m5ji2vwkw5cpp6m4i32kyhzxha",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihslhumdpjt4wntxc6uxf2hcdu5m5ji2vwkw5cpp6m4i32kyhzxha",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihslhumdpjt4wntxc6uxf2hcdu5m5ji2vwkw5cpp6m4i32kyhzxha",
+        "name": "hyper_hamster_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeifaxmwtjx4ftkcl5blfiqjp4o5mzfkkm2lxjs3zoav6mohdr676ty",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifaxmwtjx4ftkcl5blfiqjp4o5mzfkkm2lxjs3zoav6mohdr676ty",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifaxmwtjx4ftkcl5blfiqjp4o5mzfkkm2lxjs3zoav6mohdr676ty",
+        "name": "hyper_hamster_evo5.png"
+      }
+    },
+    "hyperfocus_horse": {
+      "evo1": {
+        "cid": "bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaczf5xgrf6ljbqzlo7sxqrvylejajwnglg2fyoeeyazgxvvjho4a",
+        "name": "hyperfocus_horse_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiglbgdjf7hbrbu27t2dc2z2vnpaxo7if7odhac3eaubwkahrsladq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiglbgdjf7hbrbu27t2dc2z2vnpaxo7if7odhac3eaubwkahrsladq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiglbgdjf7hbrbu27t2dc2z2vnpaxo7if7odhac3eaubwkahrsladq",
+        "name": "hyperfocus_horse_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeie2p2qlbjhyiuspxseo4yjsmaxkdjqocaha3e6mwjrhl7mtybr7la",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeie2p2qlbjhyiuspxseo4yjsmaxkdjqocaha3e6mwjrhl7mtybr7la",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeie2p2qlbjhyiuspxseo4yjsmaxkdjqocaha3e6mwjrhl7mtybr7la",
+        "name": "hyperfocus_horse_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeiburvkslsnva74cvvrdi5caqpoifrkkl5yy24s2ss7oyb5ks4yawi",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiburvkslsnva74cvvrdi5caqpoifrkkl5yy24s2ss7oyb5ks4yawi",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiburvkslsnva74cvvrdi5caqpoifrkkl5yy24s2ss7oyb5ks4yawi",
+        "name": "hyperfocus_horse_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeiac6onm7a7tfuuckgpvv7eintybssnq45hzrxcz2stdgdsxgzfjha",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiac6onm7a7tfuuckgpvv7eintybssnq45hzrxcz2stdgdsxgzfjha",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiac6onm7a7tfuuckgpvv7eintybssnq45hzrxcz2stdgdsxgzfjha",
+        "name": "hyperfocus_horse_evo5.png"
+      }
+    },
+    "power_pup": {
+      "evo1": {
+        "cid": "bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidxdd5gqakezyfhldv5hofjgy2uz5rmzgcdfu6dg4j42wg75haefq",
+        "name": "power_pup_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiflmwhzsag5xmlrhrwskkehfmeuf6tacrug2evfwkt3vzd5xrup6e",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiflmwhzsag5xmlrhrwskkehfmeuf6tacrug2evfwkt3vzd5xrup6e",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiflmwhzsag5xmlrhrwskkehfmeuf6tacrug2evfwkt3vzd5xrup6e",
+        "name": "power_pup_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeifmnmjshmpryfwab5p65utqyr6kqniphnxolxbq6fvpnjvvxmes7u",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifmnmjshmpryfwab5p65utqyr6kqniphnxolxbq6fvpnjvvxmes7u",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifmnmjshmpryfwab5p65utqyr6kqniphnxolxbq6fvpnjvvxmes7u",
+        "name": "power_pup_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeifpmvhrii6nqtrnws4s27iub5wzt4wk3zguvfegv2bq5sp5wxngnq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifpmvhrii6nqtrnws4s27iub5wzt4wk3zguvfegv2bq5sp5wxngnq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifpmvhrii6nqtrnws4s27iub5wzt4wk3zguvfegv2bq5sp5wxngnq",
+        "name": "power_pup_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeie6uycwnatg3uoexdim235xuiocp245njm43ibnhevoeib77kfso4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeie6uycwnatg3uoexdim235xuiocp245njm43ibnhevoeib77kfso4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeie6uycwnatg3uoexdim235xuiocp245njm43ibnhevoeib77kfso4",
+        "name": "power_pup_evo5.png"
+      }
+    },
+    "sonic_spider": {
+      "evo1": {
+        "cid": "bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigpb5ixu4xdm4ocs44gzdnzzdsak6lhhdsgsibwgqbisqftqh3w6i",
+        "name": "sonic_spider_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeidswzmuqptgyyc3zew7s4h7u75tker4kes64s5l6s3q45h26qyzry",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidswzmuqptgyyc3zew7s4h7u75tker4kes64s5l6s3q45h26qyzry",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidswzmuqptgyyc3zew7s4h7u75tker4kes64s5l6s3q45h26qyzry",
+        "name": "sonic_spider_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeighyp3elcnt46ptb7qbae4u6puqmph26qsjobvqrrpdrccb7m6urq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeighyp3elcnt46ptb7qbae4u6puqmph26qsjobvqrrpdrccb7m6urq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeighyp3elcnt46ptb7qbae4u6puqmph26qsjobvqrrpdrccb7m6urq",
+        "name": "sonic_spider_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeihrp4kwgwmrp6h7dmcmu3xhfilsy6mkmuk7mi75kxmh5iq2hnchey",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihrp4kwgwmrp6h7dmcmu3xhfilsy6mkmuk7mi75kxmh5iq2hnchey",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihrp4kwgwmrp6h7dmcmu3xhfilsy6mkmuk7mi75kxmh5iq2hnchey",
+        "name": "sonic_spider_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeierkbuoeimijdzb7t7sivhri53drva5tkta3oqgaqhupslyfoag3m",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeierkbuoeimijdzb7t7sivhri53drva5tkta3oqgaqhupslyfoag3m",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeierkbuoeimijdzb7t7sivhri53drva5tkta3oqgaqhupslyfoag3m",
+        "name": "sonic_spider_evo5.png"
+      }
+    },
+    "storm_hawk": {
+      "evo1": {
+        "cid": "bafybeieqxsbhe57dtqe26f336do3jnvghchvcbt3g4dbtsgmeyozl6cj3i",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeieqxsbhe57dtqe26f336do3jnvghchvcbt3g4dbtsgmeyozl6cj3i",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieqxsbhe57dtqe26f336do3jnvghchvcbt3g4dbtsgmeyozl6cj3i",
+        "name": "storm_hawk_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeibzr2ykgyqd3qbh7z4cyvg6xz3m4a5w6rgkfsrfaemd7glywbglcy",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibzr2ykgyqd3qbh7z4cyvg6xz3m4a5w6rgkfsrfaemd7glywbglcy",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibzr2ykgyqd3qbh7z4cyvg6xz3m4a5w6rgkfsrfaemd7glywbglcy",
+        "name": "storm_hawk_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeihrr3o5e4x7rum67bvz5kqrqyzxsdk4d3lydqa6qnphq3fabniuke",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihrr3o5e4x7rum67bvz5kqrqyzxsdk4d3lydqa6qnphq3fabniuke",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihrr3o5e4x7rum67bvz5kqrqyzxsdk4d3lydqa6qnphq3fabniuke",
+        "name": "storm_hawk_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeifakg3k2w3hk73cuskja6fhsnujpbzx3uzsc5rsbwtrecmmnpdcei",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifakg3k2w3hk73cuskja6fhsnujpbzx3uzsc5rsbwtrecmmnpdcei",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifakg3k2w3hk73cuskja6fhsnujpbzx3uzsc5rsbwtrecmmnpdcei",
+        "name": "storm_hawk_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeicstm2mbhdgkongxrzpakzpopdzjc576bjp2o7nzfb5dicy6bot4i",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeicstm2mbhdgkongxrzpakzpopdzjc576bjp2o7nzfb5dicy6bot4i",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicstm2mbhdgkongxrzpakzpopdzjc576bjp2o7nzfb5dicy6bot4i",
+        "name": "storm_hawk_evo5.png"
+      }
+    },
+    "super_snake": {
+      "evo1": {
+        "cid": "bafybeig3lf3626hyq6raiumsp5o2fei6ozgsqzesf22rf4mzdvbth7g3bi",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeig3lf3626hyq6raiumsp5o2fei6ozgsqzesf22rf4mzdvbth7g3bi",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeig3lf3626hyq6raiumsp5o2fei6ozgsqzesf22rf4mzdvbth7g3bi",
+        "name": "super_snake_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiad7ckrhytqytrywedme4x3wdw6pdjidjlfpzmxwgskpe2k7hy65q",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiad7ckrhytqytrywedme4x3wdw6pdjidjlfpzmxwgskpe2k7hy65q",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiad7ckrhytqytrywedme4x3wdw6pdjidjlfpzmxwgskpe2k7hy65q",
+        "name": "super_snake_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeigr6ea7ipsm2oxrwkq4arnqxa7ses3osdk7zo24p3w4bqtri73ha4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigr6ea7ipsm2oxrwkq4arnqxa7ses3osdk7zo24p3w4bqtri73ha4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigr6ea7ipsm2oxrwkq4arnqxa7ses3osdk7zo24p3w4bqtri73ha4",
+        "name": "super_snake_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeieni7crsqm64qxomymp7xjwgnwbn7eixbkiiu7xpi6l24xrfnfoxy",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeieni7crsqm64qxomymp7xjwgnwbn7eixbkiiu7xpi6l24xrfnfoxy",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieni7crsqm64qxomymp7xjwgnwbn7eixbkiiu7xpi6l24xrfnfoxy",
+        "name": "super_snake_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeifrpi27twmk3l7kvvsizeehxuygz2ql3hxfcmp7zv5efh2c2x7rke",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifrpi27twmk3l7kvvsizeehxuygz2ql3hxfcmp7zv5efh2c2x7rke",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifrpi27twmk3l7kvvsizeehxuygz2ql3hxfcmp7zv5efh2c2x7rke",
+        "name": "super_snake_evo5.png"
+      }
+    },
+    "terra_mole": {
+      "evo1": {
+        "cid": "bafybeigeecdq5oih4lrlzyldffdoy3hcdahbcgeo4dbyhcxqvr7hdpjkqa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigeecdq5oih4lrlzyldffdoy3hcdahbcgeo4dbyhcxqvr7hdpjkqa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigeecdq5oih4lrlzyldffdoy3hcdahbcgeo4dbyhcxqvr7hdpjkqa",
+        "name": "terra_mole_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeicd6uqtch3agsl4wkib3e3tpu77xgg4gabhkp36sanjycycaopcau",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeicd6uqtch3agsl4wkib3e3tpu77xgg4gabhkp36sanjycycaopcau",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicd6uqtch3agsl4wkib3e3tpu77xgg4gabhkp36sanjycycaopcau",
+        "name": "terra_mole_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeieeqfugitato4jcm4wdit6nvjwdyyud2ecym264f3rshvzskzji24",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeieeqfugitato4jcm4wdit6nvjwdyyud2ecym264f3rshvzskzji24",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeieeqfugitato4jcm4wdit6nvjwdyyud2ecym264f3rshvzskzji24",
+        "name": "terra_mole_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeigtnbihlpqaawlv6j2alchosf4fl6re44ags526gt6nvwtsqhh67u",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigtnbihlpqaawlv6j2alchosf4fl6re44ags526gt6nvwtsqhh67u",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigtnbihlpqaawlv6j2alchosf4fl6re44ags526gt6nvwtsqhh67u",
+        "name": "terra_mole_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeidlcztvo475b7rwmvczpnfud4mzwpziiwlifm6fvcbbdn7rqv2q5y",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidlcztvo475b7rwmvczpnfud4mzwpziiwlifm6fvcbbdn7rqv2q5y",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidlcztvo475b7rwmvczpnfud4mzwpziiwlifm6fvcbbdn7rqv2q5y",
+        "name": "terra_mole_evo5.png"
+      }
+    },
+    "ultra_goldfish": {
+      "evo1": {
+        "cid": "bafybeifvbnu5x74zeqpyzkmjk4gk2rptkcgjhdrnhh5cgojj6dalhsaxma",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifvbnu5x74zeqpyzkmjk4gk2rptkcgjhdrnhh5cgojj6dalhsaxma",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifvbnu5x74zeqpyzkmjk4gk2rptkcgjhdrnhh5cgojj6dalhsaxma",
+        "name": "ultra_goldfish_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeihjzv4mh7qxvvuqvkzq77d7b7y5hzbrzohvftsurpisdaq2yezudy",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihjzv4mh7qxvvuqvkzq77d7b7y5hzbrzohvftsurpisdaq2yezudy",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihjzv4mh7qxvvuqvkzq77d7b7y5hzbrzohvftsurpisdaq2yezudy",
+        "name": "ultra_goldfish_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeicf7erkfhqhyqum64lz46nabkw7hsxsnm2a5vxxz4tqye7ibewfd4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeicf7erkfhqhyqum64lz46nabkw7hsxsnm2a5vxxz4tqye7ibewfd4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicf7erkfhqhyqum64lz46nabkw7hsxsnm2a5vxxz4tqye7ibewfd4",
+        "name": "ultra_goldfish_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeifwnr7gg6vapo6wf2k4fdizccj7hixrgdtsgwiih2ix2zcnayblxm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifwnr7gg6vapo6wf2k4fdizccj7hixrgdtsgwiih2ix2zcnayblxm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifwnr7gg6vapo6wf2k4fdizccj7hixrgdtsgwiih2ix2zcnayblxm",
+        "name": "ultra_goldfish_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeibjim4ckrduvudqlldywmfizkdusn7clx6qyt25fpwcj5wgim4cmq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibjim4ckrduvudqlldywmfizkdusn7clx6qyt25fpwcj5wgim4cmq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibjim4ckrduvudqlldywmfizkdusn7clx6qyt25fpwcj5wgim4cmq",
+        "name": "ultra_goldfish_evo5.png"
+      }
+    },
+    "welshdog": {
+      "evo1": {
+        "cid": "bafybeidsrbaiwi7dtlirvimbsuq5c2b5hxpgk4ho2itdgh72jcv4tr47zu",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeidsrbaiwi7dtlirvimbsuq5c2b5hxpgk4ho2itdgh72jcv4tr47zu",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeidsrbaiwi7dtlirvimbsuq5c2b5hxpgk4ho2itdgh72jcv4tr47zu",
+        "name": "welshdog_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeiezcwrtkpp4zsucplxp5rxeycucmavntpqzzhmwqg3e6zwizei6vy",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiezcwrtkpp4zsucplxp5rxeycucmavntpqzzhmwqg3e6zwizei6vy",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiezcwrtkpp4zsucplxp5rxeycucmavntpqzzhmwqg3e6zwizei6vy",
+        "name": "welshdog_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeighmeyoanrsgqi25qvophrvn7lfujv5xp2whsa5d6znlxn55hl7b4",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeighmeyoanrsgqi25qvophrvn7lfujv5xp2whsa5d6znlxn55hl7b4",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeighmeyoanrsgqi25qvophrvn7lfujv5xp2whsa5d6znlxn55hl7b4",
+        "name": "welshdog_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeihrgpuoopp6tbh63t2k2tfzgi5vgzgx5tl5zpk4lawuhykikpmp2q",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeihrgpuoopp6tbh63t2k2tfzgi5vgzgx5tl5zpk4lawuhykikpmp2q",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeihrgpuoopp6tbh63t2k2tfzgi5vgzgx5tl5zpk4lawuhykikpmp2q",
+        "name": "welshdog_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeias5eskqyx4l77o4mvyeyefof7hqeutj7i7sq2jvp7vyblnjftfue",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeias5eskqyx4l77o4mvyeyefof7hqeutj7i7sq2jvp7vyblnjftfue",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeias5eskqyx4l77o4mvyeyefof7hqeutj7i7sq2jvp7vyblnjftfue",
+        "name": "welshdog_evo5.png"
+      }
+    },
+    "wire_wolf": {
+      "evo1": {
+        "cid": "bafybeibbtjpzwr77iera5qa6bzdg3v4piffs5gzdnrmxjs5cr6ksgkludm",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeibbtjpzwr77iera5qa6bzdg3v4piffs5gzdnrmxjs5cr6ksgkludm",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeibbtjpzwr77iera5qa6bzdg3v4piffs5gzdnrmxjs5cr6ksgkludm",
+        "name": "wire_wolf_evo1.png"
+      },
+      "evo2": {
+        "cid": "bafybeicgr63yzxfdvcovdg7zpo7c77g47n3gn6zld32433yofd2foy4hxa",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeicgr63yzxfdvcovdg7zpo7c77g47n3gn6zld32433yofd2foy4hxa",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeicgr63yzxfdvcovdg7zpo7c77g47n3gn6zld32433yofd2foy4hxa",
+        "name": "wire_wolf_evo2.png"
+      },
+      "evo3": {
+        "cid": "bafybeiaihnd4bn4msj6e2rfcpbuke3hrfzr5jzr3lhbxx2pwlnansacjre",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiaihnd4bn4msj6e2rfcpbuke3hrfzr5jzr3lhbxx2pwlnansacjre",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaihnd4bn4msj6e2rfcpbuke3hrfzr5jzr3lhbxx2pwlnansacjre",
+        "name": "wire_wolf_evo3.png"
+      },
+      "evo4": {
+        "cid": "bafybeiaohfss44eqxm4bkdpwdqs3wn3ayktswzi2gb2rgo2mklih22hd2q",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiaohfss44eqxm4bkdpwdqs3wn3ayktswzi2gb2rgo2mklih22hd2q",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaohfss44eqxm4bkdpwdqs3wn3ayktswzi2gb2rgo2mklih22hd2q",
+        "name": "wire_wolf_evo4.png"
+      },
+      "evo5": {
+        "cid": "bafybeifcsvsrea6xtref2zr2pt4sinptkqxgk7xjht5vvjced3qajdroha",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifcsvsrea6xtref2zr2pt4sinptkqxgk7xjht5vvjced3qajdroha",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifcsvsrea6xtref2zr2pt4sinptkqxgk7xjht5vvjced3qajdroha",
+        "name": "wire_wolf_evo5.png"
+      }
+    }
+  },
+  "extras": {
+    "card_backgrounds": {
+      "Common rarity card background \u2014 dark lab cyan grid Image": {
+        "cid": "bafybeic3r7e5l3o3jgwxkcugjpiens2tt3huwbv5m4os4quv37pvxt2ftq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeic3r7e5l3o3jgwxkcugjpiens2tt3huwbv5m4os4quv37pvxt2ftq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeic3r7e5l3o3jgwxkcugjpiens2tt3huwbv5m4os4quv37pvxt2ftq",
+        "name": "Common rarity card background \u2014 dark lab cyan grid Image.png"
+      },
+      "Legendary rarity card background \u2014 gold magenta cosmic vortex": {
+        "cid": "bafybeia7zwzf2uy5smzgkxeufglglbhrmosw7w2qkowp456rl5mloysvvi",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeia7zwzf2uy5smzgkxeufglglbhrmosw7w2qkowp456rl5mloysvvi",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeia7zwzf2uy5smzgkxeufglglbhrmosw7w2qkowp456rl5mloysvvi",
+        "name": "Legendary rarity card background \u2014 gold magenta cosmic vortex.png"
+      },
+      "Quantum rarity card background \u2014 reality fracture void": {
+        "cid": "bafybeiaztpwdlwfa2w7d6yud2x5tg7nvm2fljdqkcc3ghfsraid54cxb2a",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiaztpwdlwfa2w7d6yud2x5tg7nvm2fljdqkcc3ghfsraid54cxb2a",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiaztpwdlwfa2w7d6yud2x5tg7nvm2fljdqkcc3ghfsraid54cxb2a",
+        "name": "Quantum rarity card background \u2014 reality fracture void.png"
+      },
+      "Rare rarity card background \u2014 deep navy cyan circuits": {
+        "cid": "bafybeigzkvyk5g64t3ut5xk2xexurk6k5ndl6ybhxzhyhcxegflmqwlqby",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeigzkvyk5g64t3ut5xk2xexurk6k5ndl6ybhxzhyhcxegflmqwlqby",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeigzkvyk5g64t3ut5xk2xexurk6k5ndl6ybhxzhyhcxegflmqwlqby",
+        "name": "Rare rarity card background \u2014 deep navy cyan circuits.png"
+      }
+    },
+    "card_overlays": {
+      "Holographic card frame overlay \u2014 rainbow foil border": {
+        "cid": "bafybeifqyggfgww2vl3o3qj2wf76nmnllc5iu7cd4f3fhm6jcb2wea72ru",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeifqyggfgww2vl3o3qj2wf76nmnllc5iu7cd4f3fhm6jcb2wea72ru",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeifqyggfgww2vl3o3qj2wf76nmnllc5iu7cd4f3fhm6jcb2wea72ru",
+        "name": "Holographic card frame overlay \u2014 rainbow foil border.png"
+      },
+      "HyperFocus aura overlay \u2014 cyan pulse rings VFX": {
+        "cid": "bafybeiewlweaceh6fnyotrpondngo3wi6k7mjezrp4e27grcuyqmbuwzzq",
+        "ipfs_url": "https://ipfs.io/ipfs/bafybeiewlweaceh6fnyotrpondngo3wi6k7mjezrp4e27grcuyqmbuwzzq",
+        "pinata_url": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs/bafybeiewlweaceh6fnyotrpondngo3wi6k7mjezrp4e27grcuyqmbuwzzq",
+        "name": "HyperFocus aura overlay \u2014 cyan pulse rings VFX.png"
+      }
+    }
+  }
+}
