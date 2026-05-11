@@ -1,0 +1,320 @@
+{
+  "categories": ["food", "toys", "hygiene", "boosts", "cosmetics", "sacred", "event"],
+  "items": [
+    {
+      "id": "food_markdown_muffin",
+      "name": "Markdown Muffin",
+      "category": "food",
+      "cost": 50,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "focus_speed_boost", "value": 1.1, "duration": "1_session"},
+      "description": "High-fiber treat that boosts focus speed for one long-form writing session."
+    },
+    {
+      "id": "food_api_apple",
+      "name": "API-Response Apple",
+      "category": "food",
+      "cost": 40,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "happiness_boost", "value": 10},
+      "description": "A crisp reward for clean API responses. Boosts pet happiness instantly."
+    },
+    {
+      "id": "food_pixel_sushi",
+      "name": "Pixel Sushi",
+      "category": "food",
+      "cost": 75,
+      "rarity": "Uncommon",
+      "consumable": true,
+      "effect": {"type": "xp_boost", "value": 15, "duration": "1_session"},
+      "description": "Precision-cut data roll. Boosts XP gain for one full session."
+    },
+    {
+      "id": "food_hyper_donut",
+      "name": "HyperFocus Donut",
+      "category": "food",
+      "cost": 60,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "focus_speed_boost", "value": 1.2, "duration": "2_hours"},
+      "description": "Sugar-coated hyperfocus fuel. 2 hours of turbo concentration mode."
+    },
+    {
+      "id": "food_broski_burger",
+      "name": "BROski Burger",
+      "category": "food",
+      "cost": 90,
+      "rarity": "Uncommon",
+      "consumable": true,
+      "effect": {"type": "energy_restore", "value": 50},
+      "description": "Stack of pure energy. Fully restores pet stamina after a long grind."
+    },
+    {
+      "id": "food_energy_drink",
+      "name": "Neural Surge Drink",
+      "category": "food",
+      "cost": 35,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "energy_restore", "value": 25},
+      "description": "Quick energy hit. Good for short bursts before a deploy."
+    },
+    {
+      "id": "toy_rubber_duck",
+      "name": "Rubber Duck Debugger",
+      "category": "toys",
+      "cost": 80,
+      "rarity": "Common",
+      "consumable": false,
+      "effect": {"type": "happiness_boost", "value": 20},
+      "description": "Explain your code to the duck. Pet happiness goes up, bugs go down."
+    },
+    {
+      "id": "toy_code_ball",
+      "name": "Code Ball",
+      "category": "toys",
+      "cost": 50,
+      "rarity": "Common",
+      "consumable": false,
+      "effect": {"type": "happiness_boost", "value": 15},
+      "description": "Bouncy sphere of compiled joy. Endless entertainment for your EEP."
+    },
+    {
+      "id": "toy_webhook_whistle",
+      "name": "Webhook Whistle",
+      "category": "toys",
+      "cost": 120,
+      "rarity": "Uncommon",
+      "consumable": false,
+      "effect": {"type": "clear_notifications", "duration": "instant"},
+      "description": "Calls for a Pack Strike, clearing all active HUD notifications."
+    },
+    {
+      "id": "toy_deploy_button",
+      "name": "Squeaky Deploy Button",
+      "category": "toys",
+      "cost": 150,
+      "rarity": "Uncommon",
+      "consumable": false,
+      "effect": {"type": "xp_boost", "value": 10},
+      "description": "Satisfying squeak every press. Grants small XP burst for the dopamine hit."
+    },
+    {
+      "id": "toy_laser_pointer",
+      "name": "Laser Pointer",
+      "category": "toys",
+      "cost": 65,
+      "rarity": "Common",
+      "consumable": false,
+      "effect": {"type": "agility_boost", "value": 10},
+      "description": "Keeps your EEP sharp and agile. Boosts response speed."
+    },
+    {
+      "id": "hygiene_log_floss",
+      "name": "Log-File Floss",
+      "category": "hygiene",
+      "cost": 30,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "memory_cleanup", "value": 20},
+      "description": "Removes junk data from pet memory to free up cognitive bandwidth."
+    },
+    {
+      "id": "hygiene_cache_shampoo",
+      "name": "Cache Clear Shampoo",
+      "category": "hygiene",
+      "cost": 45,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "status_clear", "clears": "debuffs"},
+      "description": "Washes away all negative status effects. Fresh start, clean slate."
+    },
+    {
+      "id": "hygiene_lint_brush",
+      "name": "Dependency Lint Brush",
+      "category": "hygiene",
+      "cost": 55,
+      "rarity": "Common",
+      "consumable": true,
+      "effect": {"type": "error_reduction", "value": 15},
+      "description": "Brushes out unused dependencies. Reduces random error rate by 15%."
+    },
+    {
+      "id": "boost_xp_potion",
+      "name": "XP Potion",
+      "category": "boosts",
+      "cost": 200,
+      "rarity": "Uncommon",
+      "consumable": true,
+      "effect": {"type": "xp_multiplier", "value": 2.0, "duration": "1_session"},
+      "description": "Double XP for one full session. Stack with food buffs for max gains."
+    },
+    {
+      "id": "boost_focus_juice",
+      "name": "Focus Juice",
+      "category": "boosts",
+      "cost": 150,
+      "rarity": "Uncommon",
+      "consumable": true,
+      "effect": {"type": "distraction_filter", "value": 0.5, "duration": "3_hours"},
+      "description": "Cuts incoming distractions by 50% for 3 hours. ADHD mode: activated."
+    },
+    {
+      "id": "boost_evo_accelerator",
+      "name": "Evo Accelerator",
+      "category": "boosts",
+      "cost": 500,
+      "rarity": "Rare",
+      "consumable": true,
+      "effect": {"type": "evo_xp_boost", "value": 500},
+      "description": "Injects 500 bonus evolution XP directly into your EEP."
+    },
+    {
+      "id": "util_vibe_restorer",
+      "name": "Shadow-Breaker's Vibe-Restorer",
+      "category": "boosts",
+      "cost": 800,
+      "rarity": "Rare",
+      "faction": "Shadow Breakers",
+      "consumable": true,
+      "effect": {"type": "void_reset"},
+      "description": "Instantly resets pet energy if it hits Void status from screen-time fatigue."
+    },
+    {
+      "id": "util_diff_dial_knob",
+      "name": "DifficultyDial Precision Knob",
+      "category": "boosts",
+      "cost": 1500,
+      "rarity": "Rare",
+      "unlock_level": 19,
+      "consumable": false,
+      "effect": {"type": "xp_multiplier_scale", "value": 1.5},
+      "description": "Fine-tunes the AI Distraction Filter for higher XP sessions."
+    },
+    {
+      "id": "cosmetic_neon_den",
+      "name": "Neon Den Background",
+      "category": "cosmetics",
+      "type": "background",
+      "cost": 300,
+      "rarity": "Uncommon",
+      "consumable": false,
+      "effect": {"type": "visual_background", "overlay": "neon_den"},
+      "description": "Cyberpunk neon backdrop for your pet card. Glows in the dark."
+    },
+    {
+      "id": "cosmetic_server_rack_bed",
+      "name": "Server Rack Habitat",
+      "category": "cosmetics",
+      "type": "habitat",
+      "cost": 500,
+      "rarity": "Rare",
+      "consumable": false,
+      "effect": {"type": "visual_habitat", "overlay": "server_rack"},
+      "description": "Your EEP lives in a real data centre now. Ultimate dev aesthetic."
+    },
+    {
+      "id": "cosmetic_dev_hat",
+      "name": "Dev Hat",
+      "category": "cosmetics",
+      "type": "accessory",
+      "cost": 100,
+      "rarity": "Common",
+      "consumable": false,
+      "effect": {"type": "visual_accessory", "overlay": "dev_hat"},
+      "description": "Classic developer beanie. Identifies your EEP as a builder."
+    },
+    {
+      "id": "cosmetic_welsh_dragon_cape",
+      "name": "Welsh Dragon Cape",
+      "category": "cosmetics",
+      "type": "accessory",
+      "cost": 250,
+      "rarity": "Uncommon",
+      "consumable": false,
+      "effect": {"type": "visual_accessory", "overlay": "welsh_dragon_cape"},
+      "description": "Red dragon pride. Represent Wales every session. 🏴󠁧󠁢󠁷󠁬󠁳󠁿"
+    },
+    {
+      "id": "cosmetic_broski_crown",
+      "name": "BROski Crown",
+      "category": "cosmetics",
+      "type": "accessory",
+      "cost": 750,
+      "rarity": "Rare",
+      "unlock_level": 10,
+      "consumable": false,
+      "effect": {"type": "visual_accessory", "overlay": "broski_crown"},
+      "description": "Only the elite wear this. Unlocks at Level 10 mastery."
+    },
+    {
+      "id": "cosmetic_pixel_shades",
+      "name": "Pixel Shades",
+      "category": "cosmetics",
+      "type": "accessory",
+      "cost": 120,
+      "rarity": "Common",
+      "consumable": false,
+      "effect": {"type": "visual_accessory", "overlay": "pixel_shades"},
+      "description": "Too cool for school. Your EEP is now unbothered."
+    },
+    {
+      "id": "cosmetic_dragon_forge",
+      "name": "The Dragon Forge Frame",
+      "category": "cosmetics",
+      "type": "frame",
+      "cost": 2500,
+      "rarity": "Legendary",
+      "faction": "Architects",
+      "consumable": false,
+      "effect": {"type": "visual_frame", "overlay": "dragon_scale"},
+      "description": "Welsh dragon aesthetic; glows gold when BROski$ is mined."
+    },
+    {
+      "id": "cosmetic_nebula_drift",
+      "name": "Nebula Drift Background",
+      "category": "cosmetics",
+      "type": "background",
+      "cost": 400,
+      "rarity": "Uncommon",
+      "consumable": false,
+      "effect": {"type": "visual_background", "overlay": "nebula_drift"},
+      "description": "Deep-space background layer for your pet card. Peaceful and epic."
+    },
+    {
+      "id": "sacred_redemption_core",
+      "name": "Redemption Core",
+      "category": "sacred",
+      "cost": 0,
+      "rarity": "Quantum",
+      "consumable": false,
+      "earned_by": "Realignment of a Dark EEP",
+      "effect": {"type": "metadata_purge_evolution"},
+      "description": "Purges corrupted metadata and triggers Quantum evolution into an EEPVenger."
+    },
+    {
+      "id": "sacred_vault_seal",
+      "name": "Vault Immortal Seal",
+      "category": "sacred",
+      "cost": 0,
+      "rarity": "Legendary",
+      "consumable": false,
+      "unlock_level": 10,
+      "earned_by": "Complete 10 consecutive focus sessions",
+      "effect": {"type": "persistence_lock"},
+      "description": "Permanently protects pet metadata from Docker container desync."
+    },
+    {
+      "id": "event_v3_rift_banner",
+      "name": "v3.0 Rift Banner",
+      "category": "event",
+      "cost": 0,
+      "rarity": "Legendary",
+      "consumable": false,
+      "effect": {"type": "hud_overlay", "label": "v3.0 Hero"},
+      "description": "Limited-edition banner commemorating the May 2026 launch of BROskiPets v3.0."
+    }
+  ]
+}
