@@ -9,10 +9,12 @@ RUN pip install --user --no-cache-dir --upgrade pip && \
     fastapi==0.104.1 \
     uvicorn[standard]==0.24.0 \
     redis==5.0.1 \
-    httpx==0.26.0 \
+    'httpx>=0.24.0,<0.25.0' \
     web3==6.15.1 \
     requests==2.31.0 \
-    python-dotenv==1.0.0
+    python-dotenv==1.0.0 \
+    supabase==2.1.1 \
+    pydantic==2.5.0
 
 # ─── Runtime stage ───
 FROM python:3.11-slim
