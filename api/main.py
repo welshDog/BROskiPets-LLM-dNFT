@@ -11,6 +11,10 @@ Endpoints:
   POST /pet/{pet_id}/evolve           — trigger full evolution pipeline (IPFS → chain)
   GET  /pet/{pet_id}/metadata         — current EIP-721 metadata JSON
 
+  GET  /api/pets/                     — list all 80 pets from Supabase (filterable)
+  GET  /api/pets/{species}            — all evo stages for a species
+  GET  /api/pets/{species}/{evo_stage} — single pet
+
 Run:
   uvicorn api.main:app --reload --port 8080
 
@@ -61,6 +65,7 @@ from pydantic import BaseModel, Field
 from agent import BROskiPet, load_squad
 from metadata import EEPMetadata
 from api.chain import call_evolve_onchain
+from api.pets import router as pets_router
 
 from rewards.ledger import RewardsLedger
 from rewards.rules import decide_chat_reward, decide_evolve_reward, decide_feed_reward
@@ -125,6 +130,9 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+# ── Routers ───────────────────────────────────────────────────────────────────
+app.include_router(pets_router)
 
 
 def _resolve_pet_id(pet_id: str) -> str:
