@@ -28,7 +28,7 @@ async def get_all_items(category: str = None, faction: str = None, rarity: str =
     result = query.execute()
     items = result.data
 
-    # Filter faction/rarity from metadata JSONB (Supabase can't filter nested JSON easily)
+    # Filter faction/rarity via metadata JSONB (post-query)
     if faction:
         items = [i for i in items if i.get("metadata", {}).get("faction") == faction]
     if rarity:
@@ -58,7 +58,7 @@ async def get_categories():
 
 class PurchaseRequest(BaseModel):
     pet_id: str
-    user_id: str
+    user_id: str  # UUID of the user in public.users
 
 
 @router.post("/purchase/{item_id}")
@@ -68,51 +68,101 @@ async def purchase_item(
     x_sync_secret: str = Header(...),
 ):
     """
-    Purchase an item for a pet.
-    - Validates SHOPSYNCSECRET header
-    - Blocks sacred/unavailable items
-    - Checks unlock_level if set
-    - TODO: Call spendtokens(user_id, price_tokens) in Supabase
-    - TODO: Apply effect to pet metadata in Redis / on-chain
+    Purchase a shop item for a pet.
+
+    Flow:
+      1. Validate SHOPSYNCSECRET
+      2. Fetch item from Supabase
+      3. Block sacred + unavailable items
+      4. Check unlock_level gate
+      5. Call spend_tokens(user_id, price_tokens) -- SECURITY DEFINER, atomic
+         - Raises if insufficient balance
+         - Writes to token_transactions ledger automatically
+         - Returns { spent: true, new_balance: X }
+      6. TODO: Apply effect to pet (Redis / on-chain)
     """
     if x_sync_secret != SHOPSYNCSECRET:
         raise HTTPException(status_code=403, detail="Unauthorized Shop Sync Attempt")
 
     sb = get_supabase()
-    result = sb.table("shop_items").select("*").eq("id", item_id).single().execute()
-    item = result.data
 
+    # --- 1. Fetch item ---
+    item_result = sb.table("shop_items").select("*").eq("id", item_id).single().execute()
+    item = item_result.data
     if not item:
         raise HTTPException(status_code=404, detail="Item not found")
 
+    # --- 2. Block unavailable / sacred items ---
     if not item.get("is_available", False):
         raise HTTPException(
             status_code=400,
             detail="This item must be earned, not purchased. Earn it, BROski!"
         )
-
-    metadata = item.get("metadata", {})
-
-    # Sacred items double-check
     if item["category"] == "sacred":
         raise HTTPException(
             status_code=400,
-            detail="Sacred items cannot be bought. Earn it through real cognitive labour!"
+            detail="Sacred items cannot be bought. Real cognitive labour earns these!"
         )
 
-    # TODO: Check unlock_level against user's current level
-    # unlock_level = metadata.get("unlock_level")
-    # if unlock_level and user_level < unlock_level:
-    #     raise HTTPException(status_code=403, detail=f"Requires Level {unlock_level}")
+    metadata = item.get("metadata", {})
+    price = item.get("price_tokens", 0)
 
-    # TODO: Call Supabase spendtokens(body.user_id, item["price_tokens"])
-    # TODO: Apply metadata effect to pet via Redis or on-chain update
+    # --- 3. Unlock level gate ---
+    unlock_level = metadata.get("unlock_level")
+    if unlock_level:
+        # Fetch user's current level from public.users
+        user_result = sb.table("users").select("level").eq("id", body.user_id).single().execute()
+        user = user_result.data
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        user_level = user.get("level", 0)
+        if user_level < unlock_level:
+            raise HTTPException(
+                status_code=403,
+                detail=f"'{item['name']}' requires Level {unlock_level}. You're Level {user_level}. Keep grinding!"
+            )
+
+    # --- 4. Spend tokens via Supabase SECURITY DEFINER function ---
+    # spend_tokens(p_user_id uuid, p_amount int, p_reason text, p_source_id text)
+    # Atomically: checks balance, deducts, writes token_transactions ledger
+    # Raises Postgres exception if insufficient balance
+    try:
+        spend_result = sb.rpc(
+            "spend_tokens",
+            {
+                "p_user_id": body.user_id,
+                "p_amount": price,
+                "p_reason": f"shop_purchase:{item['name']}",
+                "p_source_id": item_id,
+            }
+        ).execute()
+    except Exception as e:
+        err = str(e)
+        if "Insufficient BROski$" in err:
+            raise HTTPException(
+                status_code=402,
+                detail=f"Not enough BROski$! This costs {price} tokens. Top up and come back!"
+            )
+        raise HTTPException(status_code=500, detail=f"Token spend failed: {err}")
+
+    spend_data = spend_result.data  # { spent: true, new_balance: X }
+    new_balance = spend_data.get("new_balance", "?")
+
+    # --- 5. TODO: Apply effect to pet ---
+    # e.g. POST to broski-pets-bridge /api/pet/{pet_id}/apply-effect
+    # with effect = metadata.get("effect", {})
+    # For consumables: one-time effect
+    # For cosmetics: persist to pet metadata
+    # For sacred: trigger evolution flow
 
     return {
         "status": "success",
-        "message": f"Purchased {item['name']} for Pet {body.pet_id}!",
+        "message": f"Purchased {item['name']}! BROski$ spent: {price}",
         "item_name": item["name"],
-        "cost_deducted": item["price_tokens"],
+        "category": item["category"],
+        "cost_deducted": price,
+        "new_balance": new_balance,
         "pet_target": body.pet_id,
         "effect": metadata.get("effect", {}),
+        "rarity": metadata.get("rarity", "Common"),
     }
