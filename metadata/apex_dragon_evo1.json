@@ -1,0 +1,32 @@
+{
+  "name": "Apex Dragon \u2014 Hatchling",
+  "description": "A Common BROskiPet dNFT. The Apex Dragon at Hatchling stage. Evolves through dev actions, XP, and BROski$ spending. Part of the HyperFocus Zone ecosystem.",
+  "image": "ipfs://bafybeiczwphl4sgny4al6bksu7ts25vroy2lgjpbpt7uopldb3gqnrfhma",
+  "external_url": "https://broskipets.xyz/pet/apex_dragon/evo1",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Apex Dragon"
+    },
+    {
+      "trait_type": "Evo Stage",
+      "value": "Hatchling"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "XP Required",
+      "value": 0
+    },
+    {
+      "trait_type": "Collection",
+      "value": "BROski Pets dNFTs"
+    },
+    {
+      "trait_type": "Ecosystem",
+      "value": "HyperFocus Zone"
+    }
+  ]
+}
