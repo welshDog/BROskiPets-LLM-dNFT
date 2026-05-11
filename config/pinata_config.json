@@ -1,0 +1,64 @@
+{
+  "_comment": "BROskiPets Pinata IPFS Configuration — Single source of truth for all group IDs and gateway",
+  "_last_updated": "2026-05-11",
+  "gateway": "https://aqua-few-dolphin-310.mypinata.cloud/ipfs",
+  "public_gateway": "https://gateway.pinata.cloud/ipfs",
+  "groups": {
+    "pets": {
+      "name": "BROski_pets_dNFTs",
+      "group_id": "2aedcf70-d4bb-4e13-94c9-ef6098d49aca",
+      "created": "2026-05-07",
+      "purpose": "Primary pet evolution art + mint metadata JSON files",
+      "contains": ["numbered mint JSONs 002-078", "baby species metadata", "baby species images"],
+      "status": "live"
+    },
+    "og_eeps": {
+      "name": "BROski_OG_EEPs_dNFTs",
+      "group_id": "b4e17293-b3ef-4739-9a7a-cf6b71fb5724",
+      "created": "2026-05-10",
+      "purpose": "Original canonical EEP character collection",
+      "contains": ["TomEEP.gif", "SlaughterEEp.gif", "RudolphEEp.gif", "Rov3rEEP.jpg", "MuskEEp.gif", "LuckyEEP.gif", "LollyEEP.jpg", "Laszer_EyeEEp.gif", "INVISIBLEEP.gif", "HoudiniEEp.gif"],
+      "asset_count": 10,
+      "status": "live"
+    },
+    "dark_eeps": {
+      "name": "BROski_Dark_EEPs_dNFTs",
+      "group_id": "cec7d61c-6d9b-410a-8db9-17489b40bd41",
+      "created": "2026-05-10",
+      "purpose": "Horror villain EEP corruption forms",
+      "contains": ["VoorhEEp.gif", "Squid_Games.gif", "Slendeep.gif", "PennyEEPwise.gif", "Jokeep.gif", "fredEEP_krueger.gif", "Eeple_juice.gif"],
+      "asset_count": 7,
+      "status": "live",
+      "note": "VoorhEEp.gif (29MB) and PennyEEPwise.gif (22MB) are large — consider compression"
+    },
+    "eepvengers": {
+      "name": "BROski_EEPVENGERS_dNFTs",
+      "group_id": "e829dd09-64ff-4e60-a3b6-83825a89525e",
+      "created": "2026-05-10",
+      "purpose": "Superhero EEP forms — the EEPVengers squad collection",
+      "contains": ["WOLVEREEP.gif", "VemonEEp.gif", "THOREEP.gif", "SuperEEP.gif", "SpiderEEP.gif", "MystquEEP.gif", "IRONEEP.gif", "HULKEEP.gif", "FlashEEP.gif", "DEAD_EEP_PooL.gif"],
+      "asset_count": 10,
+      "status": "live"
+    },
+    "token": {
+      "name": "BROski_Token_dNFT",
+      "group_id": "57d6e6bb-8587-4d67-b567-5ce5c9c9752b",
+      "created": "2026-05-10",
+      "purpose": "BROski$ token art and currency visuals",
+      "contains": [],
+      "status": "pending_audit",
+      "note": "Not yet audited — open in Pinata to inspect"
+    }
+  },
+  "asset_summary": {
+    "og_eeps": 10,
+    "dark_eeps": 7,
+    "eepvengers": 10,
+    "pet_mint_jsons": 76,
+    "pet_baby_pairs": 10,
+    "total_confirmed_eep_gifs": 27,
+    "token": "pending"
+  },
+  "uploader_script": "scripts/pinata_cid_export.py",
+  "cid_inventory_output": "pinata_cid_inventory.json"
+}
