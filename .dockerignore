@@ -1,0 +1,47 @@
+.git
+.gitignore
+.env
+.mypy_cache
+.pytest_cache
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.claude
+.github
+.idea
+*.log
+
+# Don't bundle source files
+tests/
+docs/
+roadmaps/
+scripts/
+skills/
+data/
+migrations/
+tiktok/
+
+# Don't bundle metadata or generated files
+metadata/
+**/out/
+**/cache/
+**/broadcast/
+
+# Large data files
+*.json
+pet_art_cids.json
+pinata_cids.json
+pinata_cids_test.json
+pinata_cid_inventory.json
+
+# Frontend (separate build)
+frontend/
+node_modules/
+
+# Dev files
+*.md
+CONTRIBUTING.md
+DESIGN.md
+CHANGELOG.md
+*.sql

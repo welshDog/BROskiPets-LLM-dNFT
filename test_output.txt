@@ -1,0 +1,25 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-8.3.4, pluggy-1.6.0 -- C:\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: H:\dNFTpet\BROskiPets-LLM-dNFT
+configfile: pytest.ini
+plugins: Faker-33.1.0, langsmith-0.7.16, asyncio-0.24.0, cov-6.0.0, xdist-3.8.0, anyio-4.9.0
+asyncio: mode=Mode.STRICT, default_loop_scope=function
+collecting ... collected 80 items / 1 error
+
+=================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_api.py ______________________
+ImportError while importing test module 'H:\dNFTpet\BROskiPets-LLM-dNFT\tests\test_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests\test_api.py:40: in <module>
+    from api.main import app
+api\main.py:68: in <module>
+    from api.pets import router as pets_router
+E   ImportError: cannot import name 'router' from 'api.pets' (H:\dNFTpet\BROskiPets-LLM-dNFT\tests\..\api\pets.py)
+=========================== short test summary info ===========================
+ERROR tests/test_api.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 11.43s ==============================

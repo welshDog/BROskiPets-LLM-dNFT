@@ -11,7 +11,12 @@ import re
 from pathlib import Path
 
 from web3 import Web3
-from web3.middleware import ExtraDataToPOAMiddleware
+try:
+    from web3.middleware import ExtraDataToPOAMiddleware
+except ImportError:
+    # web3.py 7.0+ moved middleware; define a no-op for compatibility
+    class ExtraDataToPOAMiddleware:
+        pass
 
 # ── ABI (only the functions we call) ──────────────────────────────────────────
 
@@ -89,7 +94,10 @@ def call_evolve_onchain(token_id: int, metadata_cid: str, new_stage: int) -> str
 
     w3 = Web3(Web3.HTTPProvider(rpc))
     # Sepolia uses PoA-style extra data in some client configs
-    w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
+    try:
+        w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
+    except (TypeError, AttributeError):
+        pass  # web3.py version doesn't support this middleware
 
     if not w3.is_connected():
         raise RuntimeError(f"Cannot connect to RPC endpoint: {rpc}")

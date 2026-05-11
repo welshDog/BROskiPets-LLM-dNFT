@@ -1,0 +1,37 @@
+[
+  {
+    "id": "001",
+    "name": "SpiderEep",
+    "species": "Spider",
+    "rarity": "Common",
+    "power": "Precision web control and signal detection"
+  },
+  {
+    "id": "002",
+    "name": "WelshDog",
+    "species": "Canine",
+    "rarity": "Quantum",
+    "power": "Founder power — ultimate loyalty and protection"
+  },
+  {
+    "id": "003",
+    "name": "PowerPup",
+    "species": "Canine",
+    "rarity": "Legendary",
+    "power": "Heroic attack mode and loyal defense"
+  },
+  {
+    "id": "004",
+    "name": "Apex Dragon",
+    "species": "Dragon",
+    "rarity": "Rare",
+    "power": "Apex mythic power and fire breath"
+  },
+  {
+    "id": "005",
+    "name": "CyberFox",
+    "species": "Fox",
+    "rarity": "Uncommon",
+    "power": "Fast stealth and neon tech integration"
+  }
+]
