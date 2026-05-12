@@ -34,3 +34,4 @@ Thumbs.db
 metadata/          # generated metadata JSON files (IPFS upload artifacts)
 data/              # local rewards ledger sqlite db + runtime artifacts
 *.zip
+NFTs-3-001.zip
