@@ -29,6 +29,7 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+git-error-*
 
 # ── Project-specific ──────────────────────────────────────────────────────────
 metadata/          # generated metadata JSON files (IPFS upload artifacts)
