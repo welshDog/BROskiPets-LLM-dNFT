@@ -1,128 +1,54 @@
 # 🐾 BROskiPets-LLM-dNFT — CLAUDE.md
-> Read this first. Every session. No exceptions.
-> Built by @welshDog — Lyndz Williams, Llanelli, Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+
+> **Read MASTER first:** [HyperCode-V2.4/CLAUDE.md](https://github.com/welshDog/HyperCode-V2.4/blob/main/CLAUDE.md)
+> That file has: who Lyndz is, comms rules, all sacred rules, ecosystem map, AI behaviour.
+> This file has: Pets-specific rules only.
 
 ---
 
-## 👤 Who You're Working With
-- Name: Lyndz — call them "Bro"
-- ADHD + Dyslexia + Autistic — chunked output ALWAYS
-- Short sentences. Bold key info. Emojis. Celebrate wins 🎉
-- Style: Why → How → Ready-to-use example
+## 📍 What This Repo Is
+
+- **Purpose:** Web3 NFT pet game — dynamic NFTs (dNFTs) + LLM personality + BROski$ economy
+- **Port:** `8098` (broski-pets-bridge in V2.4 stack)
+- **Chain:** Base Sepolia testnet — Mint is LIVE 🔥 (May 7)
+- **Local path:** `H:\dNFTpet\BROskiPets-LLM-dNFT`
+- **Web3 stack:** RainbowKit + wagmi + Base Sepolia
 
 ---
 
-## 🏗️ What This Repo Is
-- **BROskiPets-LLM-dNFT** — Dynamic NFT pet system on Ethereum Sepolia
-- EEPVengers smart contract — MAX_SUPPLY: 78, EVOLVE_COOLDOWN: 3600s
-- Pets evolve based on LLM interactions and XP
-- Part of the HYPERFOCUS Z0NE ecosystem
+## 🔴 Sacred Rules — BROskiPets
+
+| # | Rule | Why | Consequence if broken |
+|---|---|---|---|
+| 1 | **NEVER import `wagmi`/`rainbowkit` outside `/pets` route** | Shared with Course repo pattern — re-bloats cold funnel by ~900 kB | Reverts Sprint 2 perf win |
+| 2 | **`broski-pets-bridge` runs on port `8098` — never reassign** | V2.4 Prometheus + healthchecks hardcoded to 8098 | Monitoring blind spot, health checks fail |
+| 3 | **dNFT metadata updates go through bridge — NEVER direct contract write from frontend** | Bridge validates + rate-limits writes | Unvalidated on-chain writes, gas waste |
+| 4 | **Supabase schema for Pets is SEPARATE from V2.4 schema — NEVER merge** | Cross-schema coupling causes migration conflicts | Schema drift, broken queries both sides |
+| 5 | **Base Sepolia = testnet — NEVER deploy to mainnet without Lyndz explicit sign-off** | Real money, real NFTs | Irreversible mainnet transactions |
+| 6 | **`.env` files NEVER committed** | Same as all repos — wallet keys in here | Wallet drained |
+| 7 | **Commits: `feat:` `fix:` `docs:` `chore:` only** | Conventional commits | Changelog breaks |
 
 ---
 
-## ✅ What's Already DONE
+## 📂 Key Files
 
-### 🔗 On-Chain
-- EEPVengers contract **DEPLOYED** on Sepolia (chainId 11155111)
-- Contract Address: `0x3691470c6c56D9bb3cBe8052A2cEAcDdeeEe2F09`
-- Contract: **VERIFIED** on Sepolia Etherscan
-- **ALL 78 EEPS MINTED** (2026-05-09) — `totalMinted() == MAX_SUPPLY == 78`
-  - Token #1 SpiderEep — earlier mint (Block 10709316)
-  - Tokens #2–#78 — `mint_all_eeps.py` batch run (Blocks 10820695–10820781)
-  - First evolve confirmed (Block 10709937)
-
-### 📌 IPFS / Pinata (DONE 2026-05-11)
-- **ALL 148 assets pinned to IPFS via Pinata** ✅
-- `pinata_cid_inventory.json` generated — full CID map on disk
-- Groups pinned:
-  - `BROski_pets_dNFTs` → **100 assets** (78 mint JSONs + 10 baby pet pairs + extras)
-  - `BROski_OG_EEPs_dNFTs` → **28 assets** (19 GIFs/JPGs + 9 MP4 vids + BROski$ Token gif)
-  - `BROski_Dark_EEPs_dNFTs` → **7 assets**
-  - `BROski_EEPVENGERS_dNFTs` → **12 assets**
-  - `BROski_Token_dNFT` → **1 asset**
-- Script: `scripts/pinata_cid_export.py`
-
-### 🗄️ Supabase (DONE 2026-05-11)
-- **148 assets synced to Supabase** ✅
-- Project: `Hyper Vibe Coding Course` (ref: `yhtmuibgdnxhbgboajhc`, eu-west-2)
-- Tables created with RLS + public read:
-  - `pet_assets` — 100 rows
-  - `eep_assets` — 47 rows (OG + Dark + Vengers)
-  - `broski_tokens` — 1 row
-- Script: `scripts/pinata_to_supabase.py`
-- Load env fix for WSL: `set -a && source <(sed 's/\r//' .env) && set +a`
-- Env var aliases needed: `SUPABASE_URL=$VITE_SUPABASE_URL` + `SUPABASE_SERVICE_KEY=$SUPABASE_SERVICE_ROLE_KEY`
-
----
-
-## ❌ Known Issues / TODO
-
-### 🎨 Art Generation (PRIORITY 1)
-- All 78 EEPs minted with **placeholder image URLs** — no real art files on disk yet
-- `IMAGES_ROOT_CID` not in `.env` — set this once EEP art is generated and pinned
-- Baby art exists for 10 pets (pinned) — need evo1, evo2, evo3 stages for all
-
-### 🔧 Minor Fixes
-- `.env` has a duplicate `DEPLOYER_KEY` line at the bottom (base64 garbage). Harmless but worth deleting.
-
----
-
-## 🗺️ Next Steps (In Order)
-1. **Generate art** for all 78 EEPs (`EEPVengers/{pet_id}/{stage}.png` per metadata convention)
-2. **Pin art folder** to IPFS via Pinata → grab the root CID
-3. Add `IMAGES_ROOT_CID=<cid>` to `.env`
-4. **Run evolve flow** per pet to swap placeholder → real art (uses `dnft-evolve-flow` skill)
-5. **Wire frontend** — `pet_assets` + `eep_assets` tables are live, ready to query
-6. **Build mint flow** — connect CIDs from Supabase to smart contract mint
-7. (Optional) On-chain evolve trigger from LLM agent (`pet_evolver_agent.py`)
-
----
-
-## 🔑 Key Files
-- `contracts/src/EEPVengers.sol` — main smart contract
-- `contracts/script/Deploy.s.sol` — Foundry deploy script
-- `scripts/sepolia_mint_first_eep.py` — single mint script (EIP-1559 ✅)
-- `scripts/mint_all_eeps.py` — batch mint all 78 EEPs (idempotent, resumable, EIP-1559 ✅)
-- `scripts/mint_all_manifest.json` — generated by batch mint, tracks tx_hash + token_id per pet_id
-- `scripts/pinata_cid_export.py` — exports all Pinata CIDs to JSON inventory
-- `scripts/pinata_to_supabase.py` — syncs CID inventory to Supabase tables
-- `pinata_cid_inventory.json` — full CID map (148 assets, 5 groups) — LOCAL ONLY
-- `eeps/squad.json` — all 78 EEP definitions
-- `contracts/.env` — secrets (NEVER commit)
-
----
-
-## ⚙️ Environment Variables Needed
 ```
-SEPOLIA_RPC=https://ethereum-sepolia-rpc.publicnode.com
-DEPLOYER_KEY=0x<64 hex chars from Trust Wallet>
-CONTRACT_ADDRESS=0x3691470c6c56D9bb3cBe8052A2cEAcDdeeEe2F09
-PINATA_JWT=<your rotated JWT>
-PINATA_API_KEY=<Pinata API key>
-VITE_SUPABASE_URL=https://yhtmuibgdnxhbgboajhc.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=<service role key>
-VITE_SUPABASE_ANON_KEY=<anon key>
-AGENT_KEY=<fill when BROskiPets Phase 1 begins>
-ADMIN_ADDRESS=0xb58B8e2E80451cc4ba8064cf8a0ad67aaa88FD41
+contracts/                      — Solidity smart contracts
+frontend/src/pages/pets/        — Pets UI (wagmi/rainbowkit isolated here)
+backend/                        — broski-pets-bridge FastAPI service
+scripts/                        — deploy + mint scripts
+.env.example                    — all required env keys
 ```
 
 ---
 
-## 🛡️ Sacred Rules
-- NEVER commit `.env` to git
-- NEVER use mainnet ETH for testing
-- Always use Sepolia (chainId 11155111) for dev
-- EIP-1559 gas fields only — no `gasPrice` on Sepolia
-- Absolute imports only — add repo root to `sys.path`
+## 🔍 Current Status
+
+- Mint LIVE on Base Sepolia ✅ May 7
+- XP + leaderboard bridge to V2.4 ✅
+- E2E mint test on Base Sepolia testnet 🟡 TODO this week
+- dNFT dynamic metadata updates 🟡 next sprint
 
 ---
 
-## 🌍 Ecosystem Links
-- HyperCode-V2.4: github.com/welshDog/HyperCode-V2.4
-- HyperAgent-SDK: github.com/welshDog/HyperAgent-SDK
-- Course: github.com/welshDog/Hyper-Vibe-Coding-Course
-
----
-> Built for ADHD brains. Fast feedback. Real tools. No fluff.
-> by welshDog — Lyndz Williams, South Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿
-> A BROski is ride or die. We build this together. 🐾♾️
+> 🐶♾️ Part of the Hyperfocus z0ne — @welshDog
